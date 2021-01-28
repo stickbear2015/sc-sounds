@@ -1,0 +1,39 @@
+#var vol 50
+#var silent 0
+#Var SocialsOn 1
+#var commson 1
+#var version 2.8;
+#var soundsversion 2
+#var date 06/18/2019;
+#var len 0
+#Var SoundHandlePanning
+#Var InCombatSuit 0
+#Var CurrentTrackedTarget None
+#Var ShipHitGagging 0
+#var DSound 0
+#Var ScanShipIFF
+#Var ScanShipHullDamage
+#Var ScanShipAverageDamage
+#Var ScanTriggersActive 0
+#Var ScanTriggerCount 0
+#var ovenon 1
+#var Gaggs 1
+#var phones 1
+#var robots 0
+#var felo 0
+#var GagAll 0
+#var RTime 0
+#Var PaLastMessage
+#Var PAMessage1
+#Var PAMessage2
+#Var PAMessage3
+#Var PAMessage4
+#Var PAMessage5
+#Var PAMessage6
+#Var PAMessage7
+#Var PAMessage8
+#Var PAMessage9
+#Var PAMessage10
+#Var PAMessage11
+#Var PACounter 1
+

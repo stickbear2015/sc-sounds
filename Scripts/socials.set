@@ -1,0 +1,329 @@
+#trigger {* leaves your group.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\disband.wav} @Vol}}} {}
+#TRIGGER {* hand, taking * into * group.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\joins.wav} @Vol}}} {}
+#TRIGGER {* disband* * group.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\disband.wav} @Vol}}} {}
+#Trigger {* take* * into * group.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\joins.wav} @Vol}}} {}
+#TRIGGER {* take* control of * group.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\joins.wav} @Vol}}} {}
+#trigger {* join* * group.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\socials\joins.wav} @vol}}} {}
+
+#trigger {* lies down on *.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\socials\lie.wav} @vol}}} {}
+#trigger {You lie down on *.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\socials\lie.wav} @vol}}} {}
+#TRIGGER {You lie *} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\lie.wav} @Vol}}} {}
+
+#trigger {You scramble to your feet.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\socials\stand.wav} @vol}}} {}
+#trigger {* scrambles to *.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\socials\stand.wav} @vol}}} {}
+#trigger {* stands up from *.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\socials\stand.wav} @vol}}} {}
+#trigger {You stand up from *.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\socials\stand.wav} @vol}}} {}
+#TRIGGER {You stand up.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\stand.wav} @Vol}}} {}
+
+#trigger {* sits down on *.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\socials\sit.wav} @vol}}} {}
+#trigger {You sit down on *.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\socials\sit.wav} @vol}}} {}
+#TRIGGER {You sit down.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\sit.wav} @Vol}}} {}
+
+#Trigger {* slaps you!} {
+#If {@SocialsOn = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\Slap*2.wav} @Vol}}} {}
+#Trigger {You slap *!} {
+#If {@SocialsOn = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\Slap*2.wav} @Vol}}} {}
+
+#TRIGGER {You hear someone knocking calmly upon the hull.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\Knock1.wav} @Vol}}} {}
+#TRIGGER {You knock calmly upon the hull of the * "*".} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\Knock1.wav} @Vol}}} {}
+#Trigger {You hear someone pounding impatiently upon the hull.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\Knock2.wav} @Vol}}} {}
+#Trigger {You hear someone kicking furiously against the hull.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\Knock3.wav} @Vol}}} {}
+#Trigger {You suddenly hear a loud clang against the hull, followed by an odd silence.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\CantGo.wav} @Vol}}} {}
+#Trigger {You pound impatiently on the hull of the * "*".} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\Knock2.wav} @Vol}}} {}
+#Trigger {You kick furiously at the hull of the * "*".} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\Knock3.wav} @Vol}}} {}
+#Trigger {You back up slowly, then spin around and charge the * "*".  Your head hits the hull with a loud clang and you drop to the ground, stunned.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\CantGo.wav} @Vol;
+#Play {Star Conquest\General\Socials\HeadBash*3.wav} @Vol}}} {}
+
+#TRIGGER {You whistle.} {
+#If {@SocialsOn = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\Whistle*2.wav} @Vol}}} {}
+#TRIGGER {* whistles.} {
+#If {@SocialsOn = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\Whistle*2.wav} @Vol}}} {}
+#TRIGGER {* whistles at you.} {
+#If {@SocialsOn = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\Whistle*2.wav} @Vol}}} {}
+#TRIGGER {You whistle at *.} {
+#If {@SocialsOn = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\Whistle*2.wav} @Vol}}} {}
+
+#TRIGGER {You yawn.} {
+#If {@SocialsOn = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\yawn*2.wav} @Vol}}} {} AnyCase
+#TRIGGER {* yawns.} {
+#If {@SocialsOn = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\yawn*2.wav} @Vol}}} {}
+
+#TRIGGER {You snort.} {
+#If {@SocialsOn = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\snort.wav} @Vol}}} {}
+#TRIGGER {* snorts.} {
+#If {@SocialsOn = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\snort.wav} @Vol}}} {}
+
+#TRIGGER {You snap your fingers.} {
+#If {@SocialsOn = 1} {
+#if {@silent = 1} {
+#PLAY {Star Conquest\General\Socials\snap1.wav} @Vol}}} {}
+#TRIGGER {* snaps * fingers.} {
+#If {@SocialsOn = 1} {
+#if {@silent = 1} {
+#PLAY {Star Conquest\General\Socials\snap1.wav} @Vol}}} {}
+
+#TRIGGER {You sigh.} {
+#If {@SocialsOn = 1} {
+#if {@silent = 1} {
+#PLAY {Star Conquest\General\Socials\sigh*2.wav} @Vol}}} {}
+#TRIGGER {* sighs.} {
+#If {@SocialsOn = 1} {
+#if {@silent = 1} {
+#PLAY {Star Conquest\General\Socials\sigh*2.wav} @Vol}}} {}
+
+#TRIGGER {You shriek!} {
+#If {@SocialsOn = 1} {
+#if {@silent = 1} {
+#PLAY {Star Conquest\General\Socials\shriek*2.wav} @Vol}}} {}
+#TRIGGER {* shrieks!} {
+#If {@SocialsOn = 1} {
+#if {@silent = 1} {
+#PLAY {Star Conquest\General\Socials\shriek*2.wav} @Vol}}} {}
+
+#TRIGGER {you scream!} {
+#If {@SocialsOn = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\General\Socials\scream*2.wav} @Vol}}} {}
+#TRIGGER {* screams} {
+#If {@SocialsOn = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\General\Socials\scream*2.wav} @Vol}}} {}
+
+#TRIGGER {You poke * in the ribs!} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#PLAY {Star Conquest\General\Socials\Poke.wav} @Vol}}} {}
+#TRIGGER {* pokes you in the ribs!} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#PLAY {Star Conquest\General\Socials\Poke.wav} @Vol}}} {}
+#trigger {* pokes * in the ribs!} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#PLAY {Star Conquest\General\Socials\Poke.wav} @Vol}}} {}
+
+#TRIGGER {You laugh*} {
+#If {@SocialsOn = 1} {
+#if {@silent = 1} {
+#PLAY {Star Conquest\General\Socials\laugh*2.wav} @Vol}}} {}
+#TRIGGER {* laughs*} {
+#If {@SocialsOn = 1} {
+#if {@silent = 1} {
+#PLAY {Star Conquest\General\Socials\laugh*2.wav} @Vol}}} {}
+
+#TRIGGER {You cry.} {
+#If {@SocialsOn = 1} {
+#if {@silent = 1} {
+#PLAY {Star Conquest\General\Socials\cry*2.wav} @Vol}}} {}
+#TRIGGER {* cries.} {
+#If {@SocialsOn = 1} {
+#if {@silent = 1} {
+#PLAY {Star Conquest\General\Socials\cry*2.wav} @Vol}}} {}
+
+#TRIGGER {You cough.} {
+#If {@SocialsOn = 1} {
+#if {@silent = 1} {
+#PLAY {Star Conquest\General\Socials\cough*2.wav} @Vol}}} {}
+#trigger {* coughs} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#PLAY {Star Conquest\General\Socials\cough*2.wav} @Vol}}} {}
+
+#TRIGGER {You giggle.} {
+#If {@SocialsOn = 1} {
+#if {@silent = 1} {
+#PLAY {Star Conquest\General\Socials\chuckle.wav} @Vol}}} {}
+#TRIGGER {* giggles.} {
+#If {@SocialsOn = 1} {
+#if {@silent = 1} {
+#PLAY {Star Conquest\General\Socials\chuckle.wav} @Vol}}} {}
+
+#TRIGGER {You chortle.} {
+#If {@SocialsOn = 1} {
+#if {@silent = 1} {
+#PLAY {Star Conquest\General\Socials\chortle.wav} @Vol}}} {}
+#TRIGGER {* chortles.} {
+#If {@SocialsOn = 1} {
+#if {@silent = 1} {
+#PLAY {Star Conquest\General\Socials\chortle.wav} @Vol}}} {}
+
+#TRIGGER {* moans.} {
+#If {@SocialsOn = 1} {
+#if {@silent = 1} {
+#PLAY {Star Conquest\General\Socials\moan*2.wav} @Vol}}} {}
+#TRIGGER {You moan.} {
+#If {@SocialsOn = 1} {
+#if {@silent = 1} {
+#PLAY {Star Conquest\General\Socials\moan*2.wav} @Vol}}} {}
+
+#Trigger {* aims a high kick at you!} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\Kick*2.wav} @Vol}}} {}
+#Trigger {You aim a high kick at *!} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\Kick*2.wav} @Vol}}} {}
+#Trigger {* aims a heavy kick at * while * is down.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\Kick*2.wav} @Vol}}} {}
+#Trigger {You aim a heavy kick at * while * is down.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\Kick*2.wav} @Vol}}} {}
+#Trigger {* aims a high kick at *!} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\Kick*2.wav} @Vol}}} {}
+
+#Trigger {* raises * fist and aims a punch at you!} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\Punch*2.wav} @Vol}}} {}
+#Trigger {You aim a punch at *!} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\Punch*2.wav} @Vol}}} {}
+#Trigger {* raises * fist and aims a punch at *!} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\Punch*2.wav} @Vol}}} {}
+
+#trigger {You kiss *.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\socials\kiss.wav} @vol}}} {}
+#trigger {* kisses you.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\socials\kiss.wav} @vol}}} {}
+#trigger {* kisses * on *.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\socials\kiss.wav} @vol}}} {}
+
+#TRIGGER {You sneeze explosively.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\socials\sneeze*2.wav} @vol}}} {}
+#trigger {* sneezes.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\socials\sneeze*2.wav} @vol}}} {}
+#trigger {* drop* into * toilet and then flush* it. The corpse swirls around rapidly and then vanishes with a gurgle of finality, returning from whence it came.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\socials\toiletflush.wav} @vol}}} {}
+#trigger {You vigorously rub a point summary printout in your hands.  It bursts into flames and instantaneously disappears.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\socials\trash.wav} @vol}}} {}
+#trigger {* stumble* then fall* heavily to the floor.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\socials\collapse*3.wav} @vol}}} {}
+#trigger {You glance around, move aside clothing as necessary, and do your business with *.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\socials\toiletflush.wav} @vol}}} {}
+#Trigger {As soon as * hits the ground, * suddenly shatters into a billion pieces, never to be seen again.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\breakingglass1.wav} @Vol}}} {}
+

@@ -1,0 +1,548 @@
+#trigger {* (inside a battlesuit)} {
+#var InCombatSuit 1} {}
+
+#Trigger {A quiet beep serves to notify you that the aerial fortress has completed repairs of all stored equipment.} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\Beep*3.wav} @Vol}} {}
+#Trigger {You press a few buttons, calling up a damage diagram of the aerial fortress, and begin directing repair drones.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Computer\Keyboard.wav} @Vol}} {}
+#Trigger {You hear odd clanking sounds as the aerial fortress begins repairs.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\Repair*2.wav} @Vol}} {}
+#Trigger {A beep from the computer indicates that the aerial fortress is now completely repaired.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\Repair*2.wav} @Vol}} {}
+#Trigger {You and your battlesuit are promptly loaded onto a flier, which quickly moves out to the deployment area.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\FlyerTransport.wav} @Vol}} {}
+#Trigger {You and your battlesuit are promptly picked up by a flier, which begins returning to the deployment facility.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\FlyerTransport.wav} @Vol}} {}
+#Trigger {The pod shudders violently as it speeds through the interior of the nest. The interior of your battlesuit cushions most of the turbulence.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\BattleSuitFlight.wav} @Vol}} {}
+#Trigger {You tongue a prominent control inside your battlesuit, then brace yourself as two halves of a drop pod suddenly descend onto you and seal around you. A moment later, you feel sudden acceleration as your pod is launched from the aerial fortress.} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\Beep*3.wav} @Vol;
+#Play {Star Conquest\Ground Combat\EnterBattleSuit.wav} @Vol;
+#Play {Star Conquest\Ground Combat\ArialFortressBattleSuitLaunch.WAV} @Vol;
+#Var InCombatSuit 1}} {}
+#Trigger {You light your battlesuit's ascent rockets and begin speeding toward the waiting aerial fortress.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\ArialFortressBattleSuitLaunch.WAV} @Vol}} {}
+#Trigger {You rocket through the fortress's entrance hatch and stumble to a stop on the deck.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\BattleSuitFlight.wav} @Vol;
+#Var InCombatSuit 0}} {}
+#TRIGGER {* armor suddenly crumples, several electrical components sparking as they fail.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Combat\OtherDestroyed*3.wav} @Vol}} {}
+#TRIGGER {* crumples to the ground in a spectacular fashion, utterly destroyed.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Combat\OtherDestroyed*3.wav} @Vol}} {}
+#Trigger {      * abruptly rockets skywards under emergency power, barely avoiding destruction!} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\EnemyRocketLaunch.wav} @Vol}} {}
+#Trigger {* mewls weakly, crumples, and moves no more.} {
+#If {@InCombatSuit = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\BariDeath.wav} @Vol}}} {}
+#Trigger {* aims * * at * and fires!} {
+#If {@InCombatSuit = 1} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Combat\OtherFired*3.wav} @Vol}}} {}
+#Trigger {* aims its * at * and fires!} {
+#If {@InCombatSuit = 1} {
+#Sub {%1 fires its %2 at %3};
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Combat\OtherFired*3.wav} @Vol}}} {}
+#Trigger {   You are hit!} {
+#Sub {Hit!};
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Combat\YouHit*3.wav} @Vol}} {}
+#Trigger {* turns toward you.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\EnemyFocus2.wav} @Vol}} {}
+#Trigger {   Several laser beams burn into *!} {
+#If {@InCombatSuit = 1} {
+#Gagline Voice}} {}
+#Trigger {   Two slim laser beams burn into *!} {
+#If {@InCombatSuit = 1} {
+#Gagline Voice}} {}
+#Trigger {   The laser beam burns into *!} {
+#If {@InCombatSuit = 1} {
+#Gagline Voice}} {}
+#Trigger {You aim your * at * and fire!} {
+#If {@InCombatSuit = 1} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\Shoot*2.wav} @Vol}}} {}
+#Trigger {   * impacts *!} {
+#If {@InCombatSuit = 1} {
+#Gagline Voice}} {}
+#Trigger {   * impact *!} {
+#If {@InCombatSuit = 1} {
+#Gagline Voice}} {}
+#Trigger {You detach a one-use repair drone.} {
+#Sub {Repair}} {}
+#Trigger {   You repair * damage!} {
+#Sub {%1 damage repaired!};
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\Repair*2.wav} @Vol}} {}
+#Trigger {   You are rapidly repaired by a swarm of minidrones!} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\Repair*2.wav} @Vol}} {}
+#Trigger {   You, * are rapidly repaired by a swarm of minidrones!} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\Repair*2.wav} @Vol}} {}
+#Trigger {   You and * are rapidly repaired by a swarm of minidrones!} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\Repair*2.wav} @Vol}} {}
+#Trigger {   You begin regenerating!} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\Repair*2.wav} @Vol}} {}
+#Trigger {You regenerate * damage from Regenerate!} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\Repair*2.wav} @Vol}} {}
+#Trigger {You toss a * at *!} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\ThrowWeapon.wav} @Vol}} {}
+#Trigger {   The * lands near * and explodes!} {
+#If {@InCombatSuit = 1} {
+#Sub {%1 explodes near %2};
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\HandGrenade.wav} @Vol}}} {}
+#Trigger {You toss a space-grade detonator at the enemy!} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\ThrowWeapon.wav} @Vol;
+#Play {Star Conquest\Ground Combat\HandGrenade.wav} @Vol}} {}
+
+#Trigger {You feel a slight bump as the aerial fortress detaches from "*."} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\ArialFortressDetach.wav} @Vol}} {}
+#Trigger {You hold yourself steady against the sudden thrust as the aerial fortress fires its descent thrusters.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\ArialFortressFireThrusters.wav} @Vol}} {}
+#Trigger {The aerial fortress rumbles as it slowly thrusts toward the nest.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\ArialFortressRumble.wav} @Vol}} {}
+#Trigger {A faint vibration soon turns into a steady rumbling as the aerial fortress thrusts toward the space station.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\ArialFortressRumble.wav} @Vol}} {}
+#Trigger {The aerial fortress suddenly fires its ascent thrusters, rocketing toward open space.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\ArialFortressFireThrusters2.wav} @Vol}} {}
+#Trigger {The rumbling eases off as the aerial fortress comes to rest just inside the entrance to the nest.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\ArialFortressNestLand.wav} @Vol}} {}
+#Trigger {The rumble of thrust eases off as the aerial fortress achieves a hovering position near the space station's docking bay.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\ArialFortressNestLand.wav} @Vol}} {}
+#Trigger {You hear a faint hum as the aerial fortress engages its cloaking device.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\ArialFortressCloakEngage.wav} @Vol}} {}
+#Trigger {The vibrations of ascent start to ease off slightly as the aerial fortress leaves the entrance area.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\ArialFortressAscend.wav} @Vol}} {}
+#Trigger {At the top of its ascent, the aerial fortress gently comes into contact with "*" and the docking clamps snap into place.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\ArialFortressDock.WAV} @Vol}} {}
+
+#Trigger {A wave of fighters is approaching!} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\FightersWaveIncoming.wav} @Vol}} {}
+#Trigger {The computer announces that defenses on the space station have detected your descent and are launching fighters!} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\FightersWaveIncoming.wav} @Vol}} {}
+#Trigger {A * approaches from the * direction on the starboard side.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\WingedAutonomousSwarmingPatrollerApproach.wav} @Vol;
+#Var SoundHandlePanning %PlayHandle;#Pc @SoundHandlePanning Pan 3500}} {}
+#Trigger {A * approaches from the * direction on the port side.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\WingedAutonomousSwarmingPatrollerApproach.wav} @Vol;
+#Var SoundHandlePanning %PlayHandle;#Pc @SoundHandlePanning Pan -3500}} {}
+#Trigger {A * suddenly increases speed, coming up alongside the aerial fortress.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\WingedAutonomousSwarmingPatrollerFly.wav} @Vol}} {}
+#Trigger {A * drops back, coming up alongside the aerial fortress.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\WingedAutonomousSwarmingPatrollerFly.wav} @Vol}} {}
+#Trigger {A * suddenly arrives from the other side of the aerial fortress in the * direction.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\WingedAutonomousSwarmingPatrollerApproach.wav} @Vol}} {}
+#Trigger {A * * of the aerial fortress abruptly tilts its wings and slides gracefully underneath the fortress, moving to the opposite side.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\WingedAutonomousSwarmingPatrollerApproach.wav} @Vol}} {}
+#Trigger {A * * of the aerial fortress abruptly tilts its wings and slides gracefully above the fortress, moving to the opposite side.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\WingedAutonomousSwarmingPatrollerApproach.wav} @Vol}} {}
+
+#Trigger {You feel the aerial fortress jerk once as a missile accelerates out of the starboard launcher.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\ArialFortressMissileLaunch.wav} @Vol;
+#Var SoundHandlePanning %PlayHandle;#Pc @SoundHandlePanning Pan 3500}} {}
+#Trigger {You feel the aerial fortress jerk once as a missile accelerates out of the port launcher.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\ArialFortressMissileLaunch.wav} @Vol}} {}
+#Trigger {You press a few buttons, firing a missile *.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Computer\Keyboard.wav} @Vol}} {}
+#Trigger {The missile homes in on * and explodes!} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\ArialFortressMissileExplodes.WAV} @Vol;
+#Play {Star Conquest\Ship\Combat\OtherDestroyed*3.wav} @Vol}} {}
+#Trigger {You press a few buttons, firing grapeshot *.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Computer\Keyboard.wav} @Vol}} {}
+#Trigger {You hear a faint rattling sound as grapeshot is ejected from the aerial fortress.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\ArialFortressGrapeShotLaunched.wav} @Vol}} {}
+#Trigger {The grapeshot disperses * on the port side, slowly drifting away from the aerial fortress as it moves.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\ArialFortressGrapeShotDisperse.wav} @Vol;
+#Var SoundHandlePanning %PlayHandle;#Pc @SoundHandlePanning Pan -3500}} {}
+#Trigger {The grapeshot disperses * on the starboard side, slowly drifting away from the aerial fortress as it moves.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\ArialFortressGrapeShotDisperse.wav} @Vol}} {}
+#Trigger {A * flies through a cloud of grapeshot, taking damage.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\WingedAutonomousSwarmingPatrollerFly.wav} @Vol;
+#Play {Star Conquest\Ground Combat\ArialFortressGrapeShotHit.wav} @Vol}} {}
+#Trigger {You press a few buttons, firing lasers.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Computer\Keyboard.wav} @Vol}} {}
+#Trigger {You feel the aerial fortress shudder faintly as its broadside lasers are fired.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Combat\Laser*3.wav} @Vol}} {}
+#Trigger {Laser bursts fly from the turrets, impacting *!} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Combat\OtherHit*3.wav} @Vol}} {}
+#Trigger {The aerial fortress shakes violently under fire from * on the starboard side.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Combat\YouHit*3.wav} @Vol;
+#Var SoundHandlePanning %PlayHandle;#Pc @SoundHandlePanning Pan 3500}} {}
+#Trigger {The aerial fortress shakes violently under fire from * on the port side.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Combat\YouHit*3.wav} @Vol}} {}
+#Trigger {The computer announces that * on the starboard side has been destroyed.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Combat\OtherDestroyed*3.wav} @Vol;
+#Var SoundHandlePanning %PlayHandle;#Pc @SoundHandlePanning Pan 3500}} {}
+#Trigger {The computer announces that * on the port side has been destroyed.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Combat\OtherDestroyed*3.wav} @Vol}} {}
+
+#Trigger {You tongue a control inside your battlesuit, which immediately splits down the front. You carefully climb out.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\ExitBattleSuit.wav} @Vol;
+#Var InCombatSuit 0}} {}
+#Trigger {You press a button on *, which splits open down the front. You carefully climb inside.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\Beep*3.wav} @Vol;
+#Play {Star Conquest\Ground Combat\EnterBattleSuit.wav} @Vol;
+#Var InCombatSuit 1}} {}
+#Trigger {A crane descends from the ceiling and efficiently returns all battlesuits in the area to storage.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\LowerSuit.wav} @Vol;
+#If {@InCombatSuit = 1} {#Var InCombatSuit 0}}} {}
+#trigger {* a prominent button, and a crane promptly retrieves * from * and sets it in front of *.} {
+#if {@silent = 1} {
+#play {Star Conquest\ground combat\LowerSuit.wav} @vol}} {}
+#trigger {* is brought forward from a small recess in the aft of the ship.} {
+#if {@silent = 1} {
+#play {Star Conquest\ground combat\LowerSuit.wav} @vol}} {}
+#trigger {The control room is rapidly cleared of abandoned battlesuits.} {
+#if {@silent = 1} {
+#play {Star Conquest\ground combat\LowerSuit.wav} @vol}} {}
+#trigger {Your battlesuit is automatically transferred to *} {
+#if {@silent = 1} {
+#play {Star Conquest\ground combat\SuitLoad.wav} @vol}} {}
+
+#trigger {Mother prepares to use RATS * Mother Laser!} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\warning.wav} @vol}} {}
+#trigger {Mother beams a high powered communication burst!} {
+#if {@silent = 1} {
+#play {Star conquest\ground combat\mother reinforcement.wav} @vol}} {}
+#trigger {* fires a bright flare high into the air!} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\flare.wav} @vol}} {}
+#Trigger {* Alpha prepares to use *!} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\alpha Warning.wav} @vol}} {}
+#Trigger {* Beta prepares to use *!} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\Beta Warning.wav} @vol}} {}
+#Trigger {* Fehu prepares to use *!} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\alpha Warning.wav} @vol}} {}
+#Trigger {* Uruz prepares to use*!} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\Beta Warning.wav} @vol}} {}
+#Trigger {* Gamma prepares to use *!} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\Gamma Warning.wav} @vol}} {}
+#Trigger {* Thorn prepares to use *!} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\Gamma Warning.wav} @vol}} {}
+#trigger {Miniaturized Interfacing Companion Entity * stands alone.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\Standalone.wav} @vol}} {}
+#Trigger {* is blinded!} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\blind.wav} @vol}} {}
+#trigger {Power systems channeling wears off.} {
+#if {@silent = 1} {
+#play {Star Conquest\ground combat\wear off.wav} @vol}} {}
+#Trigger {Laser guidance wears off.} {
+#if {@silent = 1} {
+#play {Star Conquest\ground combat\wear off.wav} @vol}} {}
+#Trigger {Bob and weave wears off.} {
+#if {@silent = 1} {
+#play {Star Conquest\ground combat\wear off.wav} @vol}} {}
+#Trigger {Redirect rage wears off.} {
+#if {@silent = 1} {
+#play {Star Conquest\ground combat\wear off.wav} @vol}} {}
+#Trigger {Enemy analysis wears off.} {
+#if {@silent = 1} {
+#play {Star Conquest\ground combat\wear off.wav} @vol}} {}
+#Trigger {Nanofocus wears off.} {
+#if {@silent = 1} {
+#play {Star Conquest\ground combat\wear off.wav} @vol}} {}
+#Trigger {Radiate wears off.} {
+#if {@silent = 1} {
+#play {Star Conquest\ground combat\wear off.wav} @vol}} {}
+#Trigger {Hardening spray wears off.} {
+#if {@silent = 1} {
+#play {Star Conquest\ground combat\wear off.wav} @vol}} {}
+#Trigger {Nanotemper wears off.} {
+#if {@silent = 1} {
+#play {Star Conquest\ground combat\wear off.wav} @vol}} {}
+#Trigger {Illuminate wears off.} {
+#if {@silent = 1} {
+#play {Star Conquest\ground combat\wear off.wav} @vol}} {}
+#Trigger {Nanoboost wears off.} {
+#if {@silent = 1} {
+#play {Star Conquest\ground combat\wear off.wav} @vol}} {}
+#Trigger {Preemptive repair wears off.} {
+#if {@silent = 1} {
+#play {Star Conquest\ground combat\rep wear off.wav} @vol}} {}
+#Trigger {Reconstructive microdrone cloud wears off.} {
+#if {@silent = 1} {
+#play {Star Conquest\ground combat\rep wear off.wav} @vol}} {}
+#Trigger {Reconstructive microdrones wears off.} {
+#if {@silent = 1} {
+#play {Star Conquest\ground combat\rep wear off.wav} @vol}} {}
+#Trigger {Repair drone wears off.} {
+#if {@silent = 1} {
+#play {Star Conquest\ground combat\rep wear off.wav} @vol}} {}
+#trigger {Flurry wears off.} {
+#if {@silent = 1} {
+#play {Star Conquest\ground combat\rep wear off.wav} @vol}} {}
+#Trigger {With a soft click, your battlesuit's auto-repair systems shut down with all damage repaired.} {
+#if {@silent = 1} {
+#play {Star Conquest\ground combat\rep wear off.wav} @vol}} {}
+#Trigger {Energy bottle wears off.} {
+#if {@silent = 1} {
+#play {Star Conquest\ground combat\max.wav} @vol}} {}
+#Trigger {Your battlesuit has sustained too much damage! At the last moment, it suddenly rockets skywards, barely avoiding destruction.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\ArialFortressBattleSuitLaunch.WAV} @Vol}} {}
+#Trigger {After several long moments, you feel your battlesuit automatically curling you into a protective ball. You bounce to an uncomfortable stop on the metal deck. Upon detecting safe surroundings, the battlesuit automatically peels open and deposits you on the deck.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\ExitBattleSuit.wav} @Vol;
+#Var InCombatSuit 0}} {}
+
+#Trigger {* ?in cover? is under cover; you can't fire at it now.} {
+#Sub {%1 under cover}}
+#TRIGGER {* deftly enters a set of coordinates, and the computer chirps in confirmation.} {
+#if {@silent = 1} {
+#Play {Star Conquest\commchirp.wav} @Vol}} {}
+#trigger {*'s ability preparation is interrupted!} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\cancel.wav} @vol}} {}
+#TRIGGER {* vine shield collapses!} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\shield drop.wav} @vol}} {}
+#TRIGGER {*Queen prepares to use * Bari Queen Rage!*} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\qrage.wav} 50}} {}
+#trigger {* energy cor* appear and beam regenerating energy at Cyberhyperwarrior Prime!} {
+#if {@silent = 1} {
+#play {Star conquest\ground combat\mother reinforcement.wav} @vol}} {}
+#trigger {Cyberhyperwarrior Prime prepares to use *} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\qrage.wav} 50}} {}
+#trigger {An energy core shatters!} {
+#if {@silent = 1} {
+#play {Star Conquest\ground combat\core.wav} @vol}} {}
+#trigger {You absorb its energy!} {
+#if {@silent = 1} {
+#play {Star Conquest\ground combat\max.wav} @vol}} {}
+#Trigger {You hear a soft hum as your battlesuit's energy reaches maximum levels.} {
+#if {@silent = 1} {
+#play {Star Conquest\ground combat\max.wav} @vol}} {}
+#Trigger {* suddenly cannot move!} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\knockout.wav} @vol}} {}
+#Trigger {* exceeds *%*} {
+#Sub {%1 Exceeds %2%!};
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\DamageWarning.wav} @Vol}} {}
+#TRIGGER {   You do * damage to *!} {
+#Sub {%1 damage: %2};
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\ShotHits.wav} @Vol;
+#Play {Star Conquest\Ship\Combat\OtherHit*3.wav} @Vol}} {}
+#TRIGGER {   Miss!} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\ShotMisses.wav} @Vol}} {}
+#trigger {* turns toward *} {
+#if {@incombatsuit = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\EnemyFocus1.wav} @Vol}}} {}
+;Tesla
+
+#TRIGGER {Your battlesuit extends a set of treads and begins rolling across the surface of Teslaworld.} {
+#gagline voice;
+#if {@silent = 1} {
+#PLAY {Star Conquest\ground combat\Spacecraft_Start_Engines_SE.wav} @Vol}} {}
+#TRIGGER {You begin the journey back to the gates of Teslatown.} {
+#gagline voice;
+#if {@silent = 1} {
+#play {Star Conquest\ground combat\Spacecraft_Start_Engines_SE.wav} @Vol}} {}
+#TRIGGER {You prepare to use * Extraction!} {
+#gagline voice;
+#if {@silent = 1} {
+#play {Star Conquest\ground combat\scanning.wav} @Vol}} {}
+#TRIGGER {You extract *.} {
+#if {@silent = 1} {
+#play {Star Conquest\ground combat\extracter.wav} @Vol}} {}
+#TRIGGER {* drill attachment and * it into the ground.} {
+#gagline Voice;
+#if {@silent = 1} {
+#play {star conquest\ground combat\usedrill.wav} @vol}} {}
+#TRIGGER {* claw and * rooting through the ground.} {
+#gagline voice;
+#if {@silent = 1} {
+#PLAY {Star Conquest\ground combat\usedrill.wav} @Vol}} {}
+#TRIGGER {You seem to have extracted all of that resource.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\ground combat\FinishedExtracting.wav} @Vol}} {}
+#TRIGGER {You quickly scan for resources.} {
+#gagline Voice;
+#if {@silent = 1} {
+#PLAY {Star Conquest\ground combat\scanner.wav} @Vol}} {}
+#TRIGGER {You detect a seam of minerals.} {
+#if {@silent = 1} {
+#PLAY {Star Conquest\ground combat\MineralsHere.wav} @Vol}} {}
+#TRIGGER {You detect a * and a *.} {
+#if {@silent = 1} {
+#PLAY {Star Conquest\ground combat\MineralsHere.wav} @Vol}} {}
+#TRIGGER {* has located a seam of minerals!} {
+#if {@silent = 1} {
+#PLAY {Star Conquest\ground combat\MineralsHere.wav} @Vol}} {}
+#TRIGGER {* has located a * and a *} {
+#if {@silent = 1} {
+#PLAY {Star Conquest\ground combat\MineralsHere.wav} @Vol}} {}
+#Trigger {* seems to detect nothing of interest.} {
+#if {@silent = 1} {
+#Play {Star Conquest\ground combat\NothingFound.wav} @Vol}} {}
+#TRIGGER {You detect no resources here.} {
+#if {@silent = 1} {
+#Play {Star Conquest\ground combat\NothingFound.wav} @Vol}} {}
+#TRIGGER {You detect a buried artifact in * condition.} {
+#if {@silent = 1} {
+#play {Star Conquest\ground combat\Artifact found.wav} @Vol}} {}
+#TRIGGER {* has located a buried artifact in * condition!} {
+#if {@silent = 1}{ 
+#play {Star Conquest\ground combat\Artifact found.wav} @Vol}} {}
+#TRIGGER {You detect a deposit of rare earths.} {
+#if {@silent = 1} {
+#play {star conquest\ground combat\MineralsHere.wav} @vol}} {}
+#TRIGGER {* has located a deposit of rare earths!} {
+#if {@silent = 1} {
+#play {star conquest\ground combat\MineralsHere.wav} @vol}} {}
+#TRIGGER {You move into the area.} {
+#If {@InCombatSuit = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\ground combat\move.wav} @Vol}}} {}
+#trigger {* moves *} {
+#If {@InCombatSuit = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\ground combat\move.wav} @Vol}}} {}
+#Trigger {*Markings on the ground show that this area has already been explored.} {
+#if {@silent = 1} {
+#Play {Star Conquest\ground combat\Already Explored.wav} @Vol}} {}
+#trigger {You have destroyed all attackers! Your mission is complete!} {
+#if {@silent = 1} {
+#play {Star Conquest\ground combat\missiondone.wav} @vol}} {}
+#trigger {Enemies have appeared at *} {
+#if {@silent = 1} {
+#play {Star Conquest\ground combat\getingAttacked.wav} @vol}} {}
+
+;GMG
+
+#Trigger {A large blast door suddenly opens.} {
+#gagline voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\glyphdoor.wav} @Vol}} {}
+#Trigger {Glyph * detaches from an alcove on the wall.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\glyphdetach.wav} @Vol}} {}
+#trigger {You see a semi-transparent hexagonal crystal container, a semi-transparent hexagonal crystal container*} {
+#if {@silent = 1} {
+#play {Star conquest\Ground Combat\ContainerHere.wav} @vol}} {}
+#trigger {You see a semi-transparent hexagonal crystal container and a semi-transparent hexagonal crystal container here.} {
+#if {@silent = 1} {
+#play {Star Conquest\Ground Combat\Containerhere.wav} @vol}} {}
+#trigger {* glyph suddenly appears in front of a large blast door.} {
+#if {@silent = 1} {
+#play {Star Conquest\Ground Combat\glyphflash.wav} @vol}} {}
+#trigger {Glyph * damage level exceeds *%!} {
+#if {@silent = 1} {
+#play {Star Conquest\Ground Combat\beep.wav} @vol}} {}
+#trigger {You project a * glyph.} {
+#if {@silent = 1} {
+#play {Star Conquest\Ground Combat\glyphflash.wav} @vol}} {}
+#trigger {* projects a * glyph.} {
+#if {@silent = 1} {
+#play {Star Conquest\Ground Combat\glyphflash.wav} @vol}} {}

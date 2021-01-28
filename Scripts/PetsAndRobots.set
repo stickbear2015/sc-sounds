@@ -1,0 +1,105 @@
+;Robots talking
+#Trigger {* ship buddy says in a chirpy synthesized voice, *} {
+#if {@robots = 1} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\robotsay.wav} @vol}}}} {}
+#trigger {* says in a synthesized voice, *} {
+#if {@robots = 1} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\robotsay.wav} @vol}}}} {}
+#trigger {* the security hoverbot chirps affirmatively.} {
+#if {@robots = 1} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\hoverbotbeep.wav} @vol}}}} {}
+
+;CatBots
+#trigger {* CatBot meows!} {
+#if {@robots = 1} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\felo\meow*3.wav} @vol}}}} {}
+#trigger {* CatBot prances in place for a moment, purring.} {
+#if {@robots = 1} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\felo\purr*3.wav} @vol}}}} {}
+#trigger {* CatBot performs a perfect backflip, then mews happily.} {
+#if {@robots = 1} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\felo\meow*3.wav} @vol}}}} {}
+
+;Felo
+#TRIGGER {* purrs softly.} {
+#if {@socialson = 1} {
+#if {@felo = 1} {
+#if {@silent = 1} {
+#play {Star conquest\General\Felo\purr*3.wav} @Vol}}}} {}
+#TRIGGER {* meows at *.} {
+#if {@socialson = 1} {
+#if {@felo = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\general\felo\meow*3.wav} @vol}}}} {}
+#trigger {* purrs and rubs its head against * hand, looking up at * adoringly.} {
+#if {@socialson = 1} {
+#if {@felo = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\felo\purr*3.wav} @vol}}}} {}
+#trigger {* rubs up against *, and both animals purr softly.} {
+#if {@socialson = 1} {
+#if {@felo = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\felo\purr*3.wav} @vol}}}} {}
+#trigger {* meows, wriggles a bit, then goes back to sleep.} {
+#if {@socialson = 1} {
+#if {@felo = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\felo\meow*3.wav} @vol}}}} {}
+#trigger {* purrs and rubs its head against * hand.} {
+#if {@socialson = 1} {
+#if {@felo = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\felo\purr*3.wav} @vol}}}} {}
+#trigger {* rears up and plants both pairs of forelegs on * leg, then rubs its head against *, purring softly.} {
+#if {@socialson = 1} {
+#if {@felo = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\felo\purr*3.wav} @vol}}}} {}
+#trigger {* approaches * glances around, then begins shoveling low-grade dry Felo Chow into its mouth.} {
+#if {@socialson = 1} {
+#if {@felo = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\felo\feloeat.wav} @vol}}}} {}
+#trigger {* lets out a low growl at *} {
+#if {@socialson = 1} {
+#if {@felo = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\felo\feloroar.wav} @vol}}}} {}
+#trigger {* rubs up against *} {
+#if {@socialson = 1} {
+#if {@felo = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\felo\purr*3.wav} @vol}}}} {}
+#trigger {* digital felo game beeps hungrily as the felo rapidly empties its food bowl.} {
+#if {@socialson = 1} {
+#if {@felo = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\felo\feloeat.wav} @vol}}}} {}
+#trigger {* digital felo game beeps * for food.} {
+#if {@socialson = 1} {
+#if {@felo = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\felo\FeloGameBeep.wav} @vol}}}} {}
+#trigger {* digital felo game beeps repeatedly as the felo chases around a tiny digital ball!} {
+#if {@socialson = 1} {
+#if {@felo = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\felo\FeloGamePlay.wav} @vol}}}} {}
+#trigger {* places its paw on a prominent bar on a felo nutrigel dispenser unit. It begins churning violently for several moments before producing a small glob of nutrigel.} {
+#if {@socialson = 1} {
+#if {@felo = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\felo\nutrigel.wav} @vol}}}} {}

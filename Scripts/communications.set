@@ -1,0 +1,267 @@
+#TRIGGER {* beeps quietly for attention, indicating a new post in *} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Device\New Post.wav} @Vol}} {}
+#TRIGGER {* trills quietly, indicating a new story has been posted under "*"} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Comm\NewsReader.wav} @Vol}} {}
+
+#Trigger {You switch off *.} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Device\Deactivate.wav} @Vol}} {}
+#Trigger {You switch on *.} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Device\Activate.wav} @Vol}} {}
+#Trigger {You switch * off.} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Device\Deactivate.wav} @Vol}} {}
+#Trigger {You switch * on.} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Device\Activate.wav} @Vol}} {}
+#Trigger {You turn * off.} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Device\Deactivate.wav} @Vol}} {}
+#Trigger {You turn * on.} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Device\Activate.wav} @Vol}} {}
+#TRIGGER {You turn off *.} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Device\Deactivate.wav} @Vol}} {}
+#TRIGGER {You turn on *.} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Device\Activate.wav} @Vol}} {}
+#trigger {* dings politely as it receives a new notice.} {
+#if {@silent = 1} {
+#play {Star Conquest\general\comm\alliancenotice.wav} @vol}} {}
+#trigger {* chirps quietly as it receives a new notice.} {
+#if {@silent = 1} {
+#play {Star Conquest\general\comm\AllianceNotice.wav} @vol}} {}
+#trigger {* chimes softly as it receives a new notice.} {
+#if {@silent = 1} {
+#play {Star Conquest\general\comm\AllianceNotice.wav} @vol}} {}
+#trigger {* beeps insistently as it receives a new notice.} {
+#if {@silent = 1} {
+#play {Star Conquest\general\comm\AllianceNotice.wav} @vol}} {}
+#Trigger {* beeps quietly, indicating that it has unread notices.} {
+#if {@silent = 1} {
+#play {Star Conquest\general\comm\AllianceNotice.wav} @vol}} {}
+
+#trigger {[ [ ]* | *: *] *} {
+#if {@commson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\comm\alliance.wav} @vol}}} {}
+#TRIGGER {[ [ ]General Communication] *} {
+#if {@commson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Comm\General.wav} @vol}}} {}
+#Trigger {[ [ ]Newbie Help] *} {
+#if {@commson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Comm\newbie.wav} @Vol}}} {}
+#Trigger {[ [ ]Tactical Communication] *} {
+#if {@commson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Comm\tactical.wav} @Vol}}} {}
+#trigger {[ [ ]Mining Station Communication] *} {
+#if {@commson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\comm\mining.wav} @vol}}} {}
+#trigger {[ [ ]Salvage Op] *} {
+#if {@commson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\comm\salvageop.wav} @vol}}} {}
+;fixes the error  while in a battlesuit and still plays different sounds for different community channels
+#trig {[[]*] * *} {
+#if {(%ifword(%1,@chansecond," ")) and (@commson = 1) and (@silent = 1)} {#play {Star Conquest\general\comm\community2.wav} @vol};
+#if {(%ifword(%1,@org," ")) and (@commson = 1) and (@silent = 1)} {#play {Star Conquest\general\comm\community1.wav} @vol}}
+
+#trigger {Via general sector communication, * "*"} {
+#if {@commson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\comm\sectorprivate.wav} @vol}}} {}
+
+#TRIGGER {* * in a * accent, "*"} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\say.wav} @vol}}} {}
+#Trigger {You * in a * accent, "*"} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\say.wav} @vol}}} {}
+#Trigger {You *, "*"} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\say.wav} @vol}}} {}
+#Trigger {"*" you *.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\say.wav} @vol}}} {}
+#Trigger {"*" says *.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\say.wav} @vol}}} {}
+#Trigger {"*" asks *?} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\say.wav} @vol}}} {}
+#Trigger {"*" exclaims *!} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\say.wav} @vol}}} {}
+#Trigger {"*" asks *? "*"} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\say.wav} @Vol}}} {}
+#Trigger {"*" says *. "*"} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\say.wav} @Vol}}} {}
+#Trigger {"*" exclaims *! "*"} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\say.wav} @vol}}} {}
+#Trigger {"*" exclaims *! "*"} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\say.wav} @vol}}} {}
+#Trigger {"*" * says.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\say.wav} @vol}}} {}
+#Trigger {* says, "*"} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\say.wav} @vol}}} {}
+#Trigger {* asks, "*"} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\say.wav} @vol}}} {}
+#Trigger {* exclaims, "*"} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Socials\say.wav} @vol}}} {}
+#trigger {"*" says *, "*"} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\socials\say.wav} @vol}}} {}
+#trigger {"*" * asks.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\socials\say.wav} @vol}}} {}
+#trigger {* says to * in *, "*"} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\socials\say.wav} @vol}}} {}
+#trigger {* says into * "*"} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\socials\say.wav} @vol}}} {}
+#trigger {* says to *, "*"} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\socials\say.wav} @vol}}} {}
+#trigger {"*" * says. "*"} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\socials\say.wav} @vol}}} {}
+
+#trigger {[ [ ]MTTS] *: *} {
+#if {@commson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\comm\Salvageop.wav} @vol}}} {}
+#trigger {[[]MTTS] * has joined the channel.} {
+#if {@commson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\comm\Salvageop.wav} @vol}}} {}
+#trigger {[][MTTS] * has left the channel.} {
+#if {@commson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\comm\Salvageop.wav} @vol}}} {}
+
+#trigger {[ [ ]Hyperwave Relay] *} {
+#if {@commson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\comm\hypercomm.wav} @vol}}} {}
+#trigger {Incoming hypercaster transmission from *: "*"} {
+#if {@commson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\comm\hyperincome.wav} @vol}}} {}
+#trigger {Incoming hypercaster identification ping from *} {
+#if {@commson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\comm\hyperincome.wav} @vol}}} {}
+#trigger {Incoming hypercaster calibration ping from * Local hypercaster is currently tuned to * and the current power level settings are * percent. Signal strength between this vessel and calibrating vessel *.} {
+#if {@commson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\comm\hyperincome.wav} @vol}}} {}
+
+#trigger {Message from the Space Defense Captain: "*"} {
+#if {@commson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\comm\SpaceDefense.wav} @vol}}} {}
+#trigger {[ [ ]Message from *] *} {
+#if {@commson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\comm\SpaceDefense.wav} @vol}}} {}
+
+#trigger {You speak into the radio, saying*} {
+#if {@commson = 1} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {star conquest\scooping\radio.wav} @vol}}}} {} 
+#trigger {*voice comes over the radio, saying*} {
+#if {@commson = 1} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {star conquest\scooping\radio.wav} @vol}}}} {}
+
+#trigger {You lean into a microphone near the rift controls.} {
+#gagline voice} {}
+#trigger {The voice of * comes tinnily over the linked rift comm, saying,*} {
+#if {@commson = 1} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {star conquest\scooping\radio.wav} @vol}}}} {}
+#trigger {The voice of * comes clearly over the linked rift comm, saying,*} {
+#if {@commson = 1} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {star conquest\scooping\radio.wav} @vol}}}} {}
+
+#trigger {[[]Mentor Channel[]] * says, "*"} {
+#if {@commson = 1} {
+#if {@silent = 1} {
+#play {star conquest\General\Comm\mentor.wav} @vol}}} {}
+#trigger {[[]Mentor Channel[]] * has connected to the game.} {
+#if {@commson = 1} {
+#if {@silent = 1} {
+#play {star conquest\General\Comm\mentor.wav} @vol}}} {}
+#trigger {[[]Mentor Channel[]] * has disconnected from the game.} {
+#if {@commson = 1} {
+#if {@silent = 1} {
+#play {star conquest\General\Comm\mentor.wav} @vol}}} {}
+
+#TRIGGER {A voice emanating from * flight control scanner *} {
+#if {@commson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Comm\FlightScanner.wav} @Vol}}} {}
+#trigger {To all ships in the sector, this station transmits: *} {
+#if {@commson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\comm\sector.wav} @vol}}} {}
+#Trigger {?Squad Communication? * says, "*"} {
+#if {@commson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\squad.wav} @Vol}}} {}
+
+;Spacesuit stuff
+#trigger {Over your spacesuit radio, you hear *} {
+#if {@commson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\squad.wav} @Vol}}} {}
+#trigger {The ship's radio crackles and you hear *} {
+#if {@commson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\squad.wav} @Vol}}} {}
+#trigger {* OOCly, *} {
+#if {@silent = 1} {
+#play {Star Conquest\general\comm\orgold.wav} @vol}} {}

@@ -1,0 +1,169 @@
+#key control-f1 {
+#if {@commson = 1} {
+#var commson 0;
+#say {Communication sounds off.}} {
+#var commson 1;
+#say {Communication sounds on.}}}
+
+#key f2 {
+#if {@robots = 1} {
+#var robots 0;
+#say {Robot sounds (which include catbots) off.}} {
+#var robots 1;
+#say {Robot sounds (which include catbots) on.}}}
+
+#key control-f2 {
+#if {@ovenon = 1} {
+#var ovenon 0;
+#say {Oven sounds off.}} {
+#var ovenon 1;
+#say {Oven sounds on.}}}
+
+#key control-f3 {
+#if {@RTime = 1} {
+#var RTime 0;
+#say {Roundtime sound off.}} {
+#var RTime 1;
+#say {Roundtime sound on.}}}
+
+#key f3 {
+#if {@felo = 1} {
+#var felo 0;
+#say {Felo sounds off.}} {
+#var felo 1;
+#say {Felo sounds on.}}}
+
+#key control-f6 {
+#if {@ShipHitGagging = 1} {
+#var ShipHitGagging 0;
+#say {The ship hit gagging is now off.}} {
+#var ShipHitGagging 1;
+#say {The ship hit gagging is now on.}}}
+
+#key f11 {
+#if {@silent = 1} {
+#var silent 0;
+#say {sounds off.}} {
+#var silent 1;
+#say {Sounds on.}}}
+
+#key f9 {
+#math Vol {@vol - 5};
+#if {@Vol < 5} {@Vol = 5};
+#play {Star Conquest\general\misc\beep*3.wav} @vol;
+#say {The master volume is @Vol percent}}
+
+#key f10 {
+#math Vol {@Vol + 5};
+#if {@Vol > 100} {@Vol = 100};
+#say {The master volume is @Vol percent};
+#play {Star Conquest\general\misc\beep*3.wav} @vol;
+#if {@vol = 100} {
+#say {The master volume is now maxed.}}};
+
+#key f8 {
+#if {@socialson = 1} {
+#var socialson 0;
+#say {The social sounds are now off.}} {
+#var socialson 1;
+#say {The social sounds are now on.}}}
+
+#alias wn {#edit {Star Conquest\scripts\files\ChangeLog.txt}}
+
+#key control-f5 {
+#if {@gaggs = 1} {
+#var gaggs 0;
+#say {The gaggs are now off.}} {
+#var gaggs 1;
+#say {The gaggs are now on.}}}
+
+#key f5 {
+#if {@phones = 1} {
+#var phones 0;
+#say {The phone sounds are now off.}} {
+#var phones 1;
+#say {The phone sounds are now on.}}}
+
+#key f12 {
+#say {Saving all soundpack settings.};
+#file 6 {Star Conquest/Settings.set} 1;#Var SettingsFileCounter 1;
+#Write 6 @vol @SettingsFileCounter;#Math SettingsFileCounter {@SettingsFileCounter +1};
+#Write 6 @socialson @SettingsFileCounter;#Math SettingsFileCounter {@SettingsFileCounter +1};
+#Write 6 @silent @SettingsFileCounter;#Math SettingsFileCounter {@SettingsFileCounter +1};
+#Write 6 @Gaggs @SettingsFileCounter;#Math SettingsFileCounter {@SettingsFileCounter +1};
+#Write 6 @org @SettingsFileCounter;#Math SettingsFileCounter {@SettingsFileCounter +1};
+#Write 6 @commson @SettingsFileCounter;#Math SettingsFileCounter {@SettingsFileCounter +1};
+#Write 6 @ovenon @SettingsFileCounter;#Math SettingsFileCounter {@SettingsFileCounter +1};
+#Write 6 @ChanSecond @SettingsFileCounter;#Math SettingsFileCounter {@SettingsFileCounter +1};
+#Write 6 @robots @SettingsFileCounter;#Math SettingsFileCounter {@SettingsFileCounter +1};
+#Write 6 @felo @SettingsFileCounter;#Math SettingsFileCounter {@SettingsFileCounter +1};
+#Write 6 @RTime @SettingsFileCounter;#Math SettingsFileCounter {@SettingsFileCounter +1};
+#close 6;
+#say {Soundpack settings saved.}}
+
+#key shift-f12 {GagAllText} {}
+
+#key control-f12 {
+#say {"Checking soundpack information...};
+#wait 0.4;
+#say {The following is the current settings for the soundpack. To save them while connected, press F12.};
+#say {1 equals enabled, 0 equals disabled.};
+#say {Current soundpack volume: @vol%, Social sounds: @socialson, Soundpack silent setting: @silent, Soundpack custom gag settings: @gaggs, Communication channel sounds status: @commson, Oven sounds: @ovenon, Robot sounds: @robots, Felo sounds: @felo, and Roundtime sound: @rtime.};
+#say {The current channel that you have set for your first community channel is, @org, and the second channel is @ChanSecond.};
+#say {The current version of the scripts folder is @version, and the current version of the sounds folder is @soundsversion.};
+#say {The current version of the client that you're running is %Version.};
+#say {The script path for the soundpack is: %mudfolder, and the sounds path is: %soundsfolder.}}
+
+#alias ChanOne {
+#say {Please type the name of your default community channel exactly  as it is given by the game for the communication triggers to fire.};
+#prompt org {Name?};
+#say {Your first community channels name is now, @org.}}
+
+
+#alias ChanTwo {
+#say {Please type the name of your secondary community channel exactly  as it is given by the game for the communication triggers to fire.};
+#prompt ChanSecond {Name?};
+#say {Your second community channels name is now, @chansecond.}}
+
+#alias Version {#say {The current version of the soundpack is: @version}}
+
+#alias PeopleContrib {#say {This soundpack has nearly been rewritten by the player of Jason Rat and Melinda Michaels from its original format which was written by Cory Martin and Stephen Hampton. Over time, it has become a very different soundpack from what we started with. We would like to thank the following people for helping make the soundpack better! Elira Waters for sounds for felo! Also, a good friend Matt who does not play Star Conquest. He has helped with some of the harder stuff. Thanks everyone! This pack was updated on @date.}}
+
+#alias Keys {#edit {Star Conquest\scripts\files\Keys.txt}}
+
+#alias Readme {#edit {Star Conquest\scripts\files\ReadMe.txt}}
+
+#Alias sca {#Say {Last scanned Average Damage:  @ScanShipAverageDamage Percent}} {}
+
+#Alias sch {#Say {Last scanned Hull Damage:  @ScanShipHullDamage Percent}} {}
+
+#Alias GagAllText {
+ #Var GagAll {%Eval(NOT @GagAll)};
+ #If {@GagAll=1} {
+  #SetSpeech Incoming Off;
+  #Say {Gagging enabled. Type GagAllText, or press shift plus dash plus F12 to disable.} VoiceOnly
+ } {
+  #SetSpeech Incoming On;
+  #Say {Gagging Disabled.}
+ }
+}
+
+#alias RDi {
+#say {Rolling a soundpack generated di!};
+#play {Star Conquest\General\Misc\Roll.wav} @vol;
+#wait 0.3;
+#say {You rolled a %random(1,6)!}}
+
+#alias reloadsp {
+#say {Reloading the soundpack.};
+#ForAll {SalvagingANDScooping|combat|ground|explore|asteroid|ship|Vars|misc|communications|socials|phones|gags|keys|Oven|PetsAndRobots} {
+#UnLoad {Scripts\%I.set}};
+#reload;
+#say {Soundpack reloaded.};
+#if {@silent = 1};
+#play {Star Conquest\general\misc\beep*3.wav} @vol} {}
+
+#alias length {
+#prompt len {Enter the string here};
+#say {The length of the string, @len is: %length(@len) characters};
+#var len 0}

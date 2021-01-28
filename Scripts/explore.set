@@ -1,0 +1,73 @@
+#TRIGGER {A stationary artifact repository drone suddenly bleeps and extends a gripper-like appendage, picking up a * and dropping it into a receptacle in the front.} {
+#Gagline VOICE;
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\SnatchArtifact2.wav} @Vol}} {}
+#TRIGGER {A stationary artifact repository drone suddenly bleeps and extends a gripper-like appendage, picking up an * and dropping it into a receptacle in the front.} {
+#Gagline VOICE;
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\SnatchArtifact2.wav} @Vol}} {}
+#TRIGGER {Artifacts: *} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Computer\Artifact.wav} @Vol}} {}
+#trigger {You grab * as it floats before you.} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\SnatchArtifact2.wav} @vol}} {}
+
+#Trigger {Something deep inside the starship roars to life as the lights dim sharply.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Move\rift start.wav} @Vol}} {}
+#Trigger {A formless mist suddenly swirls outside the viewports, then is rapidly sucked forward into a bright wormhole in front of the ship. The wormhole blinks out of existence, and the ship is suddenly in normal space.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Move\rift end.wav} @Vol}} {}
+#trigger {The ship is suddenly grasped by powerful EMMs from a nearby temporary space station.} {
+#if {@silent = 1} {
+#play {Star Conquest\ship\move\rift start.wav} @vol}} {}
+#trigger {The tone of the starship's ever-present hum suddenly changes slightly.} {
+#if {@silent = 1} {
+#play {Star Conquest\ship\move\riftcrash.wav} @vol}} {}
+#trigger {The deck suddenly jumps under your feet as you hear a heavy thud from deep inside the starship.} {
+#if {@silent = 1} {
+#play {Star Conquest\ship\move\riftcrash.wav} @vol}} {}
+#trigger {The computer beeps in an imperative manner and informs you that the starship's sensors have detected a new location of interest in the riftflow.} {
+#if {@silent = 1} {
+#play {Star Conquest\ship\misc\riftsensors.wav} @vol}} {}
+#trigger {You drive your shovel into *, then begin flinging shovelfuls into the open cavity of the blast chamber.} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\shovel.wav} @vol}} {}
+#Trigger {You drive your shovel into *, then begin flinging shovelfuls into the open cavity of the blast chamber. * the ship buddy configures its manipulators into a shovel shape and eagerly helps!} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\shovel.wav} @vol}} {}
+#trigger {* drives * shovel into *, then begins flinging shovelfuls into the open cavity of the blast chamber. * the ship buddy configures its manipulators into a shovel shape and eagerly helps!} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\shovel.wav} @vol}} {}
+#trigger {The blast chamber is about * full.} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\fillamount.wav} @vol}} {}
+#trigger {The blast chamber begins warming up.} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\burnstart.wav} @vol}} {}
+#trigger { The rift drive ought to be operational again!} {
+#if {@silent = 1} {
+#play {Star Conquest\General\Misc\fillamount.wav} @vol}} {}
+#trigger {* bips quietly.} {
+#gagline voice;
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\fillamount.wav} @vol}} {}
+#trigger {The computer beeps in an imperative manner and informs you that the ship has passed outside communications range.} {
+#if {@silent = 1} {
+#play {Star Conquest\General\Misc\fillamount.wav} @vol}} {}
+#trigger {The computer beeps and informs you that the ship is once again within communications range.} {
+#if {@silent = 1} {
+#play {Star Conquest\General\Misc\fillamount.wav} @vol}} {}
+#trigger {The starship has left a unique area of space.} {
+#if {@silent = 1} {
+#play {Star Conquest\ship\misc\leaveriftplace.wav} @vol}} {}
+#trigger {* has claimed leadership of the rift group.} {
+#if {@silent = 1} {
+#play {Star Conquest\General\misc\takelead.wav} @vol}} {}
+#trigger {You hear a "ping" sound as the ship's computer detects an active sensor sweep. The sound seems *.} {
+#if {@silent = 1} {
+#play {Star Conquest\ship\comm\ping.wav} @vol}} {}
+#trigger {* repairs appear to be complete!} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\fillamount.wav} @vol}} {}

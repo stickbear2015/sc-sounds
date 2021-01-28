@@ -1,0 +1,50 @@
+#Trigger {You hear a soft ringing sound on the line.} {
+#gagline all;
+#if {@phones = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\general\Comm\Phone Ring Out.wav} @Vol}}} {}
+#Trigger {You hear your * ringing.} {
+#gagline voice;
+#if {@phones = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\general\Comm\Phone Ring.wav} @Vol}}} {}
+#trigger {You hear * ringing.} {
+#if {@socialson = 1} {
+#if {@phones = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\comm\Phone ring.wav} @vol}}}} {}
+#trigger {The connection goes silent with a soft click.} {
+#if {@socialson = 1} {
+#if {@phones = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\comm\phoneend.wav} @vol}}}} {}
+#trigger {Over the line, you hear *} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\socials\say.wav} @vol}}} {}
+#Trigger {Your * chimes softly as it finishes recording a voicemail.} {
+#if {@socialson = 1} {
+#if {@phones = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\comm\Voicemail.wav} @vol}}}} {}
+#trigger {Your phone is now silenced.} {
+#gagline voice;
+#if {@socialson = 1} {
+#if {@phones = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\comm\muted.wav} @vol}}}} {}
+#trigger {Your phone is now unsilenced.} {
+#gagline Voice;
+#if {@socialson = 1} {
+#if {@phones = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\comm\unmuted.wav} @vol}}}} {}
+#trigger {It is currently silenced and you will not hear any calls.} {
+#gagline Voice;
+#if {@socialson = 1} {
+#if {@phones = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\comm\muted.wav} @vol}}}} {}
+
+#trigger {You switch a toggle on your * einrophone.} {
+#gagline Voice} {}

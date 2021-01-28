@@ -1,0 +1,482 @@
+;airlock
+#TRIGGER {* a large button marked CYCLE.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\cyclestart.wav} @Vol}} {}
+#TRIGGER {The computer announces over your suit radio, "Beginning cycling."} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\AirStart.wav} @Vol}} {}
+#TRIGGER {The computer announces over your suit radio, "Cycling complete."} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\Bell.wav} @Vol}} {}
+#TRIGGER {The computer announces, "Cycling complete."} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\Bell.wav} @Vol}} {}
+#TRIGGER {A small light on the airlock control panel turns from red to yellow.  Through your suit, you gradually begin to hear the hiss of air entering the airlock.} {
+#Gagline Voice} {}
+#TRIGGER {A small light on the airlock control panel turns from green to yellow.  Through your suit, you hear the hiss of air quickly leaving the airlock.} {
+#Gagline Voice} {}
+#TRIGGER {The hiss of air slowly fades away into nothingness, and the yellow light becomes green.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\AirEnd.wav} @Vol}} {}
+#TRIGGER {The computer announces, "Beginning cycling."} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\AirStart.wav} @Vol}} {}
+#TRIGGER {The hiss of air slowly fades away into nothingness, and the yellow light becomes red.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\AirEnd.wav} @Vol}} {}
+#trigger {The airlock hatch chimes quietly.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\ship\misc\AirlockChime.wav} @vol}} {}
+#TRIGGER {You float close to * "*", open the hatch, and carefully float inside, orienting yourself so that your feet hit the floor as you enter the ship's artificial gravity field.} {
+#Gagline Voice} {}
+
+;boarding
+#TRIGGER {Some lights on the * suddenly flash several times.} {
+#if {@silent = 1} {
+#play {Star Conquest\Ship\Misc\lights.wav} @Vol}} {}
+#Trigger {Some lights on * flash as * boards it. They flash again as the airlock closes.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\SomeoneBoardsShip.wav} @Vol}} {}
+#Trigger {The hatch seems to be locked.  You can't get in.} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\CantGo.wav} @Vol}} {}
+#trigger {You hear a sharp click as the ship's hatch is locked.} {
+#if {@silent = 1} {
+#play {Star Conquest\ship\misc\hatch.wav} @vol}} {}
+#Trigger {The computer reports that a person has attempted to enter the ship but was turned away by the locked hatch.} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\CantGo.wav} @Vol}} {}
+#trigger {Some lights on * flash as * group board it. They flash again as the airlock closes.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\SomeoneBoardsShip.wav} @Vol}} {}
+
+;exiting
+#Trigger {Spaceport security officers arrive and haul you bodily off the ship.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\AirlockExit.wav} @Vol}} {}
+#Trigger {You exit the ship.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\AirlockExit.wav} @Vol}} {}
+#Trigger {You exit the capsule.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\AirlockExit.wav} @Vol}} {}
+#Trigger {You follow * out of the ship.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\AirlockExit.wav} @Vol}} {}
+#Trigger {You carefully open the hatch and float outside.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\AirlockExit.wav} @Vol}} {}
+
+;power
+#TRIGGER {The reactionless drive of the * "*" begins to hum slightly as the starship is powered up.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Move\precision powerup.wav} @Vol}} {}
+#Trigger {The reactionless drive of * "*" ceases its faint hum as the starship is powered down.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Move\precision powerdown.wav} @Vol}} {}
+#TRIGGER {The faint sounds and status lights of the starship's systems slowly fade away, leaving you in a dim silence.} {
+#Gagline VOICE;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\PowerOff.wav} @Vol}} {}
+#TRIGGER {You pull a large lever*} {
+#Gagline voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\Lever.wav} @Vol}} {}
+#TRIGGER {You grasp a large lever on the control board and push it slowly away from you.} {
+#Gagline voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\Lever.wav} @Vol}} {}
+#TRIGGER {Status lights blink on all around you as faint hums and beeps begin to emanate from the various starship systems.} {
+#Gagline VOICE;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\PowerOn.wav} @Vol}} {}
+
+;movement
+#Trigger {* "*" is loaded onto an automated flatbed and slowly moved into a large garage.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Move\LandingPadToGarage.wav} @Vol}} {}
+#Trigger {* "*" is slowly brought in aboard an automated flatbed, then lowered to the floor.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Move\ShipOnFlatbed.wav} @Vol}} {}
+#TRIGGER {The * is loaded onto an automated flatbed and slowly moved to the launching area.} {
+#Gagline voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\Garage.wav} @Vol}} {}
+#TRIGGER {Your ship * has been automatically moved into a garage.} {
+#Gagline voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\Garage.wav} @Vol}} {}
+
+;rescue
+#TRIGGER {A high warbling alarm suddenly goes off.  Speaking over it, the computer announces, "Fatal hit received.  Occupants must stand by for emergency ejection."} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Combat\warbling.wav} @Vol}} {}
+#TRIGGER {You suddenly float up into the air as the ship's artificial gravity abruptly switches off, and you feel your hair stand on end as the ship projects an electromagnetic field around you. Suddenly, every seam of the ship seems to come apart, exposing you to space. You quickly close your eyes as the vacuum pulls at your skin and the electromagnetic field tugs you rapidly toward a starship rescue pod.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Combat\YouDestroyed4.wav} @Vol;
+#Play {Star Conquest\Ship\Combat\EMField.wav} @Vol}} {}
+#TRIGGER {You suddenly feel yourself in the grip of a strong electromagnetic field.  The field hauls you bodily to a waiting escape pod, and you are shoved inside.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Combat\EMField.wav} @Vol}} {}
+#Trigger {The pod continues accelerating rapidly for several minutes.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\EscapePodWormHoleJump1.wav} @Vol}} {}
+#Trigger {Finally, you feel a slight shaking that quickly grows more violent.  The pod must be coming in for a landing.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\EscapePodWormHoleJump2.wav} @Vol}} {}
+#Trigger {The pod decelerates at the last moment, causing your stomach to protest vigorously.  As soon as the pod touches solid ground, rescue workers open it and pull you out, quickly checking you over for any injuries.*} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\EscapePodDescend.wav} @Vol}} {}
+
+;launch and land
+#TRIGGER {The mild vibration of acceleration eases off and is replaced by the firm pull of artificial gravity as the ship pulls into clear space.} {
+#Gagline voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\Background2.wav} @Vol}} {}
+#TRIGGER {The mild vibration of acceleration eases off and is replaced by the firm pull of gravity as the ship touches down smoothly on the *} {
+#Gagline voice;
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\beep*3.wav} @vol}} {}
+#TRIGGER {The mild vibration of acceleration eases off and is replaced by the firm pull of the space station's local artificial gravity.} {
+#Gagline voice;
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\beep*3.wav} @vol}} {}
+#TRIGGER {You feel mild acceleration as the ship descends} {
+#Gagline voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Move\Landing.wav} @Vol}} {}
+#Trigger {You notice a bright flash of light above; a starship must be coming in for a landing.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Move\Landing.wav} @Vol}} {}
+#Trigger {You notice a point of light outside slowly start to grow larger.  A starship must be about to dock.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Move\Landing.wav} @Vol}} {}
+#TRIGGER {The ship's computer automatically requests landing clearance.} {
+#Gagline voice;
+#if {@silent = 1} {
+#Play {Star Conquest\commchirp*2.wav} @Vol}} {}
+#TRIGGER {You use the ship's radio to ask flight control for launch clearance.} {
+#Gagline voice;
+#if {@silent = 1} {
+#Play {Star Conquest\commchirp*2.wav} @Vol}} {}
+#TRIGGER {You begin the docking sequence.} {
+#Gagline voice;
+#if {@silent = 1} {
+#Play {Star Conquest\commchirp*2.wav} @Vol}} {}
+#Trigger {You feel a bit of acceleration as the ship begins docking procedures.} {
+#Gagline VOICE;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Move\Landing.wav} @Vol}} {}
+#TRIGGER {You feel mild acceleration as the ship lifts off smoothly.} {
+#Gagline VOICE;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Move\Launch.wav} @Vol}} {}
+#TRIGGER {You feel mild acceleration as the ship descends toward an asteroid.} {
+#Gagline VOICE;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Move\Landing.wav} @Vol}} {}
+#TRIGGER {A flash of movement out of the corner of your eye brings your attention to the *"*" as it settles down upon the nearby landing pad.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Move\Landing.wav} @Vol}} {}
+#TRIGGER {You feel a faint rumbling and look up just in time to see the *"*" lift off the landing pad and head into space.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Move\Launch.wav} @Vol}} {}
+#Trigger {The * "*" rises smoothly off the ground and accelerates rapidly toward space.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Move\Launch.wav} @Vol}} {}
+
+;ship moving
+#TRIGGER {The reactionless drive emits a deep hum as the ship moves.} {
+#Gagline Voice} {}
+#TRIGGER {A destination appears on the ship's navigation controls: *} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\Beep1.wav} @Vol}} {}
+#TRIGGER {The sound of the engines slowly fades away as the starship stops moving.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Move\Decelerate.wav} @Vol}} {}
+#TRIGGER {You detect a faint rumbling as the starship begins to move through space.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Move\Accelerate.wav} @Vol}} {}
+#Trigger {You hear a loud rumbling as the ship's engines move using emergency boost power.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Move\Boost.wav} @Vol}} {}
+#trigger {A loud roar is heard as the starship's afterburners fire.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Move\Boost.wav} @Vol}} {}
+#TRIGGER {A small light next to the word AUTOPILOT switches on, while a similar light next to the word MANUAL switches off.} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\Beep1.wav} @Vol}} {}
+#TRIGGER {A small light next to the word MANUAL switches on, while a similar light next to the word AUTOPILOT switches off.} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\Beep1.wav} @Vol}} {}
+
+;FTL
+#TRIGGER {FTL Capable: *} {
+#Gagline VOICE} {}
+#TRIGGER {You hear a sharp electronic whine as the FTL drive opens a wormhole.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Move\Jumpgate.wav} @Vol}} {}
+#TRIGGER {The starship shudders violently as it nears the wormhole mouth.} {
+#Gagline Voice} {}
+#TRIGGER {The windows automatically dim as space outside dissolves into a bright flash of light.} {
+#Gagline Voice} {}
+#TRIGGER {The bright light fades and is once again replaced by the black vacuum and stars of a different sector of space.  The vibrations slowly ease off as the wormhole shrinks and disappears.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\Background2.wav} @Vol}} {}
+#TRIGGER {You hear a sharp electronic whine as power suddenly flows into the wormhole drive.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Move\ftl.wav} @Vol}} {}
+#TRIGGER {*The computer says, "Destination selected. * jumps to * Orbit. Initializing quantum wormhole selection sequence."} {
+#Gagline Voice} {}
+#TRIGGER {The computer says, "Convergent wormhole located. Expanding wormhole."} {
+#Gagline Voice} {}
+#TRIGGER {You feel mild acceleration as the ship moves toward a space station.} {
+#Gagline voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Move\Landing.wav} @Vol}} {}
+#TRIGGER {You feel mild acceleration as the ship moves toward a space structure.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Move\Landing.wav} @Vol}} {}
+
+#TRIGGER {*'s voice comes over the loudspeaker and says, "*"} {
+#Sub {%1: %2};
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Comm\PA*4.wav} @vol}} {}
+#TRIGGER {You speak into the PA microphone, saying, *} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Comm\pa*4.wav} @vol}} {}
+#TRIGGER {You * into the PA microphone.} {
+#if {@silent = 1} {
+#play {Star Conquest\ship\comm\pa*4.wav} @vol}} {}
+#TRIGGER {* says into the PA microphone, "*"} {
+#Sub {%1, %2};
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Comm\pa*4.wav} @vol}} {}
+#trigger {A voice says over the speaker, "*"} {
+#if {@silent = 1} {
+#play {Star Conquest\ship\comm\pa*4.wav} @vol}} {}
+#trigger {* voice comes over the loudspeaker as *} {
+#if {@silent = 1} {
+#play {Star Conquest\ship\comm\pa*4.wav} @vol}} {}
+#Trigger {A voice comes over the speaker and says, "*"} {
+#Sub {%1};
+#if {@silent = 1};
+#Play {Star Conquest\Ship\Comm\PA*4.wav} @Vol} {}
+#trigger {*, and lift one cup of your earmuffs in time to hear *'s voice coming over the loudspeaker, saying, "*"} {
+#sub {%2: %3};
+#if {@silent = 1};
+#play {Star Conquest\ship\comm\pa*4.wav} @vol}
+
+#Trigger {A few green lights blink on, then off again a moment later, as another starship is scanned.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Computer\Scan.wav} @vol;
+#Gagline Voice;
+#Math ScanTriggerCounter {@ScanTriggerCounter + 1};
+#Var ScanTriggersActive 1}} {}
+#Trigger {Hull damage: &{ScanShipHullDamage}?} {
+#If {@ScanTriggersActive = 1} {
+#Gagline Voice;
+#Math ScanTriggerCounter {@ScanTriggerCounter + 1}}} {}
+#Trigger {Average damage: &{ScanShipAverageDamage}?} {
+#If {@ScanTriggersActive = 1} {
+#Gagline Voice;
+#Math ScanTriggerCounter {@ScanTriggerCounter + 1}}} {}
+
+#Trigger {You hear a loud clang, followed by a distinct thud: the sound of a ship docking.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Move\RingStart.wav} @Vol;
+#Play {Star Conquest\Ship\Move\RingEnd.wav} @Vol}} {}
+#Trigger {The starship begins docking procedures with *.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Move\RingStart.wav} @Vol}} {}
+#Trigger {You hear a low scraping sound as the ship undocks.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Move\RingRemove.wav} @Vol}} {}
+
+#Trigger {You lift an unobtrusive panel and make your way into the starship's network of system ducts.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\EnterDucts*2.wav} @Vol}} {}
+#Trigger {* lifts an unobtrusive panel and makes * way into the starship's network of system ducts.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\EnterDucts*2.wav} @Vol}} {}
+#Trigger {A panel suddenly moves aside.  A moment later, * arrives from the starship's network of systems ducts.} {
+#Sub {%1 arrives from the starship's network of systems ducts.};
+#if {@silent = 1};
+#Play {Star Conquest\Ship\Misc\EnterDucts*2.wav} @Vol} {}
+
+#Trigger {The computer reports that * "*" has jumped into the sector.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Move\EnterSector1.wav} @Vol}} {}
+#Trigger {The computer reports that * "*" has jumped out of the sector.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Move\ExitSector1.wav} @Vol}} {}
+
+#Trigger {You power up the ship's engines, and the docking bay door begins to open slowly.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Move\Launch.wav} @Vol;
+#Play {Star Conquest\Ship\Misc\DockingBayDoorOpen.wav} @Vol}} {}
+#Trigger {You hear an odd rumbling sound as the large docking bay door opens.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\DockingBayDoorOpen.wav} @Vol}} {}
+#Trigger {You hear a solid thud as the ship sets down in a larger ship's docking bay.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\DockingBayDoorClose.wav} @Vol}} {}
+#Trigger {You hear a solid thud as a ship sets down in the docking bay.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\DockingBayLanding.wav} @Vol}} {}
+
+#Trigger {A crane efficiently unloads * "*" from * "*".} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\LowerSuit.wav} @Vol}} {}
+#Trigger {A crane efficiently loads * "*" into * "*".} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\LowerSuit.wav} @Vol}} {}
+#Trigger {A crane efficiently loads * (*) into *} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\LowerSuit.wav} @Vol}} {}
+
+#trigger {The station shudders briefly. The computer announces, "Mobile storage module manually ejected. Tracking activated. Awaiting pickup."} {
+#Gagline voice;
+#if {@silent = 1} {
+#Play {Star Conquest\ship\move\tempstationtransfer.wav} @vol}} {}
+#trigger {The lights dim briefly as the station opens an internal wormhole. The computer announces, "Mobile storage module transferred. Please stand by for module return."} {
+#Gagline voice;
+#if {@silent = 1} {
+#Play {Star Conquest\ship\move\tempstationtransfer.wav} @vol}} {}
+
+#trigger {[ [[]*[]] Jump Out: *} {
+#if {@silent = 1} {
+#play {Star Conquest\ship\move\exitsector1.wav} @vol}} {}
+#trigger {[[]*[]] Jump In: *} {
+#if {@silent = 1} {
+#play {Star Conquest\ship\move\entersector1.wav} @vol}} {}
+#trigger {[ [[]*[]] Launch: *} {
+#if {@silent = 1} {
+#play {Star Conquest\ship\move\Launch.wav} @vol}} {}
+#trigger {[[]*[]] launch: *} {
+#if {@silent = 1} {
+#play {Star Conquest\ship\move\Launch.wav} @vol}} {}
+#trigger {[[]*[]] landing: *} {
+#if {@silent = 1} {
+#play {Star Conquest\ship\move\Landing.wav} @vol}} {}
+#trigger {[ [[]*[]] Landing: *} {
+#if {@silent = 1} {
+#play {Star Conquest\ship\move\Landing.wav} @vol}} {}
+#trigger {[ [[]*[]] Docking: *} {
+#if {@silent = 1} {
+#play {Star Conquest\ship\move\Landing.wav} @vol}} {}
+#trigger {[ [ ]*] Navigate In: *} {
+#if {@silent = 1} {
+#play {Star Conquest\ship\move\EnterSector1.wav} @vol}} {}
+#trigger {[ [ ]*] Navigate Out: *} {
+#if {@silent = 1} {
+#play {Star Conquest\ship\move\ExitSector1.wav} @vol}} {}
+
+#trigger {You begin the * sequence.} {
+#if {@silent = 1} {
+#play {Star Conquest\commchirp2.wav} @vol}} {}
+#trigger {The ship's computer automatically requests * clearance.} {
+#if {@silent = 1} {
+#play {Star Conquest\commchirp2.wav} @vol}} {}
+#trigger {You feel mild acceleration as the ship descends toward a planet.} {
+#Gagline voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Move\Landing.wav} @Vol}} {} 
+
+#TRIGGER {The computer reports *} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Computer\Announce1.wav} @Vol}} {}
+#Trigger {The ship's current engine speed is * km/s.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Computer\Announce1.wav} @Vol}} {}
+#Trigger {The ship is not moving.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Computer\Announce1.wav} @Vol}} {}
+#TRIGGER {The computer reports that your current coordinates are: (*)} {
+#sub %1} {}
+#trigger {Bari Pods: *} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\warning.wav} @vol}} {}
+#trigger {The starship transitions into another sector.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\ship\move\changesector.wav} @vol}} {}
+#Trigger {The computer says, "The pilot has signalled that incoming weapon fire is imminent. Please brace yourself."} {
+#Gagline Voice;
+#Say {Brace!}} {}
+#Trigger {An odd humming sound fills the ship.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Combat\Dampen.wav} @Vol}} {}
+#Trigger {A flashing green light indicates that your news has been updated.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Computer\NewsUpdate.wav} @Vol}} {}
+#Trigger {The computer sounds the warning indicating that there is less than  ten minutes of charge left in the ship's batteries.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Computer\LowBatteryAlert.wav} @Vol}} {}
+#TRIGGER {You press a button to cancel the current autopilot program.} {
+#Gagline voice;
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\Beep1.wav} @Vol}} {}
+#TRIGGER {FTL Capable: *} {
+#Gagline VOICE} {}
+#TRIGGER {You pull up the * and press a large button.} {
+#Gagline voice;
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\Beep2.wav} @Vol}} {}
+#TRIGGER {The computer announces, "Commencing * for coordinates (*).} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Computer\Keyboard.wav} @Vol}} {}
+#TRIGGER {* brings up the * board.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Computer\Keyboard.wav} @Vol}} {}
+#Trigger {Weapons status:} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Computer\Display.wav} @Vol}} {}
+#Trigger {The computer announces, "*"} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Computer\Announce*4.wav} @Vol}} {}
+#Trigger {The computer says, "*"} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Computer\Announce*4.wav} @Vol}} {}
+#TRIGGER {The computer informs you that you have mail waiting, which may be picked up at *} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\NewMail.wav} @Vol}} {}
+#TRIGGER {X-axis ->                     X-axis ->} {} {}
+#TRIGGER {* deftly enters a set of coordinates, and the computer chirps in confirmation.} {
+#Gagline voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Combat\confirmation.wav} @Vol}} {}
+#trigger {Nests: *} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\NestDetection.wav} @vol}} {}
+#trigger {Starship "*" *.} {
+#Gagline voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\hatch.wav} @Vol}} {}
+#trigger {You hear several peculiar, barely audible clangs outside of the ship's walls, followed by some scraping sounds.} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\scrape.wav} @vol}} {}

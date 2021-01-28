@@ -1,0 +1,47 @@
+#if {NOT %Defined(vol)} {#var vol 50}
+#if {NOT %Defined(silent)} {#var silent 0}
+#if {NOT %Defined(socialson)} {#var socialson 1}
+#if {NOT %Defined(commson)} {#var commson 1}
+#if {NOT %Defined(ShipHitGaggging)} {#var ShipHitGagging 0}
+#if {NOT %Defined(ovenon)} {#var ovenon 1}
+#if {NOT %Defined(gaggs)} {#var gaggs 0}
+
+#ForAll {SalvagingANDScooping|combat|ground|explore|asteroid|ship|Vars|misc|communications|socials|phones|gags|keys|Oven|PetsAndRobots} {
+#load {Scripts\%I.set}}
+
+#file 6 {Star Conquest/Settings.set} 1;
+
+#Read 6 vol 1;
+#Read 6 socialson 2;
+#Read 6 silent 3;
+#Read 6 Gaggs 4;
+#Read 6 org 5;
+#Read 6 commson 6;
+#Read 6 ovenon 7;
+#Read 6 ChanSecond 8;
+#Read 6 robots 9;
+#Read 6 felo 10;
+#Read 6 RTime 11;
+#Close 6;
+
+#Trigger { * You have been disconnected. Please come back soon. *} {
+#file 6 {Star Conquest/Settings.set} 1;#Var SettingsFileCounter 1;
+#Write 6 @vol @SettingsFileCounter;#Math SettingsFileCounter {@SettingsFileCounter +1};
+#Write 6 @socialson @SettingsFileCounter;#Math SettingsFileCounter {@SettingsFileCounter +1};
+#Write 6 @silent @SettingsFileCounter;#Math SettingsFileCounter {@SettingsFileCounter +1};
+#Write 6 @Gaggs @SettingsFileCounter;#Math SettingsFileCounter {@SettingsFileCounter +1};
+#Write 6 @org @SettingsFileCounter;#Math SettingsFileCounter {@SettingsFileCounter +1};
+#Write 6 @commson @SettingsFileCounter;#Math SettingsFileCounter {@SettingsFileCounter +1};
+#Write 6 @ovenon @SettingsFileCounter;#Math SettingsFileCounter {@SettingsFileCounter +1};
+#Write 6 @ChanSecond @SettingsFileCounter;#Math SettingsFileCounter {@SettingsFileCounter +1};
+#Write 6 @robots @SettingsFileCounter;#Math SettingsFileCounter {@SettingsFileCounter +1};
+#Write 6 @felo @SettingsFileCounter;#Math SettingsFileCounter {@SettingsFileCounter +1};
+#Write 6 @RTime @SettingsFileCounter;#Math SettingsFileCounter {@SettingsFileCounter +1};
+#close 6;
+#say {Soundpack settings saved.}}
+
+#say {Welcome to the VIP mud soundpack for Star Conquest! This soundpack has been magerly overhauled by Jason Rat and Melinda Michaels and is on version @version! Please note all features may not have sounds. If you wish for something to have a sound that currently doesn't, please e-mail us at scsoundpack~@gmail.com!}
+
+#TRIGGER {Welcome to the original and still the most innovative pulp science fiction multiplayer roleplaying adventure!} {
+#if {@silent = 1} {
+#Play {Star Conquest\Music\*2.wav} @Vol}} {}

@@ -1,0 +1,154 @@
+;Salvaging
+#trigger {* breaks apart into pieces!} {
+#Gagline Voice;
+#if {@silent = 1} {
+#play {Star Conquest\Salvaging\break*2.wav} @vol}} {}
+#trigger {* shudders slightly and begins making a grinding noise.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\salvaging\compresser.wav} @vol}}} {}
+#trigger {You hear a resounding grinding noise from the ship's storage hold.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#play {Star Conquest\salvaging\compresser.wav} 90}} {}
+#trigger {You fire the grapple. The metal claws bounce off of the surface, finding no purchase.} {
+#Gagline voice;
+#if {@silent = 1} {
+#play {Star Conquest\salvaging\bounce.wav} @vol}} {}
+#trigger {You've fired the grapple at the *.} {
+#Gagline voice;
+#if {@silent = 1} {
+#play {Star Conquest\salvaging\connect.wav} @vol}} {}
+#trigger {You activate the * grapple *.} {
+#Gagline voice;
+#if {@silent = 1} {
+#play {Star Conquest\salvaging\FireGrapple.wav} @vol}} {}
+#trigger {You sense something loosening underneath the grapple's teeth. You must be close to dislodging something.} {
+#Gagline voice;
+#if {@silent = 1} {
+#play {Star Conquest\salvaging\GrappleMove.wav} @vol}} {}
+#trigger {You pull * salvage grapple!} {
+#if {@silent = 1} {
+#play {Star Conquest\Salvaging\pullfree.wav} @vol}} {}
+#trigger {* begins tumbling slightly.} {
+#Gagline voice;
+#if {@silent = 1} {
+#play {Star Conquest\salvaging\tumbleslightly.wav} @vol}} {}
+#TRIGGER {A bit of debris is snagged by the starship's electromagnetic field projector and slowly brought into the ship's hold.} {
+#gagline voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\Salvage*3.wav} @vol}} {}
+
+#TRIGGER {You instruct the computer to begin scanning for debris.} {
+#Gagline voice} {}
+#TRIGGER {Scanning reveals no nearby debris.} {
+#Gagline voice;
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\Beep2.wav} @Vol}} {}
+
+#trigger {You activate * salvage electromagnetic manipulator and begin scanning for debris.} {
+#gagline voice;
+#if {@silent = 1} {
+#play {Star Conquest\Ship\Misc\BOOP2.wav} @Vol}} {}
+#Trigger {You hear metallic scraping as the transfer of the cargo begins.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\TransferStart.wav} @Vol}} {}
+#Trigger {The sounds from the ship's hold cease as the cargo finishes transferring.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\TransferEnd.wav} @Vol}} {}
+#Trigger {You notice a few automated robots begin to unload storage pods from * "*".} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Asteroid\Mining\basic coming and going.wav} @Vol}} {}
+#trigger {There is nothing in the storage hold.} {
+#if {@silent = 1} {
+#play {Star Conquest\ship\computer\display.wav} @vol}} {}
+#trigger {Storage hold contents:} {
+#if {@silent = 1} {
+#play {Star Conquest\ship\computer\display.wav} @vol}} {}
+#Trigger {You hear a solid clunk as a salvage canister is secured to the ship.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\SalvageCanisterAttached.wav} @Vol}} {}
+#Trigger {You hear a thud as the ship attaches itself to a standard grade salvage canister.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\SalvageCanisterAttached.wav} @Vol}} {}
+#Trigger {The ship jerks slightly as it detaches a standard grade salvage canister.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\ExpelCargo.wav} @Vol}} {}
+#Trigger {You hear a solid thunk sound as cargo is expelled from the storage room.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\ExpelCargo.wav} @Vol}} {}
+
+;Scooping
+#trigger {The scoop jitters faintly as it dives into a cloud.} {
+#if {@silent = 1} {
+#play {Star Conquest\scooping\enter.wav} @vol}} {}
+#trigger {The cloud dissipates into scattered mist, the greater part of it having ended up in your scoop's storage tank.} {
+#if {@silent = 1} {
+#play {Star Conquest\scooping\leave.wav} @vol}} {}
+#trigger {You flip a switch and the intakes open with a clunk, causing the scoop to slow with a sudden jerk.} {
+#if {@silent = 1} {
+#play {Star Conquest\scooping\scoopopen.wav} @vol}} {}
+#trigger {You flip a switch and the intakes close with a heavy thud, and the scoop suddenly shoots ahead faster as air resistance is reduced.} {
+#if {@silent = 1} {
+#play {Star Conquest\scooping\scoopclose.wav} @vol}} {}
+#trigger {The intakes close automatically as storage fills.} {
+#if {@silent = 1} {
+#play {Star Conquest\scooping\scoopclose.wav} @vol}} {}
+#trigger {The storage hold is empty. Capacity is *} {
+#if {@silent = 1} {
+#play {Star Conquest\ship\computer\display.wav} @vol}} {}
+#trigger {The storage hold contains *} {
+#if {@silent = 1} {
+#play {Star Conquest\ship\computer\display.wav} @vol}} {}
+#trigger {Hydrogen storage is at * of capacity.} {
+#if {@silent = 1} {
+#play {Star Conquest\scooping\cargopercent.wav} @vol}} {}
+#trigger {Engine wear is at * of safety margins.} {
+#if {@silent = 1} {
+#play {Star Conquest\scooping\scoopwarning.wav} @vol}} {}
+#trigger {The scoop emerges into clear skies, trailing streams of vapor. The cloud drifts away toward *.} {
+#if {@silent = 1} {
+#play {Star Conquest\scooping\leave.wav} @vol}} {}
+#trigger {The scoop emerges into the general chaos of the storm. The stormcloud drifts away toward *.} {
+#if {@silent = 1} {
+#play {Star Conquest\scooping\leave.wav} @vol}} {}
+#trigger {The cloud vanishes into the distance.} {
+#if {@silent = 1} {
+#play {star conquest\scooping\cloudoutgone.wav} @vol}} {}
+#trigger {The scoop emerges into clear skies, trailing streams of vapor. The cloud drifts away toward *} {
+#if {@silent = 1} {
+#play {star conquest\scooping\cloudoutmore.wav} @vol}} {}
+#trigger {A cloud has been sighted toward *} {
+#if {@silent = 1} {
+#play {Star Conquest\scooping\clouddetect.wav} @vol}} {}
+#trigger {A stormcloud has been sighted toward * at a depth of *km.} {
+#if {@silent = 1} {
+#play {Star Conquest\scooping\clouddetect.wav} @vol}} {}
+#trigger {About * kilometers to the *, a massive dark stormfront the size of a planet looms like a roiling black wall.} {
+#if {@silent = 1} {
+#play {Star Conquest\scooping\storm1.wav} @vol}} {}
+#trigger {The sighted cloud is * meters away.} {
+#if {@silent = 1} {
+#play {Star Conquest\scooping\clouddetect.wav} @vol}} {}
+#trigger {The sighted cloud is now toward *} {
+#if {@silent = 1} {
+#play {Star Conquest\scooping\clouddetect.wav} @vol}} {}
+#trigger {The scoop jerks as it catches the wind, then begins tearing through the atmosphere, bouncing roughly from turbulence.} {
+#if {@silent = 1} {
+#play {Star Conquest\scooping\detach.wav} @vol}} {}
+#trigger {The scoop drops its ballast and ascends rapidly as its homing beacon pings the ship.} {
+#if {@silent = 1} {
+#play {Star Conquest\scooping\ping*2.wav} @vol}} {}
+#trigger {Wind shrieks outside the scoop's thin metal skin.} {
+#if {@silent = 1} {
+#play {Star Conquest\scooping\wind.wav} @vol}} {}
+#trigger {Wind whistles over the scoop's sleek flying wing shape.} {
+#if {@silent = 1} {
+#play {Star Conquest\scooping\wind.wav} @vol}} {}
+#trigger {Heading: *} {
+#if {@silent = 1} {
+#play {star conquest\scooping\scoopheading.wav} @vol}} {}
+#trigger {The scoop hits the thicker, soupy portions of the lower atmosphere, and the scoop shudders and jerks violently.} {
+#gagline voice;
+#if {@silent = 1} {
+#play {Star Conquest\scooping\bottom.wav} @vol}} {}

@@ -1,0 +1,25 @@
+#TRIGGER {AutoStar detects * possible destinations.*} {
+#if {@gaggs = 1} {
+#gagline all}} {}
+#TRIGGER {AutoStar (general-purpose starship autopilot) Version 9.1} {
+#if {@gaggs = 1} {
+#gagline all}} {}
+#trigger {[[]Notification from *] *} {
+#if {@gaggs = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\comm\org.wav} @vol}}} {}
+
+#TRIGGER {You hear the ping of micrometeorites against the hull of the starship as it moves.} {
+#Gagline Voice} {}
+#TRIGGER {The deck vibrates under you slightly as the ship moves.} {
+#Gagline VOICE} {}
+#TRIGGER {The starship's hull creaks slightly as it moves.} {
+#Gagline VOICE} {}
+#TRIGGER {The ship's artificial gravity fluctuates slightly as it moves.} {
+#Gagline VOICE} {}
+#TRIGGER {The thrumming of the engines slowly changes pitch as the starship moves.} {
+#Gagline VOICE} {}
+#TRIGGER {You hear a faint whirring as the reactionless drive reorients itself to keep the ship on course.} {
+#Gagline VOICE} {}
+#trigger {      The repairing has no effect!} {
+#gagline VOICE} {}

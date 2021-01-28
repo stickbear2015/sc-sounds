@@ -1,0 +1,152 @@
+;hauling
+#TRIGGER {You press the button to deploy the ship's anchor.} {
+#Gagline Voice} {}
+#TRIGGER {A sharp crack is heard throughout the ship as the anchors on either side deploy with explosive force, biting deep into the surface of the asteroid.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\General\Asteroid\hauling\anchor start.wav} @Vol}} {}
+#TRIGGER {The ship's engines fire, and the anchored asteroid gradually begins to move toward *} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\General\Asteroid\hauling\Haul.wav} @Vol}} {}
+#TRIGGER {As the asteroid falls into the station's collection bay, your ship detaches and heads for the docking bay.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\General\Asteroid\hauling\AnchorRemove.wav} @Vol}} {} 
+#TRIGGER {Asteroids: *} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\Beep1.wav} @Vol}} {}
+#trigger {The asteroid is approximately * sectors from its destination.} {
+#if {@silent = 1} {
+#play {Star Conquest\ship\computer\announce*4.wav} @vol}} {}
+#trigger {The asteroid is approximately * sector from its destination.} {
+#if {@silent = 1} {
+#play {Star Conquest\ship\computer\announce*4.wav} @vol}} {}
+#trigger {The asteroid is within the destination sector.} {
+#if {@silent = 1} {
+#play {Star Conquest\ship\computer\announce*4.wav} @vol}} {}
+#trigger {You raise a bulky asteroid supply cannon to your eye and begin carefully aiming at the asteroid's surface through the scope.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\asteroid\hauling\AimCannon.wav} @vol;
+#play {Star Conquest\general\asteroid\hauling\AnchorStart.wav} @vol}}} {}
+#trigger {After a few careful seconds aligning everything in the scope, it flashes the okay to fire. You pull the trigger and an anchor shoots rapidly from the barrel of a bulky asteroid supply cannon! You lift off the asteroid's surface slightly, landing as the anchor finishes securing itself.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\asteroid\hauling\FireCannon.wav} @vol;
+#play {Star Conquest\general\asteroid\hauling\AnchorEnd.wav} @vol}}} {}
+#trigger {You raise a bulky asteroid supply cannon to your eye and begin carefully aiming at a single-use asteroid anchor through the scope.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\asteroid\hauling\AimCannon.wav} @vol;
+#play {Star Conquest\general\asteroid\hauling\LineStart.wav} @vol}}} {}
+#trigger {The scope flashes the okay to fire. You pull the trigger and a ribbon shoots from the barrel to automatically secure itself to a single-use asteroid anchor with an attached line.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\asteroid\hauling\FireCannon.wav} @vol;
+#play {Star Conquest\general\asteroid\hauling\LineEnd.wav} @vol}}} {}
+#trigger {The scope flashes the okay to fire. You pull the trigger and more ribbon line shoots out to automatically secure itself to a single-use asteroid anchor with an attached line. It quickly spools itself up, tensioning tightly over your ship. Hopefully it will hold.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\asteroid\hauling\FireCannon.wav} @vol;
+#play {Star Conquest\general\asteroid\hauling\LineEnd.wav} @vol}}} {}
+;mining
+#TRIGGER {The mining site is coming under attack from poachers!} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\Warning.wav} @Vol}} {}
+#TRIGGER {No more poachers appear to be invading! Destroy the remainder to end this wave of the attack!} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Asteroid\mining\None.wav} @vol}} {}
+#TRIGGER {A * drone * has departed from the mining area carrying * usable metals.} {
+#if {@silent = 1} {
+#play {star conquest\general\asteroid\mining\PoacherEscape.wav} @vol}} {}
+
+#TRIGGER {A * drone * just arrived.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\General\Asteroid\mining\basic coming and going.wav} @Vol}} {}
+#TRIGGER {A * drone * goes *} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\General\Asteroid\mining\drone moving.wav} @Vol}} {}
+
+#TRIGGER {A * drone * dumps some ore onto the ground nearby.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\General\Asteroid\mining\dump ore.wav} @Vol}} {}
+#TRIGGER {A * drone designated * dumps some metals onto the ground nearby.} {
+#Gagline Voice;
+#if {@DSound = 0} {
+#var DSound 1;
+#alarm 3 {#var DSound 0};
+#if {@silent = 1} {
+#Play {Star Conquest\General\Asteroid\mining\dump metal.wav} @Vol}}} {} 
+#TRIGGER {A* ore processor finishes a processing cycle, depositing a stack of processed metals on the ground.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\General\Asteroid\mining\metal.wav} @Vol}} {}
+#TRIGGER {A * finishes a drilling cycle, dumping a load of unprocessed ore on the ground.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\General\Asteroid\mining\ore.wav} @Vol}} {}
+
+#TRIGGER {A * drone * scoops some metals into its transport bay.} {
+#Gagline Voice;
+#if {@DSound = 0} {
+#var DSound 1;#alarm 3 {#var DSound 0};
+#if {@silent = 1} {
+#Play {Star Conquest\General\Asteroid\mining\scoop metal.wav} @Vol}}} {}
+#TRIGGER {A * drone * scoops some ore into its transport bay.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\General\Asteroid\mining\scoop ore.wav} @Vol}} {}
+
+#TRIGGER {A * drone designated * has been destroyed by a sharpshooter turret.} {
+#if {@silent = 1} {
+#play {star conquest\general\asteroid\mining\missile.wav} @vol}} {}
+#TRIGGER {A * drone designated * has been destroyed by a chaingun turret.} {
+#if {@silent = 1} {
+#play {star conquest\general\asteroid\mining\chainguns.wav} @vol}} {}
+#trigger {A * drone designated * has been destroyed by an emp turret.} {
+#if {@silent = 1} {
+#play {star conquest\general\asteroid\mining\empgun.wav} @vol}} {}
+#trigger {A * drone designated * has been destroyed by a plasma turret.} {
+#if {@silent = 1} {
+#play {star conquest\ship\combat\mini*2.wav} @vol}} {}
+#TRIGGER {A * drone designated * has been destroyed by a * drone *.} {
+#if {@silent = 1} {
+#play {star conquest\general\asteroid\mining\laser.wav} @vol}} {}
+#TRIGGER {A* gracefully crumples into scrap metal upon engaging its self-destruct routine.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\General\Asteroid\mining\building destroyed.wav} @Vol}} {}
+
+#TRIGGER {This site no longer has any ore to process. You may end operations.} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Asteroid\mining\endsite.wav} @vol}} {}
+#TRIGGER {A recharge * completes its recharge of a *} {
+#if {@silent = 1} {
+#play {star conquest\general\asteroid\mining\recharge.wav} @vol}} {}
+#TRIGGER {A repair * completes its repair of a *} {
+#if {@silent = 1} {
+#play {star conquest\general\asteroid\mining\recharge.wav} @vol}} {}
+#TRIGGER {* is now being readied.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\General\Asteroid\mining\building.wav} @Vol}} {}
+#TRIGGER {A hatch on a drone replicator opens, and a drone slides out onto the ground.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\General\Asteroid\mining\drone hatch opening.wav} @Vol}} {}
+#trigger {Research has been completed. * now available for building.} {
+#if {@silent = 1} {
+#play {star conquest\general\asteroid\mining\pause and resume.wav} @vol}} {}
+#trigger {A * drone designated * begins operating *} {
+#if {@silent = 1} {
+#play {star conquest\general\asteroid\mining\operate.wav} @vol}} {}
+#trigger {Resuming mining site activity.} {
+#if {@silent = 1} {
+#play {star conquest\general\asteroid\mining\pause and resume.wav} @vol}} {}
+#trigger {Pausing mining site until your return.} {
+#if {@silent = 1} {
+#play {star conquest\general\asteroid\mining\pause and resume.wav} @vol}} {}

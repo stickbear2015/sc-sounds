@@ -1,0 +1,4 @@
+#trigger {* microwave oven chimes loudly as it powers off.} {
+#if {@ovenon = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\oven\ding.wav} @vol}}} {}

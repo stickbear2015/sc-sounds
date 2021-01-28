@@ -1,0 +1,75 @@
+Welcome to the keys help file! This file will explain all of the commands for the soundpack!
+We will try and explain them the best f1 through f12!
+
+If something says Control+F1 or Shift+F2, that means that you hit the CONTROL and F1 key at the same time!
+
+Control+F1
+This is the communication sounds toggle. If you turn it off, you will not hear channel sounds like General, Alliance, Tactical, MTTS, etc etc. Hitting the command again will turn them back on.
+
+F2
+This toggle will turn the robot sounds on and off. (This includes the catbots.)
+
+Control+F2
+This toggle will turn the oven sounds on and off.
+
+Control+Ault+F2
+
+F3
+This will turn on and off the felo sounds.
+
+F5
+This will turn on and off the phone sounds.
+
+Control+F5
+This will gag a few different things. The version of the autopilot, and two other lines of text. Hitting the command again will allow you to see them again.
+
+Control+F6
+This will turn on and off ship hit gagging.
+
+F8
+This will turn the social sounds on and off. If you hit it to turn the sounds off, you can just hit it again to turn them back on!
+
+F9
+This will lower the master soundpack volume by 5 percent.
+
+F10
+This will raise the master volume by 5 percent.
+
+F11
+This will turn all soundpack sounds on and off. You can hit the command again to turn them back on if you have them off.
+
+F12
+This will save all of your soundpacks settings! This will be better explained in the ChangeLog under version 2.0.
+
+Control+F12
+This will tell you what all of your soundpack current settings are, along with the version of the sounds folder, and the version of the scripts folder.
+
+WN
+Hitting WN and the enter key will open the What's New file. This is the ChangeLog. Alt-F4 will close it when done.
+
+Keys
+This will open this file! Hitting Alt-F4 will close it when done!
+
+README
+This will open the readme file. It will help you learn how to install the soundpack. However, if you get the readme file open through the README command, you found out how to install the soundpack. The file is housed in the files folder inside of the scripts folder. Alt F4 will close this file and put you back in the VIP window.
+
+Version
+This will announce the soundpacks current version.
+
+Peoplecontrib
+This will announce all of the people who have helped create the soundpack.
+
+CHANONE
+This command will allow you to set the name of your default community channel, allowing the channel sound to play. If your channels name is Master Pilots make sure you type it in as that. You have to have the correct capital letters.
+
+CHANTWO
+This command will allow you to set the name of your secondary community channel, allowing the channel sound to play. If your channels name is Master Pilots make sure you type it in as that. You have to have the correct capital letters.
+
+RDice
+This command will roll a 6 sided dice in the soundpack.
+
+ReloadSp
+This command will reload the soundpack.
+
+Length
+This command will open a dialog box (a prompt) and check the length of a string if you paste one.

@@ -1,0 +1,380 @@
+;credits
+#trigger {Your credit summary:} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\viewcash.wav} @vol}}} {}
+#Trigger {You have been credited with * credits for your find.} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\Credits.wav} @Vol}} {}
+#Trigger {You've earned * credits.} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\Credits.wav} @Vol}} {}
+#Trigger {You earn * Teslabucks for the completion of a Teslatown mission!} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\Credits.wav} @Vol}} {}
+#Trigger {You receive * credits for completion of a ground mission.} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\Credits.wav} @Vol}} {}
+#Trigger {You earn * credits for a successful beacon drop*} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\Credits.wav} @Vol}} {}
+#Trigger {You are credited with * credits of bounty.} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\Credits.wav} @Vol}} {}
+#trigger {You've earned * credits for exploring a Glyphmaker artifact.} {
+#if {@silent = 1} {
+#play {Star Conquest\general\Misc\credits.wav} @vol}} {}
+#trigger {You have gained an accumulated * credits, approximately, from temporary space station activities.} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\credits.wav} @vol}} {}
+#trigger {You gain * for your tritium-rich hydrogen.} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\credits.wav} @vol}} {}
+#trigger {You receive * credits from sales in the marketplace.} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\credits.wav} @vol}} {}
+#trigger {* You have gained an accumulated * credits, approximately, from temporary space station activities.} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\credits.wav} @vol}} {}
+#trigger {You are quickly debriefed for your * mission. Good work! You have been awarded * credits.} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\credits.wav} @vol}} {}
+#trigger {You have earned * credits for winning a minor skirmish.} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\credits.wav} @vol}} {}
+#trigger {Your earned points have been credited to you.} {
+#if {@silent = 1} {
+#play {Star Conquest\General\Misc\viewcash.wav} @vol}} {}
+#trigger {You drain * EAOS credits from a credit chip and discard it in a nearby waste disposal unit.} {
+#if {@silent = 1} {
+#play {Star Conquest\General\Misc\Credits.wav} @vol}} {}
+#trigger {You pay the owed salary to your employees with *.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\viewcash.wav} @vol}}} {}
+#trigger {The CSC transfers * EAOS credit* to your account.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\viewcash.wav} @vol}}} {}
+
+;apartments
+#trigger {You hear a brief ringing sound as someone buzzes the apartment from the lobby.} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\misc\doorbuzzer.wav} @Vol}} {}
+#TRIGGER {You open the door to Apartment *} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\DoorOpen.wav} @Vol}}} {}
+#TRIGGER {You close the door to Apartment *} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\DoorClose.wav} @Vol}}} {}
+#trigger {You open the door.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\dooropen.wav} @vol}}} {}
+#trigger {You close the door.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\doorclose.wav} @vol}}} {}
+#trigger {* opens the door.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\dooropen.wav} @vol}}} {}
+#trigger {* closes the door.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\doorclose.wav} @vol}}} {}
+#trigger {You briefly open the door to leave.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\dooropen.wav} @vol;
+#play {Star Conquest\general\misc\doorclose.wav} @vol}}} {}
+#trigger {The door to the north suddenly closes.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\doorclose.wav} @vol}}} {}
+
+;staff
+#TRIGGER {Announcement: *} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\Announcement.wav} @Vol}}} {}
+#trigger {Minor Change: *} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\General\misc\warning.wav} @vol}}} {}
+#trigger {The staff have responded to your recent support request: *} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\warning.wav} @vol}}} {}
+#trigger {Your support request has been acknowledged.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\warning.wav} @vol}}} {}
+#trigger {You have recieved a response from the staff regarding your support request. Use the SUPPORT command to view it.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\warning.wav} @vol}}} {}
+#Trigger {* suddenly steps from the background.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\HostIn.wav} @Vol}}} {}
+#Trigger {* suddenly seems to disappear into the background.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\HostOut.wav} @Vol}}} {}
+
+;prompts
+#trigger {Your * is being sent to: *} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\prompt.wav} @vol}}} {}
+#Trigger {?Type a line of input or ??abort' to abort the command.?} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\prompt.wav} @Vol}}} {}
+#trigger {Is this okay? [Enter `yes' or `no']} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\prompt.wav} @vol}}} {}
+#Trigger {?Enter ?yes' or ?no'?} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\prompt.wav} @Vol}}} {}
+#Trigger {Enter your selection:} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\prompt.wav} @Vol}}} {}
+#Trigger {Enter direction on new z-level or enter "?abort" to cancel.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\prompt.wav} @Vol}}} {}
+#Trigger {Enter the number of the object you would like to transfer.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\prompt.wav} @Vol}}} {}
+#Trigger {Accept? ?Enter ?yes? or ?no??} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\prompt.wav} @Vol}}} {}
+#Trigger {Invalid selection.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\Cancel.wav} @Vol}}} {}
+#Trigger {* does not match any known sector.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\Cancel.wav} @Vol}}} {}
+#Trigger {>> Command Aborted <<} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\Cancel.wav} @Vol}}} {}
+#Trigger {Invalid direction. Valid directions are:} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\Cancel.wav} @Vol}}} {}
+#Trigger {There is a ship already occupying that location.} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\Cancel.wav} @Vol}} {}
+#trigger {There is some debris or an asteroid at that location.} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\Cancel.wav} @Vol}} {}
+
+;camera
+#trigger {You push a button on your camera, and the flash goes off.  It now has * left.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\camera.wav} @vol}}} {}
+#trigger {* camera at *, and pushes a button.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\General\misc\camera.wav} @vol}}} {}
+#Trigger {* a button on * camera, and the flash goes off.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\camera.wav} @vol}}} {}
+#trigger {You carefully load * with a * exposure film cartridge.  Your camera now has * shots left.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\filmload.wav} @vol}}} {}
+
+;misc
+#trigger {* turns a page in *} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\pageturn.wav} @vol}}} {}
+#trigger {You turn to page *.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\pageturn.wav} @vol}}} {}
+#trigger {* turning the shower off. You stand, dripping, completely relaxed. Steam floats lazily in the enclosed space.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\showerend.wav} @vol}}} {}
+#trigger {* starting the shower. Hot water begins to pour over your skin. You feel cleaner already.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\shower.wav} @vol}}} {}
+#trigger {You press the 'Print' button on the nearest computer console.  Following a short confirmation beep, a copy of your current point summary prints out almost instantly.  You quickly grab it.} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\print.wav} @vol}} {}
+#trigger {* "FORTY-FIVE SECONDS TILL DETONATION. VACATE AREA IMMEDIATELY." It then begins counting down rapidly.} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\BombTimer.wav} @vol}} {}
+#trigger {The computer reports that a large bari pod has been destroyed in a massive explosion.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Combat\OtherDestroyed*3.wav} @Vol}} {}
+#Trigger {The medical creche's healing has ceased.} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\beep*3.wav} @Vol}} {}
+#Trigger {You can't go that way.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\CantGo.wav} @Vol}}} {}
+#Trigger {From * holovid: *} {
+#Sub {%2};
+#if {@silent = 1} {
+#Play {Star Conquest\General\Device\Holopad.wav} @Vol}} {}
+#trigger {Point Totals:} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\viewcash.wav} @vol}}} {}
+#trigger {* at * and * makes a barely-audible squealing noise while dust and grime flies off of *.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\cleaning.wav} @vol}}} {}
+#Trigger {I don't understand that.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\Command.wav} @Vol}}} {}
+#trigger {* in front of a Tardick lizard named *. The lizard's tongue flicks out once, then its head lunges forward, snapping up the food in a sudden blur and immediately swallowing it whole.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\lizardeat.wav} @vol}}} {}
+#trigger {There appear to be some people in the lounge.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\peopletalk.wav} @vol}}} {}
+#trigger {A loud laugh bursts out from a group at a nearby table.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\crowdlaugh.wav} @vol}}} {}
+#trigger {A female pilot at a nearby table idly pages through a catalogue of bridal dresses.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\pageturn.wav} @vol}}} {}
+#trigger { Welcome back to Star Conquest!} {
+#say {We ask that you please type keys for all soundpack related questions. The staff of Star Conquest do not provide support for any technical difficulties or questions you may have.};
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\beep*3.wav} @Vol}} {}
+#trigger {You glance at a power readout.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\ship\computer\display.wav} @vol}}} {}
+#trigger {The computer sounds a notification indicating that the ship has been fully charged.} {
+#if {@silent = 1} {
+#play {Star Conquest\ship\computer\ShipFinishRecharging.wav} @vol}} {}
+#trigger {A * beeps obnoxiously!} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\timer.wav} @vol}}} {}
+
+;ship
+#trigger {Onboard sensors detect the presence of the following people somewhere aboard the ship: *} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\prompt.wav} @vol}}} {}
+#trigger {You carefully buckle your seatbelt.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\buckle.wav} @vol}}} {}
+#trigger {Auth code already set.  Please enter the current auth code.} {
+#gagline Voice;
+#if {@silent = 1} {
+#play {Star Conquest\ship\computer\enterauthcode.wav} @vol}} {}
+#TRIGGER {You purchase a full supply of ammunition for *} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\loadclip.wav} @Vol}} {}
+#trigger {General Starship status:} {
+#if {@silent = 1} {
+#play {Star Conquest\ship\computer\Display.wav} @vol}} {}
+#trigger {You flip an out-of-the-way switch, enabling the ship's response to autonavigation.} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\beep*3.wav} @Vol}} {}
+#trigger {You flip an out-of-the-way switch, disabling the ship's response to autonavigation.} {
+#if {@silent = 1} {
+#Play {Star Conquest\ship\computer\display.wav} @Vol}} {}
+#trigger {* Charge Readout:} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\ship\computer\display.wav} @vol}}} {}
+#trigger {* of charge remaining*} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\ship\computer\display.wav} @vol}}} {}
+
+;travel
+#trigger {A display indicates that a train is due to arrive within seconds.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\traindisplay.wav} @vol}}} {}
+#trigger {* Train slowly comes to a stop in the station. A LCD display on the side of the train begins counting down the thirty seconds until it departs for the next stop, *} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\traindisplay.wav} @vol}}} {}
+#trigger {The countdown until departure reaches 15 seconds.} {
+#if {@socialson = 1} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\traindisplay.wav} @vol}}} {}
+#trigger {The train's intercom system announces, "Next stop is *.  Departure in * seconds."} {
+#if {@silent = 1} {
+#play {Star Conquest\ship\comm\pa*4.wav} @vol}} {}
+#trigger {The doors slide open and the train's intercom system announces, *} {
+#if {@silent = 1} {
+#play {Star conquest\ship\comm\pa*4.wav} @vol;
+#play {Star Conquest\general\misc\Train Whistle.wav} 80}} {}
+#trigger {The doors slide closed and you feel a gentle acceleration as the train begins travelling to the next stop.} {
+#if {@silent = 1} {
+#play {Star Conquest\general\misc\train whistle.wav} 80}} {}
+#trigger {You pay *, and are informed that a suborbital pod will arrive within two minutes.} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\Credits.wav} @Vol}} {}
+#trigger {As soon as you board the pod, it launches from the station, beginning a long arc above the surface.} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\misc\PodLaunch.wav} @Vol}} {}
+#trigger {The suborbital pod reaches the top of its arc, coming to a gradual stop before beginning to plummet back to the surface.} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\misc\PodArc.wav} @Vol}} {}
+#trigger {The pod's braking thrusters suddenly kick in, abruptly slowing the pod as it nears the surface.} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\misc\PodArrives.wav} @Vol}} {}
+#trigger {The pod settles onto the ground, and you depart.} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\misc\PodLands.wav} @Vol}} {}
+#trigger {A yellow hovertaxi pulls up and waits.} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\misc\carhorn.wav} @Vol}} {}
+#trigger {The hovertaxi arrives at its destination and pulls up to let you out.} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\misc\brakesqueal.wav} @Vol}} {}
+#TRIGGER {You have encountered an error that prevents execution of one of your commands. This is a coding error and is not your fault. The error has been automatically reported, but if you have any additional information that may be helpful, please use the REPORT command. We will fix this error as soon as possible and we apologize for any inconvenience.} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\beep*3.wav} @Vol}} {}
+#trigger {* indicates an open microphone.} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\paon.wav} @Vol}} {}
+#trigger {Starships: *Bari*} {
+#if {@silent = 1} {
+#play {Star Conquest\ship\misc\BariSpreader.wav} @vol}} {}
+#Trigger {(* second* roundtime.)} {
+ #If {%IsNumber(%1)=1} {
+  #If {@RTime=1} {
+   #Alarm {%Eval(%1-1)} {
+    #If {@RTime=1} {
+#play {Star Conquest\general\misc\RoundTime.wav} 40}}
+};
+#if {%1<1} {
+  #Sub {1 second roundtime.} or #sub {%1 seconds roundtime.}}
+}
+}
