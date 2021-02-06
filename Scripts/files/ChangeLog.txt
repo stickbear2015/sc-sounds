@@ -1,6 +1,9 @@
-Here is where Jason Rat and Melinda Michaels will be noting changes that we make to the soundpack, so you know what has been changed, fixed, and or added!
+Here is where changes that are made to the soundpack will be documented, so you know what has been changed, fixed, and or added!
 
 * Please update the entire soundpack, including the sounds.
+Version 2.8.1
+*updated credits.
+*updated information about where to submit suggestions.
 
 Version 2.8
 We got rid of some bari combat sounds that only seemed to trigger sometimes.
