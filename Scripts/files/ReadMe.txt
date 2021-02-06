@@ -13,4 +13,4 @@ If you're using the latest version of VIP mud which is 2.0, it may be installed 
 
 4. Back out of the sounds folder and go to the star conquest folder. You will simply copy and paste your scripts folder settings, and star conquest.set file from the soundpack folder to this star conquest folder located in your Vipmud directory.
 
-5. If you have any other troubles e-mail us at scsoundpack@gmail.com
+5. If you have any other troubles post on the ooc boards.
