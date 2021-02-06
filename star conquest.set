@@ -40,7 +40,7 @@
 #close 6;
 #say {Soundpack settings saved.}}
 
-#say {Welcome to the VIP mud soundpack for Star Conquest! This soundpack has been magerly overhauled by Jason Rat and Melinda Michaels and is on version @version! Please note all features may not have sounds. If you wish for something to have a sound that currently doesn't, please e-mail us at scsoundpack~@gmail.com!}
+#say {Welcome to the VIP mud soundpack for Star Conquest! This soundpack was originally overhauled by Jason Rat and Melinda Michaels, and is now maintained by Alissa Carmichael. this is version @version! Please note all features may not have sounds. If you wish for something to have a sound that currently doesn't, please post on the ooc message board!}
 
 #TRIGGER {Welcome to the original and still the most innovative pulp science fiction multiplayer roleplaying adventure!} {
 #if {@silent = 1} {
