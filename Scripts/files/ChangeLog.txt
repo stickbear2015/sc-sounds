@@ -4,7 +4,11 @@ Here is where changes that are made to the soundpack will be documented, so you 
 Version 2.8.1
 *updated credits.
 *updated information about where to submit suggestions.
+*updated information about where to submit pesky bugs
 *updated readme removing the old e-mail address.
+*actually updates peoplecontrib so it reflects the actual last modified date.
+*updates the startup message to reference the issue tracker and where you can find it's URL.
+*slight cosmetic and readability changes to readme.txt
 Version 2.8
 We got rid of some bari combat sounds that only seemed to trigger sometimes.
 In the name of not having a ton of sounds for one function, we got rid of several repair sounds.
