@@ -13,7 +13,7 @@ Version 2.8.1
 *thanks to luna, modifies ground combat to use a different sound for enemy damage notifications.
 *thanks to luna, adds a low grid sound file, and modifies the trigger to use it instead of the loud as piss failsafe sound.
 *thanks to luna, adds buffers, see buffers.txt for keystrokes and help on buffers.
-*thanks to luna, screen reader gags the computer says in ships, but leaves the line stil visible in the output window. The screen reader will only read rthe second half of the line.
+*thanks to luna, screen reader gags the computer says in ships, but leaves the line stil visible in the output window. The screen reader will only read the second half of the line.
 *adds #exec {LoadBuffers} to "star conquest.set"
 
 Version 2.8

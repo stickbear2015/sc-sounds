@@ -45,4 +45,3 @@
 #TRIGGER {Welcome to the original and still the most innovative pulp science fiction multiplayer roleplaying adventure!} {
 #if {@silent = 1} {
 #Play {Star Conquest\Music\*2.wav} @Vol}} {}
-#exec {LoadBuffers}
