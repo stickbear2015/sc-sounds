@@ -10,9 +10,12 @@ Version 2.8.1
 *updates the startup message to reference the issue tracker and where you can find it's URL.
 *slight cosmetic and readability changes to readme.txt
 *thanks to luna, modifies several sound files to make them not suck.
-*thanks to luna, modifies ground combat to use a different sound for enemy hits.
+*thanks to luna, modifies ground combat to use a different sound for enemy damage notifications.
 *thanks to luna, adds a low grid sound file, and modifies the trigger to use it instead of the loud as piss failsafe sound.
 *thanks to luna, adds buffers, see buffers.txt for keystrokes and help on buffers.
+*thanks to luna, screen reader gags the computer says in ships, but leaves the line stil visible in the output window. The screen reader will only read rthe second half of the line.
+*adds #exec {LoadBuffers} to "star conquest.set"
+
 Version 2.8
 We got rid of some bari combat sounds that only seemed to trigger sometimes.
 In the name of not having a ton of sounds for one function, we got rid of several repair sounds.
