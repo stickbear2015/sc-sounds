@@ -9,8 +9,10 @@ Version 2.8.1
 *actually updates peoplecontrib so it reflects the actual last modified date.
 *updates the startup message to reference the issue tracker and where you can find it's URL.
 *slight cosmetic and readability changes to readme.txt
-*thanks to luna modifies several sound files to make them not suck.
-*adds buffers, see keys.txt for keystrokes, and buffers.txt for help on buffers.
+*thanks to luna, modifies several sound files to make them not suck.
+*thanks to luna, modifies ground combat to use a different sound for enemy hits.
+*thanks to luna, adds a low grid sound file, and modifies the trigger to use it instead of the loud as piss failsafe sound.
+*thanks to luna, adds buffers, see buffers.txt for keystrokes and help on buffers.
 Version 2.8
 We got rid of some bari combat sounds that only seemed to trigger sometimes.
 In the name of not having a ton of sounds for one function, we got rid of several repair sounds.
