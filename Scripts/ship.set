@@ -220,7 +220,7 @@
 #Gagline Voice;
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Move\Boost.wav} @Vol}} {}
-#TRIGGER {A small light next to the word AUTOPILOT switches on, while a similar light next to the word MANUAL switches off.} {
+#TRIGGER {A small light next to the word AUTOPILOT switches on, while a similar light next to the word MANUAL switches off.} {#gagline voice;
 #if {@silent = 1} {
 #Play {Star Conquest\General\Misc\Beep1.wav} @Vol}} {}
 #TRIGGER {A small light next to the word MANUAL switches on, while a similar light next to the word AUTOPILOT switches off.} {
@@ -233,7 +233,7 @@
 #TRIGGER {You hear a sharp electronic whine as the FTL drive opens a wormhole.} {
 #Gagline Voice;
 #if {@silent = 1} {
-#Play {Star Conquest\Ship\Move\Jumpgate.wav} @Vol}} {}
+#Play {Star Conquest\Ship\Move\wormhole.wav} @Vol}} {}
 #TRIGGER {The starship shudders violently as it nears the wormhole mouth.} {
 #Gagline Voice} {}
 #TRIGGER {The windows automatically dim as space outside dissolves into a bright flash of light.} {
@@ -245,7 +245,7 @@
 #TRIGGER {You hear a sharp electronic whine as power suddenly flows into the wormhole drive.} {
 #Gagline Voice;
 #if {@silent = 1} {
-#Play {Star Conquest\Ship\Move\ftl.wav} @Vol}} {}
+#Play {Star Conquest\Ship\Move\wormhole.wav} @Vol}} {}
 #TRIGGER {*The computer says, "Destination selected. * jumps to * Orbit. Initializing quantum wormhole selection sequence."} {
 #Gagline Voice} {}
 #TRIGGER {The computer says, "Convergent wormhole located. Expanding wormhole."} {
@@ -265,6 +265,7 @@
 #Play {Star Conquest\Ship\Comm\PA*4.wav} @vol}} {}
 #TRIGGER {You speak into the PA microphone, saying, *} {
 #if {@silent = 1} {
+#additem PA %0;
 #Play {Star Conquest\Ship\Comm\pa*4.wav} @vol}} {}
 #TRIGGER {You * into the PA microphone.} {
 #if {@silent = 1} {
@@ -272,12 +273,14 @@
 #TRIGGER {* says into the PA microphone, "*"} {
 #Sub {%1, %2};
 #if {@silent = 1} {
+#additem PA %0;
 #Play {Star Conquest\Ship\Comm\pa*4.wav} @vol}} {}
 #trigger {A voice says over the speaker, "*"} {
 #if {@silent = 1} {
 #play {Star Conquest\ship\comm\pa*4.wav} @vol}} {}
 #trigger {* voice comes over the loudspeaker as *} {
 #if {@silent = 1} {
+#additem PA %0;
 #play {Star Conquest\ship\comm\pa*4.wav} @vol}} {}
 #Trigger {A voice comes over the speaker and says, "*"} {
 #Sub {%1};
@@ -286,6 +289,7 @@
 #trigger {*, and lift one cup of your earmuffs in time to hear *'s voice coming over the loudspeaker, saying, "*"} {
 #sub {%2: %3};
 #if {@silent = 1};
+#additem PA %0;
 #play {Star Conquest\ship\comm\pa*4.wav} @vol}
 
 #Trigger {A few green lights blink on, then off again a moment later, as another starship is scanned.} {
@@ -323,13 +327,15 @@
 #Play {Star Conquest\Ship\Misc\EnterDucts*2.wav} @Vol}} {}
 #Trigger {A panel suddenly moves aside.  A moment later, * arrives from the starship's network of systems ducts.} {
 #Sub {%1 arrives from the starship's network of systems ducts.};
-#if {@silent = 1};
-#Play {Star Conquest\Ship\Misc\EnterDucts*2.wav} @Vol} {}
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Misc\EnterDucts*2.wav} @Vol}} {}
 
 #Trigger {The computer reports that * "*" has jumped into the sector.} {
+#Sub {%1 %2 has jumped into the sector.};
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Move\EnterSector1.wav} @Vol}} {}
 #Trigger {The computer reports that * "*" has jumped out of the sector.} {
+#Sub {%1 %2 has jumped out of the sector.};
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Move\ExitSector1.wav} @Vol}} {}
 
@@ -456,10 +462,9 @@
 #Trigger {Weapons status:} {
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Computer\Display.wav} @Vol}} {}
-#Trigger {The computer announces, "*"} {
-#if {@silent = 1} {
-#Play {Star Conquest\Ship\Computer\Announce*4.wav} @Vol}} {}
-#Trigger {The computer says, "*"} {
+#Trigger {The computer *, "*"} {
+#gagline voice;
+#say {"%2"} voiceOnly;
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Computer\Announce*4.wav} @Vol}} {}
 #TRIGGER {The computer informs you that you have mail waiting, which may be picked up at *} {

@@ -1,0 +1,61 @@
+adapted the Cosmic Rage buffers to work with Star Conquest. Pay attention to the remainder of this file.
+You must run this command once when you first start the game after copying these files in place:
+savebuffers
+The following line already exists at the bottom of "star conquest.set"
+#exec {LoadBuffers}
+if you'd rather this line silently load your buffers without notification, change the line and replace it with
+#exec {SilentlyLoadBuffers}
+Type keys and look near the end of the file for buffer commands.
+To add a new buffer:
+Edit Star Conquest/Scripts/Buffers.set and add your new buffer name to the end of lines 1 and 2. There should be a vertical bar separating each buffer name. For example: OldBuffer1|OldBuffer2|MyNewBuffer
+Add or edit the trigger which identifies the text you'd like to have in the buffer and include this line:
+#additem MyNewBuffer %0;
+where MyNewBuffer is the name of the buffer that you added previously.
+In these examples, MyNewBuffer might be called FlightControlScanner.
+	Explaining the system.
+
+The Master buffer list contains every buffer Snapp has added into the pack. Currently as of Wednesday, June 27, 2018, there are 57 buffers in this list, and Snapp is always willing to add more.
+
+The Current buffer list.
+
+The current buffer list contains all buffers you have in your current buffer ring.  An explanation on the buffer ring will be given later in this help file.  By default, the current buffer list contains 13 buffers. You do not need to keep any of these default buffers if you don't want to. You can remove all of them even. But note, if all buffers are removed from the current buffer list, VIP will throw an error.
+
+Adding buffers.
+
+To add a buffer to the current buffer list, you may use the alias AddBuffer or the key Alt-shift-Right. The master buffer list will then be displayed. Down arrow or use first letter navigation until you find the buffer you'd like to add and hit enter.
+Do note. If hitting escape while in the add buffer window, a blank list item will be added to the current list. This is a bug from within VIP and can not be corrected. You will have to go remove that blank list item.  More on removing buffers in the next section.
+
+Removing buffers.
+
+To remove a buffer from the current buffer list, you can use the alias DelBuffer or the key alt-shift-left. All items in your current buffer list will display. Down arrow or use first letter navigation until you find the buffer you'd like to delete and press enter.
+
+Moving between buffers.
+
+Remember that buffer ring we talked about? That is how you move between your active buffers. To move between buffers, use the key alt-right to move to the next buffer, and alt-left to go back to the previous buffer.
+
+Reading buffers.
+
+Reading buffers is a bit more complex and has many more keys to remember. They will be outlined here.
+Alt-1 through alt-0 will read the last 10 items of a buffer. Alt-1 reads the first item, while alt-0 reads item 10. If no message is in that message slot, the pack will just tell you "No message."
+You may also use your arrow keys to read buffers. Alt-up will go up in the message list, while alt-down will go down in the list.
+Alt-shift-PageUp will move you 20 items up in the buffer list, while alt-shift-PageDown will move you 20 items down. Do note. This method of reading buffers will only work when using the arrow keys. The alt-numbers will always work the same.
+Alt-home will throw you to the top of a buffer, and alt-end will throw you to the bottom.
+
+Loading and saving buffers.
+
+This section is very important.
+Upon first run of the soundpack, meaning for first time users, you must type SaveBuffers or use the key control-alt-shift-S. Failing to do this will throw errors the next time you run the pack.
+For all other users, you need only save your buffer settings if you make a change to your current list of buffers, and you'd like to load that change again.
+To load the buffers you have saved, just type LoadBuffers or use the key control-alt-shift-L.
+Note. In your main VIPMud directory you will see a file called StarConquestBufferlist.txt. WARNING! Do *NOT* delete this file. This file contains all of your saved buffer settings.
+***Notice***. If you want buffers to load automatically upon loading the pack, you will need to add a bit of code. It is advised to put this code in your characters set file. So for example, MyName.set. This file can be found in the main Star Conquest directory. If you have more than one char, put this code in each file.
+If you wish to be informed that your buffers have been loaded, use this code.
+#exec {LoadBuffers}
+Optionally, you can have buffers load silently by using the following code.
+#exec {SilentlyLoadBuffers}
+Just paste that code at the end of your char file, and you are now good to go from now on!
+
+misc keys.
+
+An alias and key have been created to clear the contents of a buffer if that buffer starts throwing errors. Do to a bug within VIP, buffers can only contain so much information. At the current time, it is unknown when this error shows up. But if it does, you may type ClearBuffer or use the key alt-shift-Delete.
+You may clear the text out of all of your buffers by using the key Control-Alt-Shift-Delete, or the alias ClearAllBuffers.

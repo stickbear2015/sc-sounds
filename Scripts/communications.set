@@ -44,35 +44,82 @@
 #Trigger {* beeps quietly, indicating that it has unread notices.} {
 #if {@silent = 1} {
 #play {Star Conquest\general\comm\AllianceNotice.wav} @vol}} {}
-
-#trigger {[ [ ]* | *: *] *} {
-#if {@commson = 1} {
+#trigger {[[]CrewFinder] *} {
 #if {@silent = 1} {
-#play {Star Conquest\general\comm\alliance.wav} @vol}}} {}
-#TRIGGER {[ [ ]General Communication] *} {
 #if {@commson = 1} {
-#if {@silent = 1} {
-#Play {Star Conquest\General\Comm\General.wav} @vol}}} {}
-#Trigger {[ [ ]Newbie Help] *} {
-#if {@commson = 1} {
-#if {@silent = 1} {
-#Play {Star Conquest\General\Comm\newbie.wav} @Vol}}} {}
-#Trigger {[ [ ]Tactical Communication] *} {
-#if {@commson = 1} {
-#if {@silent = 1} {
-#Play {Star Conquest\General\Comm\tactical.wav} @Vol}}} {}
-#trigger {[ [ ]Mining Station Communication] *} {
-#if {@commson = 1} {
-#if {@silent = 1} {
-#play {Star Conquest\general\comm\mining.wav} @vol}}} {}
-#trigger {[ [ ]Salvage Op] *} {
-#if {@commson = 1} {
-#if {@silent = 1} {
-#play {Star Conquest\general\comm\salvageop.wav} @vol}}} {}
-;fixes the error  while in a battlesuit and still plays different sounds for different community channels
+#additem CrewFinder %0;
+#play {Star Conquest\general\comm\Crewfinder.wav} @vol}}}
 #trig {[[]*] * *} {
+#if {%ifWord(Notification,%1," ")} {
+#if {@commson = 1} {
+#if {@silent = 1} {
+#additem AllianceCommunication %0;
+#play {Star Conquest\general\comm\org.wav} @vol}};
+#abort 1};
+#if {%ifWord(League,%1," ")} {
+#if {@commson = 1} {
+#if {@silent = 1} {
+#additem AllianceCommunication %0;
+#play {Star Conquest\general\comm\alliance.wav} @vol}};
+#abort 1};
+#if {%ifWord(League-Mutuality,%1," ")} {
+#if {@commson = 1} {
+#if {@silent = 1} {
+#additem AllianceCommunication %0;
+#play {Star Conquest\general\comm\alliance.wav} @vol}};
+#abort 1};
+#if {%ifWord(Fringe,%1," ")} {
+#if {@commson = 1} {
+#if {@silent = 1} {
+#additem AllianceCommunication %0;
+#play {Star Conquest\general\comm\alliance.wav} @vol}};
+#abort 1};
+#if {%ifWord(AEU,%1," ")} {
+#if {@commson = 1} {
+#if {@silent = 1} {
+#additem AllianceCommunication %0;
+#play {Star Conquest\general\comm\alliance.wav} @vol}};
+#abort 1};
+#if {%ifWord(General,%1," ")} {
+#if {@commson = 1} {
+#if {@silent = 1} {
+#additem GeneralCommunication %0;
+#Play {Star Conquest\General\Comm\General.wav} @vol}};
+#abort 1};
+#if {%ifWord(Newbie,%1," ")} {
+#if {@commson = 1} {
+#if {@silent = 1} {
+#additem NewbieHelp %0;
+#Play {Star Conquest\General\Comm\newbie.wav} @Vol}};
+#abort 1};
+#if {%ifWord(Tactical,%1," ")} {
+#if {@commson = 1} {
+#if {@silent = 1} {
+#additem TacticalCommunication %0;
+#Play {Star Conquest\General\Comm\tactical.wav} @Vol}};
+#abort 1};
+#if {%ifWord(Squad,%1," ")} {
+#if {@commson = 1} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\squad.wav} @Vol}};
+#abort 1};
+#if {%ifWord(Mining,%1," ")} {
+#if {@commson = 1} {
+#if {@silent = 1} {
+#additem Mining %0;
+#play {Star Conquest\general\comm\mining.wav} @vol}};
+#abort 1};
+#if {%ifWord(Salvage,%1," ")} {
+#if {@commson = 1} {
+#if {@silent = 1} {
+#additem SalvageOp %0;
+#play {Star Conquest\general\comm\salvageop.wav} @vol}};
+#abort 1};
+#if {(%ifword(%1,@chansecond," "))} {#additem Community2 %0};
 #if {(%ifword(%1,@chansecond," ")) and (@commson = 1) and (@silent = 1)} {#play {Star Conquest\general\comm\community2.wav} @vol};
+#if {(%ifword(%1,@org," "))} {#additem Community1 %0};
 #if {(%ifword(%1,@org," ")) and (@commson = 1) and (@silent = 1)} {#play {Star Conquest\general\comm\community1.wav} @vol}}
+;fixes the error  while in a battlesuit and still plays different sounds for different community channels
 
 #trigger {Via general sector communication, * "*"} {
 #if {@commson = 1} {
@@ -240,7 +287,10 @@
 #if {@silent = 1} {
 #play {star conquest\General\Comm\mentor.wav} @vol}}} {}
 
-#TRIGGER {A voice emanating from * flight control scanner *} {
+#TRIGGER {A voice emanating from * flight control scanner *, "*"} {
+#additem FlightControlScanner %3;
+#gagline voice;
+#say {"%3"} voiceOnly;
 #if {@commson = 1} {
 #if {@silent = 1} {
 #Play {Star Conquest\General\Comm\FlightScanner.wav} @Vol}}} {}
@@ -248,10 +298,7 @@
 #if {@commson = 1} {
 #if {@silent = 1} {
 #play {Star Conquest\general\comm\sector.wav} @vol}}} {}
-#Trigger {?Squad Communication? * says, "*"} {
-#if {@commson = 1} {
-#if {@silent = 1} {
-#Play {Star Conquest\Ground Combat\squad.wav} @Vol}}} {}
+
 
 ;Spacesuit stuff
 #trigger {Over your spacesuit radio, you hear *} {
@@ -264,4 +311,4 @@
 #Play {Star Conquest\Ground Combat\squad.wav} @Vol}}} {}
 #trigger {* OOCly, *} {
 #if {@silent = 1} {
-#play {Star Conquest\general\comm\orgold.wav} @vol}} {}
+#play {Star Conquest\general\comm/OOC.wav} @vol}} {}

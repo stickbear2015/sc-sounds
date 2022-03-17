@@ -90,29 +90,28 @@
 #if {@silent = 1} {
 #Play {Star Conquest\General\Asteroid\mining\ore.wav} @Vol}} {}
 
-#TRIGGER {A * drone * scoops some metals into its transport bay.} {
+#TRIGGER {A * drone * scoops some * into its transport bay.} {
+#if {%ifWord(metals,%3," ")} {
 #Gagline Voice;
 #if {@DSound = 0} {
 #var DSound 1;#alarm 3 {#var DSound 0};
 #if {@silent = 1} {
-#Play {Star Conquest\General\Asteroid\mining\scoop metal.wav} @Vol}}} {}
-#TRIGGER {A * drone * scoops some ore into its transport bay.} {
+#Play {Star Conquest\General\Asteroid\mining\scoop metal.wav} @Vol}};
+#if {%ifWord(ore,%3," ")} {
 #Gagline Voice;
 #if {@silent = 1} {
-#Play {Star Conquest\General\Asteroid\mining\scoop ore.wav} @Vol}} {}
+#Play {Star Conquest\General\Asteroid\mining\scoop ore.wav} @Vol}}}}
+#trigger {A * drone designated * has been destroyed by a *.} {
+#if {@silent = 1} {
+#if {%ifWord(plasma turret,%3," ")} {
+#play {star conquest\ship\combat\mini*2.wav} @vol};
+#if {%ifWord(sharpshooter turret,%3," ")} {
+#play {star conquest\general\asteroid\mining\missile.wav} @vol};
+#if {%ifWord(chaingun turret,%3," ")} {
+#play {star conquest\general\asteroid\mining\chainguns.wav} @vol};
+#if {%ifWord(emp turret,%3," ")} {
+#play {star conquest\general\asteroid\mining\empgun.wav} @vol}}};
 
-#TRIGGER {A * drone designated * has been destroyed by a sharpshooter turret.} {
-#if {@silent = 1} {
-#play {star conquest\general\asteroid\mining\missile.wav} @vol}} {}
-#TRIGGER {A * drone designated * has been destroyed by a chaingun turret.} {
-#if {@silent = 1} {
-#play {star conquest\general\asteroid\mining\chainguns.wav} @vol}} {}
-#trigger {A * drone designated * has been destroyed by an emp turret.} {
-#if {@silent = 1} {
-#play {star conquest\general\asteroid\mining\empgun.wav} @vol}} {}
-#trigger {A * drone designated * has been destroyed by a plasma turret.} {
-#if {@silent = 1} {
-#play {star conquest\ship\combat\mini*2.wav} @vol}} {}
 #TRIGGER {A * drone designated * has been destroyed by a * drone *.} {
 #if {@silent = 1} {
 #play {star conquest\general\asteroid\mining\laser.wav} @vol}} {}

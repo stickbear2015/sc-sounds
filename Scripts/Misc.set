@@ -135,11 +135,11 @@
 #if {@silent = 1} {
 #Play {Star Conquest\General\Misc\prompt.wav} @Vol}}} {}
 #trigger {Is this okay? [Enter `yes' or `no']} {
-#if {@socialson = 1} {
+#if {@commson = 1} {
 #if {@silent = 1} {
 #play {Star Conquest\general\misc\prompt.wav} @vol}}} {}
 #Trigger {?Enter ?yes' or ?no'?} {
-#if {@socialson = 1} {
+#if {@commson = 1} {
 #if {@silent = 1} {
 #Play {Star Conquest\General\Misc\prompt.wav} @Vol}}} {}
 #Trigger {Enter your selection:} {
@@ -147,31 +147,31 @@
 #if {@silent = 1} {
 #Play {Star Conquest\General\Misc\prompt.wav} @Vol}}} {}
 #Trigger {Enter direction on new z-level or enter "?abort" to cancel.} {
-#if {@socialson = 1} {
+#if {@commson = 1} {
 #if {@silent = 1} {
 #Play {Star Conquest\General\Misc\prompt.wav} @Vol}}} {}
 #Trigger {Enter the number of the object you would like to transfer.} {
-#if {@socialson = 1} {
+#if {@commson = 1} {
 #if {@silent = 1} {
 #Play {Star Conquest\General\Misc\prompt.wav} @Vol}}} {}
 #Trigger {Accept? ?Enter ?yes? or ?no??} {
-#if {@socialson = 1} {
+#if {@commson = 1} {
 #if {@silent = 1} {
 #Play {Star Conquest\General\Misc\prompt.wav} @Vol}}} {}
 #Trigger {Invalid selection.} {
-#if {@socialson = 1} {
+#if {@commson = 1} {
 #if {@silent = 1} {
 #Play {Star Conquest\General\Misc\Cancel.wav} @Vol}}} {}
 #Trigger {* does not match any known sector.} {
-#if {@socialson = 1} {
+#if {@commson = 1} {
 #if {@silent = 1} {
 #Play {Star Conquest\General\Misc\Cancel.wav} @Vol}}} {}
 #Trigger {>> Command Aborted <<} {
-#if {@socialson = 1} {
+#if {@commson = 1} {
 #if {@silent = 1} {
 #Play {Star Conquest\General\Misc\Cancel.wav} @Vol}}} {}
 #Trigger {Invalid direction. Valid directions are:} {
-#if {@socialson = 1} {
+#if {@commson = 1} {
 #if {@silent = 1} {
 #Play {Star Conquest\General\Misc\Cancel.wav} @Vol}}} {}
 #Trigger {There is a ship already occupying that location.} {

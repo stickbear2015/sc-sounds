@@ -133,9 +133,9 @@
 
 #alias Readme {#edit {Star Conquest\scripts\files\ReadMe.txt}}
 
-#Alias sca {#Say {Last scanned Average Damage:  @ScanShipAverageDamage Percent}} {}
+#Alias sca {#Say {Last scanned Average Damage:  @ScanShipAverageDamage}} {}
 
-#Alias sch {#Say {Last scanned Hull Damage:  @ScanShipHullDamage Percent}} {}
+#Alias sch {#Say {Last scanned Hull Damage:  @ScanShipHullDamage}} {}
 
 #Alias GagAllText {
  #Var GagAll {%Eval(NOT @GagAll)};
@@ -156,7 +156,7 @@
 
 #alias reloadsp {
 #say {Reloading the soundpack.};
-#ForAll {SalvagingANDScooping|combat|ground|explore|asteroid|ship|Vars|misc|communications|socials|phones|gags|keys|Oven|PetsAndRobots} {
+#ForAll {SalvagingANDScooping|combat|ground|explore|asteroid|ship|Vars|misc|communications|socials|phones|gags|keys|Oven|PetsAndRobots|Buffers} {
 #UnLoad {Scripts\%I.set}};
 #reload;
 #say {Soundpack reloaded.};

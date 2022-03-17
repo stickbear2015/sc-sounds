@@ -10,7 +10,7 @@
 #trigger {You hear a resounding grinding noise from the ship's storage hold.} {
 #Gagline Voice;
 #if {@silent = 1} {
-#play {Star Conquest\salvaging\compresser.wav} 90}} {}
+#play {Star Conquest\salvaging\compresser.wav} @vol}} {}
 #trigger {You fire the grapple. The metal claws bounce off of the surface, finding no purchase.} {
 #Gagline voice;
 #if {@silent = 1} {
@@ -38,7 +38,9 @@
 #gagline voice;
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Misc\Salvage*3.wav} @vol}} {}
-
+#trig {The debris is now secured in the ship's hold.  Scanning reveals it to be *.} {
+#gagline voice;
+#say {%1 salvaged.} voiceOnly}
 #TRIGGER {You instruct the computer to begin scanning for debris.} {
 #Gagline voice} {}
 #TRIGGER {Scanning reveals no nearby debris.} {

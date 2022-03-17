@@ -1,0 +1,54 @@
+#var MasterBufferList {FlightControlScanner|AllianceCommunication|Community1|Community2|GeneralCommunication|TacticalCommunication|NewbieHelp|CrewFinder|Mining|SalvageOp|PA}
+#var CurrentBufferList {FlightControlScanner|AllianceCommunication|Community1|Community2|GeneralCommunication|TacticalCommunication|NewbieHelp|CrewFinder|Mining|SalvageOp|PA}
+#for @MasterBufferList {#var %i {}}
+#var BufferPointer 1
+#var BufferName {%word(@CurrentBufferList,"|",1)}
+#var ItemPointer 1
+#alias delbuffer  {#play {Star Conquest/General/Buffers/BufferDelete.wav} @vol; #var item {%pick(p:Which buffer do you want to delete?|@CurrentBufferList)};#var CurrentBufferList {%delitem(@CurrentBufferList,@item)};#play {Star Conquest/General/Buffers/BufferRemoved.wav} @vol; #var BufferPointer 1}
+#key {ALT-SHIFT-LEFT} {delbuffer}
+#alias addbuffer {#play {Star Conquest/General/Buffers/BufferAdd.wav} @vol; #var newitem {%pick(p:Which buffer do you want to add?|@MasterBufferList)}; #if {%ifword(@newitem,@CurrentBufferList,"|") = 1} {#play {Star Conquest/General/Buffers/BufferActive.wav} @vol} {#if {%ifword(@newitem,@MasterBufferList,"|") = 1} {#additem CurrentBufferList @newitem; #play {Star Conquest/General/Buffers/BufferAdded.wav} @vol}} {#var BufferPointer 1}}
+#key {ALT-SHIFT-RIGHT} {addbuffer}
+
+;aliases for saving and reading preferred buffers.
+
+#alias savebuffers {#delfile StarConquestBufferlist.txt; #file 5 StarConquestBufferlist.txt; #write 5 @CurrentBufferList; #close 5; #play {Star Conquest/General/Buffers/BuffersSaved.wav} @vol}
+#alias AutoSaveBuffers {#delfile StarConquestBufferlist.txt; #file 5 StarConquestBufferlist.txt; #write 5 @CurrentBufferList; #close 5}
+#alias loadbuffers {#file 5 StarConquestBufferlist.txt; #read 5 CurrentBufferList; #close 5; #play {Star Conquest/General/Buffers/BuffersLoaded.wav} @vol}
+#alias SilentlyLoadBuffers {#file 5 StarConquestBufferlist.txt; #read 5 CurrentBufferList; #close 5}
+
+;Keys for loading, reading  and saving buffers
+#key {Control-alt-shift-S} {SaveBuffers}
+#key {Control-alt-shift-L} {LoadBuffers}
+
+#Key {Alt-Right} {#math BufferPointer {@BufferPointer + 1};#if {@BufferPointer > %NumWords(@CurrentBufferList,"|")} {#Var BufferPointer 1} {};#var BufferName {%word(@currentBufferList,"|",@BufferPointer)};#play {Star Conquest/General/Buffers/BufferSwitch.wav} @vol; #PC %PlayHandle Pan 1200; #say {@BufferName, %numwords(@{@BufferName},"|") items} voiceonly;#var ItemPointer 1}
+
+#Key {Alt-Left} {#math BufferPointer {@BufferPointer - 1};#if {@BufferPointer < 1} {#Var BufferPointer %NumWords(@CurrentBufferList,"|")} {};#var BufferName {%word(@currentBufferList,"|",@BufferPointer)};#play {Star Conquest/General/Buffers/BufferSwitch.wav} @vol; #PC %PlayHandle Pan -1200; #say {@BufferName, %numwords(@{@BufferName},"|") items} Voiceonly;#var ItemPointer 1}
+#alias CleanBuffer {#var @buffername {%replace(@{@BufferName},~", )}}
+#key {Alt-Up} {CleanBuffer;#if {@{@Buffername} = ""} {#play {Star Conquest/General/Buffers/BufferBoundary.wav} @vol; #say {No items in buffer} voiceonly} {#if {@ItemPointer < 2} {#play {Star Conquest/General/Buffers/BufferBoundary.wav} @vol; #say {Top of Buffer} voiceonly} {#math ItemPointer {@ItemPointer - 1}}; #say {%word(@{@BufferName},"|",@ItemPointer)} VoiceOnly}}
+#key {Shift-Alt-PageUp} {CleanBuffer;#if {@{@Buffername} = ""} {#play {Star Conquest/General/Buffers/BufferBoundary.wav} @vol; #say {No items in buffer} VoiceOnly} {#if {@ItemPointer < 20} {#play {Star Conquest/General/Buffers/BufferBoundary.wav} @vol; #say {Not enough items have been stored in the buffer to move that far up} Voiceonly} {#math ItemPointer {@ItemPointer - 20}}; #say {%word(@{@BufferName},"|",@ItemPointer)} VoiceOnly}}
+
+#alias ClearBuffer {#var @buffername ""; #play {Star Conquest/General/Buffers/BufferAction.wav} @vol; #say {The items contained in the @buffername buffer have been cleared successfully!}}
+#key {Alt-shift-delete} {ClearBuffer}
+
+#key {Alt-Down} {CleanBuffer;#if {@{@Buffername} = ""} {#play {Star Conquest/General/Buffers/BufferBoundary.wav} @vol; #say {No items in buffer} VoiceOnly} {#if {@ItemPointer >= %NumWords(@{@BufferName},"|")} {#play {Star Conquest/General/Buffers/BufferBoundary.wav} @vol; #say {End of Buffer} Voiceonly} {#math ItemPointer {@ItemPointer + 1}};#say {%word(@{@BufferName},"|",@ItemPointer)} VoiceOnly}}
+#key {Shift-Alt-PageDown} {CleanBuffer;#if {@{@Buffername} = ""} {#play {Star Conquest/General/Buffers/BufferBoundary.wav} @vol; #say {No items in buffer} VoiceOnly} {#if {@ItemPointer >= %NumWords(@{@BufferName},"|") - 20} {#play {Star Conquest/General/Buffers/BufferBoundary.wav} @vol; #say {Not enough items have been stored in the buffer to move that far down.} Voiceonly} {#math ItemPointer {@ItemPointer + 20}};#say {%word(@{@BufferName},"|",@ItemPointer)} VoiceOnly}}
+
+#key {Alt-Home} {CleanBuffer;#play {Star Conquest/General/Buffers/BufferBoundary.wav} @vol; #say {Top of buffer.} Voiceonly; #if {@{@Buffername} = ""} {#say {No items in buffer}} {#var ItemPointer 1; #say {%word(@{@BufferName},"|",@ItemPointer)} voiceonly}}
+#key {Alt-Down} {CleanBuffer;#if {@{@Buffername} = ""} {#play {Star Conquest/General/Buffers/BufferBoundary.wav} @vol; #say {No items in buffer} VoiceOnly} {#if {@ItemPointer >= %NumWords(@{@BufferName},"|")} {#play {Star Conquest/General/Buffers/BufferBoundary.wav} @vol; #say {End of Buffer} Voiceonly} {#math ItemPointer {@ItemPointer + 1}};#say {%word(@{@BufferName},"|",@ItemPointer)} VoiceOnly}}
+
+#key {Alt-END} {CleanBuffer;#play {Star Conquest/General/Buffers/BufferBoundary.wav} @vol; #say {End of buffer.} Voiceonly; #if {@{@Buffername} = ""} {#say {No items in buffer} VoiceOnly} {#var ItemPointer %NumWords(@{@BufferName},"|");#say {%word(@{@BufferName},"|",@ItemPointer)} voiceonly}}
+
+#Key {Alt-1} {CleanBuffer;#if {@{@BufferName} = ""} {#say {No message.} Voiceonly} {#say %word(@{@BufferName},"|",%NumWords(@{@BufferName},"|")) Voiceonly}}
+#key {Alt-2} {CleanBuffer;#if {%NumWords(@{@BufferName},"|") < 2} {#say {No message.} Voiceonly} {#say {%word(@{@BufferName},"|",%eval(%NumWords(@{@BufferName},"|") - 1)}) Voiceonly}}
+#key {Alt-3} {CleanBuffer;#if {%NumWords(@{@BufferName},"|") < 3} {#say {No message.} Voiceonly} {#say {%word(@{@BufferName},"|",%eval(%NumWords(@{@BufferName},"|") - 2)}) Voiceonly}}
+#key {Alt-4} {CleanBuffer;#if {%NumWords(@{@BufferName},"|") < 4} {#say {No message.} Voiceonly} {#say {%word(@{@BufferName},"|",%eval(%NumWords(@{@BufferName},"|") - 3)}) Voiceonly}}
+#key {Alt-5} {CleanBuffer;#if {%NumWords(@{@BufferName},"|") < 5} {#say {No message.} Voiceonly} {#say {%word(@{@BufferName},"|",%eval(%NumWords(@{@BufferName},"|") - 4)}) Voiceonly}}
+#key {Alt-6} {CleanBuffer;#if {%NumWords(@{@BufferName},"|") < 6} {#say {No message.} Voiceonly} {#say {%word(@{@BufferName},"|",%eval(%NumWords(@{@BufferName},"|") - 5)}) Voiceonly}}
+#key {Alt-7} {CleanBuffer;#if {%NumWords(@{@BufferName},"|") < 7} {#say {No message.} Voiceonly} {#say {%word(@{@BufferName},"|",%eval(%NumWords(@{@BufferName},"|") - 6)}) Voiceonly}}
+#key {Alt-8} {CleanBuffer;#if {%NumWords(@{@BufferName},"|") < 8} {#say {No message.} Voiceonly} {#say {%word(@{@BufferName},"|",%eval(%NumWords(@{@BufferName},"|") - 7)}) Voiceonly}}
+#key {Alt-9} {CleanBuffer;#if {%NumWords(@{@BufferName},"|") < 9} {#say {No message.} Voiceonly} {#say {%word(@{@BufferName},"|",%eval(%NumWords(@{@BufferName},"|") - 8)}) Voiceonly}}
+#key {Alt-0} {CleanBuffer;#if {%NumWords(@{@BufferName},"|") < 10} {#say {No message.} Voiceonly} {#say {%word(@{@BufferName},"|",%eval(%NumWords(@{@BufferName},"|") - 9)}) Voiceonly}}
+
+#alias {ClearAllBuffers} {#unload misc/Buffers.set; #load misc/buffers.set; SilentlyLoadBuffers; #play {Star Conquest/General/Buffers/BufferAction.wav} @vol; #say {The items contained in your active buffers have been cleared successfully!} Voiceonly}
+#key Control-Alt-Shift-Delete {ClearAllBuffers}
+#alias FixBuffers {#load misc/buffers.set;SaveBuffers; #say {buffer errors should now be corrected.}}

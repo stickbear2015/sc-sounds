@@ -1,8 +1,12 @@
 ;tracking
-#trigger {The ship's target tracking array reports that it is now tracking *.} {
+#trigger {The ship's target tracking array reports that it is now tracking the *.} {
+#gagline voice;
+#say {%1 tracked.} voiceOnly;
 #if {@silent = 1} {
 #play {Star Conquest\Ship\Combat\tracking.wav} @vol}} {}
-#trigger {The target tracking array is now tracking *} {
+#trigger {The target tracking array is now tracking the *.} {
+#gagline voice;
+#say {%1 tracked.} voiceOnly;
 #if {@silent = 1} {
 #play {Star Conquest\Ship\Combat\tracking.wav} @Vol}} {}
 #TRIGGER {The ship's target tracking array reports that * is now in range at Sector *} {
@@ -119,7 +123,9 @@
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\mini*3.wav} @Vol}} {}
 #TRIGGER {The lights dim briefly as a plasma burst is fired.} {
-#Gagline Voice} {}
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Combat\mini*3.wav} @Vol}} {}
 #TRIGGER {The ship jerks sharply as its lasers are fired.} {
 #Gagline Voice;
 #if {@silent = 1} {
@@ -133,13 +139,17 @@
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\lasOrient.wav} @Vol}} {}
 #TRIGGER {You feel a mild vibration as the ship's lasers are fired.} {
-#Gagline Voice} {}
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Combat\Laser*3.wav} @Vol}}
 #TRIGGER {The ship shudders slightly as its lasers are fired.} {
 #Gagline Voice;
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\Laser*3.wav} @Vol}} {}
 #TRIGGER {The ship jerks sharply as its lasers are fired.} {
-#Gagline Voice} {}
+#Gagline Voice} {;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Combat\Laser*3.wav} @Vol}} {}
 #TRIGGER {The ship shudders as a torrent of bullets are launched from its chainguns.} {
 #Gagline Voice;
 #if {@silent = 1} {
@@ -159,7 +169,9 @@
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\torpedo*4.wav} @Vol}} {}
 #TRIGGER {The ship jerks back violently as torpedoes are fired.} {
-#Gagline Voice} {}
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Combat\torpedo*4.wav} @Vol}}
 #TRIGGER {You hear a loud bang as the ship's torpedo launchers are used.} {
 #Gagline Voice;
 #if {@silent = 1} {
@@ -175,11 +187,13 @@
 
 ;misc
 #TRIGGER {The computer reports that the * has executed an assault maneuver.} {
+#gagline voice;
+#say {The %1 has executed an assault maneuver.} voiceOnly;
 #if {@silent = 1} {
-#play {Star Conquest\ship\combat\rapid.wav} @vol}} {}
+#play {Star Conquest\ship\combat\warp.wav} @vol}}
 #trigger {Your starship's combat energy grid doesn't enough energy for * shot.} {
 #if {@silent = 1} {
-#play {Star Conquest\ship\combat\failsafe.wav} @vol}} {}
+#play {Star Conquest\ship\combat\LowGrid.wav} @vol}} {}
 #Trigger {* pulls up the * and presses a large button.} {
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Computer\Keyboard.wav} @Vol}} {}

@@ -73,3 +73,4 @@ This command will reload the soundpack.
 
 Length
 This command will open a dialog box (a prompt) and check the length of a string if you paste one.
+

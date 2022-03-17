@@ -48,3 +48,9 @@
 
 #trigger {You switch a toggle on your * einrophone.} {
 #gagline Voice} {}
+
+#trigger {From a phone-based holoemitter: *} {
+#gagline voice; 
+#say {"%1"} voiceOnly;
+#if {@silent = 1} {
+#play {Star Conquest\General\Misc\Phone Holo.wav} @vol}}
