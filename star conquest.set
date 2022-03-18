@@ -6,7 +6,7 @@
 #if {NOT %Defined(ovenon)} {#var ovenon 1}
 #if {NOT %Defined(gaggs)} {#var gaggs 0}
 
-#ForAll {SalvagingANDScooping|combat|ground|explore|asteroid|ship|Vars|misc|communications|socials|phones|gags|keys|Oven|PetsAndRobots} {
+#ForAll {SalvagingANDScooping|combat|ground|explore|asteroid|ship|Vars|misc|communications|socials|phones|gags|keys|Oven|PetsAndRobots|buffers} {
 #load {Scripts\%I.set}}
 
 #file 6 {Star Conquest/Settings.set} 1;
