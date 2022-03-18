@@ -15,7 +15,8 @@ Version 2.8.1
 *thanks to luna, adds buffers, see buffers.txt for keystrokes and help on buffers.
 *thanks to luna, screen reader gags the computer says in ships, but leaves the line stil visible in the output window. The screen reader will only read the second half of the line.
 *adds #exec {LoadBuffers} to "star conquest.set"
-
+*thanks to Luna, changed the sound for the alliance channel, newbie, and for comm notifications.
+*thanks to Luna, gagged a flight control scanner says from being spoken, but it still appears in output window and in logs.
 Version 2.8
 We got rid of some bari combat sounds that only seemed to trigger sometimes.
 In the name of not having a ton of sounds for one function, we got rid of several repair sounds.
