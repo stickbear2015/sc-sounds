@@ -21,7 +21,7 @@
 #Trigger {You and your battlesuit are promptly picked up by a flier, which begins returning to the deployment facility.} {
 #if {@silent = 1} {
 #Play {Star Conquest\Ground Combat\FlyerTransport.wav} @Vol}} {}
-#Trigger {The pod shudders violently as it speeds through the interior of the nest. The interior of your battlesuit cushions most of the turbulence.} {
+#Trigger {The pod shudders violently as it speeds through the interior of the enemy structure. The interior of your battlesuit cushions most of the turbulence.} {
 #if {@silent = 1} {
 #Play {Star Conquest\Ground Combat\BattleSuitFlight.wav} @Vol}} {}
 #Trigger {You tongue a prominent control inside your battlesuit, then brace yourself as two halves of a drop pod suddenly descend onto you and seal around you. A moment later, you feel sudden acceleration as your pod is launched from the aerial fortress.} {
