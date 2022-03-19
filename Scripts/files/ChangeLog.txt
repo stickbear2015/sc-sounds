@@ -4,19 +4,23 @@ Here is where changes that are made to the soundpack will be documented, so you 
 Version 2.8.1
 *updated credits.
 *updated information about where to submit suggestions.
-*updated information about where to submit pesky bugs
+*updated information about where to submit pesky bugs.
 *updated readme removing the old e-mail address.
 *actually updates peoplecontrib so it reflects the actual last modified date.
 *updates the startup message to reference the issue tracker and where you can find it's URL.
-*slight cosmetic and readability changes to readme.txt
+*slight cosmetic and readability changes to readme.txt.
 *thanks to luna, modifies several sound files to make them not suck.
 *thanks to luna, modifies ground combat to use a different sound for enemy damage notifications.
 *thanks to luna, adds a low grid sound file, and modifies the trigger to use it instead of the loud as piss failsafe sound.
 *thanks to luna, adds buffers, see buffers.txt for keystrokes and help on buffers.
 *thanks to luna, screen reader gags the computer says in ships, but leaves the line stil visible in the output window. The screen reader will only read the second half of the line.
-*adds #exec {LoadBuffers} to "star conquest.set"
+*adds #exec {LoadBuffers} to "star conquest.set".
 *thanks to Luna, changed the sound for the alliance channel, newbie, and for comm notifications.
 *thanks to Luna, gagged a flight control scanner says from being spoken, but it still appears in output window and in logs.
+*thanks to Luna, Made it easier to tell when you are dealing with one Glythmaker enemy or two by panning alpha and beta to the left or right.
+*thanks to luna, Made it faster to identify where a target is coming from if you are gunning in a fortress.
+*thanks to luna, Fixed a bug where fehu and uruz drones didn't trigger sounds when they detached from the wall.
+*thanks to luna, changed the trigger so the sound for containers at GMG is more reliable.
 Version 2.8
 We got rid of some bari combat sounds that only seemed to trigger sometimes.
 In the name of not having a ton of sounds for one function, we got rid of several repair sounds.

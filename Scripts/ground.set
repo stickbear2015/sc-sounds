@@ -587,13 +587,17 @@
 #Var SoundHandlePanning %PlayHandle;#Pc @SoundHandlePanning Pan -3500};
 #if {%ifWord(beta,%1," ")} {
 #Play {Star Conquest\Ground Combat\glyphdetach.wav} @Vol;
+#Var SoundHandlePanning %PlayHandle;#Pc @SoundHandlePanning Pan 3500};
+#if {%ifWord(Fehu,%1," ")} {
+#Play {Star Conquest\Ground Combat\glyphdetach.wav} @Vol;
+#Var SoundHandlePanning %PlayHandle;#Pc @SoundHandlePanning Pan -3500};
+#if {%ifWord(Uruz,%1," ")} {
+#Play {Star Conquest\Ground Combat\glyphdetach.wav} @Vol;
 #Var SoundHandlePanning %PlayHandle;#Pc @SoundHandlePanning Pan 3500}}}
-#trigger {You see a semi-transparent hexagonal crystal container, a semi-transparent hexagonal crystal container*} {
+#trigger {You see * here.} {
 #if {@silent = 1} {
-#play {Star conquest\Ground Combat\ContainerHere.wav} @vol}} {}
-#trigger {You see a semi-transparent hexagonal crystal container and a semi-transparent hexagonal crystal container here.} {
-#if {@silent = 1} {
-#play {Star Conquest\Ground Combat\Containerhere.wav} @vol}} {}
+#if {%ifWord(semi-transparent hexagonal crystal container,%1," ")} {
+#play {Star conquest\Ground Combat\ContainerHere.wav} @vol}}} {}
 #trigger {* glyph suddenly appears in front of a large blast door.} {
 #if {@silent = 1} {
 #play {Star Conquest\Ground Combat\glyphflash.wav} @vol}} {}
