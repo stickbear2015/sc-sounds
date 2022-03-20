@@ -1,1 +1,3 @@
 FlightControlScanner|AllianceCommunication|Community1|Community2|GeneralCommunication|TacticalCommunication|NewbieHelp|CrewFinder|Mining|SalvageOp|PA
+
+
