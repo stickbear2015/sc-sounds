@@ -1,7 +1,7 @@
 This file will explain how to get your soundpack up and running.
 
 Notes:
-if you just downloaded the scripts patch, unless otherwise specified on the release page, skips steps 3 5 6 and 7.
+if you just downloaded the scripts patch, unless otherwise specified on the release page, skips steps 3 6 and 7.
 If you just downloaded the sounds patch, skip steps 4 5 6 and 7.
 
 pre-installation, only applicable to new installations,skip this section if upgrading.
@@ -19,9 +19,9 @@ It might look something like C:\Program Files (x86)\VipMud
 or C:\Program Files\VipMud
 If you're using the latest version of VIP mud which is 2.0, it may be installed in your Documents folder.
 3. From within that folder, locate your sounds folder and open it. Then go to the soundpack that you have just downloaded and open its sound folder. Copy the star conquest folder and then paste it into your sounds folder.
-4. Back out of the sounds folder and go to the star conquest folder. You will simply copy and paste your scripts folder settings, and star conquest.set file from the soundpack folder to this star conquest folder located in your Vipmud directory.
-5. Copy "StarConquestBufferlist.txt"  into the route of your VIP Mud folder.
-6. Copy "settings.set"  into the route of your "Star Conquest" folder inside your VIP Mud folder.
-7. copy "Star Conquest.set"  into the route of your "Star Conquest" folder inside your VIP Mud folder.
+4. Back out of the sounds folder and go to the star conquest folder. You  copy and paste your scripts folder  here.
+5. Copy "Star conquest.set" here as well.
+6. Copy "settings.set"  here as well.
+7. back out of the star conquest folder, and Copy "StarConquestBufferlist.txt"  into the route of your VIP Mud folder.
 bugs, suggestions, etc.
 If you have any other troubles, find a bug, or have a feature suggestion, please post an issue to [the issue tracker](https://github.com/stickbear2015/sc-sounds/issues/new/choose)
