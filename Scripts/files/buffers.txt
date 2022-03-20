@@ -1,11 +1,10 @@
-adapted the Cosmic Rage buffers to work with Star Conquest. Pay attention to the remainder of this file.
+We've adapted the Cosmic Rage buffers to work with Star Conquest. Pay attention to the remainder of this file.
 You must run this command once when you first start the game after copying these files in place:
 savebuffers
 The following line already exists at the bottom of "star conquest.set"
 #exec {LoadBuffers}
 if you'd rather this line silently load your buffers without notification, change the line and replace it with
 #exec {SilentlyLoadBuffers}
-Type keys and look near the end of the file for buffer commands.
 To add a new buffer:
 Edit Star Conquest/Scripts/Buffers.set and add your new buffer name to the end of lines 1 and 2. There should be a vertical bar separating each buffer name. For example: OldBuffer1|OldBuffer2|MyNewBuffer
 Add or edit the trigger which identifies the text you'd like to have in the buffer and include this line:
@@ -14,7 +13,7 @@ where MyNewBuffer is the name of the buffer that you added previously.
 In these examples, MyNewBuffer might be called FlightControlScanner.
 	Explaining the system.
 
-The Master buffer list contains every buffer Snapp has added into the pack. Currently as of Wednesday, June 27, 2018, there are 57 buffers in this list, and Snapp is always willing to add more.
+The Master buffer list contains every buffer We've has added into the pack. Currently as of Wednesday, June 27, 2018, there are 57 buffers in this list, and We're  always willing to add more.
 
 The Current buffer list.
 
