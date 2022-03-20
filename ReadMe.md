@@ -3,7 +3,7 @@ This file will explain how to get your soundpack up and running.
 Notes:
 if you just downloaded the scripts patch, unless otherwise specified on the release page, skips steps 3 6 and 7.
 If you just downloaded the sounds patch, skip steps 4 5 6 and 7.
-
+If you downloaded the full release file, follow all steps, unless you already have a "settings.set" file", if you have a "settings.set" file, skip step 6.
 pre-installation, only applicable to new installations,skip this section if upgrading.
 before we continue to the installation, when creating the mud, the mud name should be called "Star Conquest" without the quotes. Capatalization is important! Please connect to it once before continuing to ensure the necessary folder is created.
 Once that's done, move on to actual installation below.
