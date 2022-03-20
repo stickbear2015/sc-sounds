@@ -21,7 +21,9 @@ Version 2.8.1
 *thanks to luna, Made it faster to identify where a target is coming from if you are gunning in a fortress.
 *thanks to luna, Fixed a bug where fehu and uruz drones didn't trigger sounds when they detached from the wall.
 *thanks to luna, changed the trigger so the sound for containers at GMG is more reliable.
-*thanks to luna and other characters, fixes a ground combat trigger that wasn't triggering the proper sound. Now, the entire launch text for battlesuits to nests triggers the proper sound.
+*thanks to luna and other characters, fixes a ground combat trigger that wasn't triggering the proper sound. Now, the entire launch text for battlesuits to nests triggers the proper sounds.
+*Set up triggers for launching to and from glyph stations.
+*Adjusted the trigger for getting hit by multiple projectiles so you hear a sound for them as well as single shots.
 Version 2.8
 We got rid of some bari combat sounds that only seemed to trigger sometimes.
 In the name of not having a ton of sounds for one function, we got rid of several repair sounds.

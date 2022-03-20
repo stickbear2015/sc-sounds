@@ -30,6 +30,15 @@
 #Play {Star Conquest\Ground Combat\EnterBattleSuit.wav} @Vol;
 #Play {Star Conquest\Ground Combat\ArialFortressBattleSuitLaunch.WAV} @Vol;
 #Var InCombatSuit 1}} {}
+#Trigger {Your battlesuit is launched at great speed toward the large artifact!} {
+#if {@silent = 1} {
+#Play {Star Conquest\General\Misc\Beep*3.wav} @Vol;
+#Play {Star Conquest\Ground Combat\ArialFortressBattleSuitLaunch.WAV} @Vol;
+#Var InCombatSuit 1}} {}
+#trig {You light your battlesuit's ascent rockets and hurl yourself down the corridor and out through the access point.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\ArialFortressBattleSuitLaunch.WAV} @Vol}} {}
+
 #Trigger {You light your battlesuit's ascent rockets and begin speeding toward the waiting aerial fortress.} {
 #if {@silent = 1} {
 #Play {Star Conquest\Ground Combat\ArialFortressBattleSuitLaunch.WAV} @Vol}} {}
@@ -62,8 +71,8 @@
 #Sub {%1 fires its %2 at %3};
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\OtherFired*3.wav} @Vol}}} {}
-#Trigger {   You are hit!} {
-#Sub {Hit!};
+#Trigger {   You are hit*} {
+#Sub {Hit%1};
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\YouHit*3.wav} @Vol}} {}
 #Trigger {* turns toward you.} {
