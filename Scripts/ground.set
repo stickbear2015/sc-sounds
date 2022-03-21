@@ -21,7 +21,7 @@
 #Trigger {You and your battlesuit are promptly picked up by a flier, which begins returning to the deployment facility.} {
 #if {@silent = 1} {
 #Play {Star Conquest\Ground Combat\FlyerTransport.wav} @Vol}} {}
-#Trigger {The pod shudders violently as it speeds through the interior of the enemy structure. The interior of your battlesuit cushions most of the turbulence.} {
+#Trigger {The pod shudders violently as it speeds through the interior of the nest. The interior of your battlesuit cushions most of the turbulence.} {
 #if {@silent = 1} {
 #Play {Star Conquest\Ground Combat\BattleSuitFlight.wav} @Vol}} {}
 #Trigger {You tongue a prominent control inside your battlesuit, then brace yourself as two halves of a drop pod suddenly descend onto you and seal around you. A moment later, you feel sudden acceleration as your pod is launched from the aerial fortress.} {
@@ -30,15 +30,6 @@
 #Play {Star Conquest\Ground Combat\EnterBattleSuit.wav} @Vol;
 #Play {Star Conquest\Ground Combat\ArialFortressBattleSuitLaunch.WAV} @Vol;
 #Var InCombatSuit 1}} {}
-#Trigger {Your battlesuit is launched at great speed toward the large artifact!} {
-#if {@silent = 1} {
-#Play {Star Conquest\General\Misc\Beep*3.wav} @Vol;
-#Play {Star Conquest\Ground Combat\ArialFortressBattleSuitLaunch.WAV} @Vol;
-#Var InCombatSuit 1}} {}
-#trig {You light your battlesuit's ascent rockets and hurl yourself down the corridor and out through the access point.} {
-#if {@silent = 1} {
-#Play {Star Conquest\Ground Combat\ArialFortressBattleSuitLaunch.WAV} @Vol}} {}
-
 #Trigger {You light your battlesuit's ascent rockets and begin speeding toward the waiting aerial fortress.} {
 #if {@silent = 1} {
 #Play {Star Conquest\Ground Combat\ArialFortressBattleSuitLaunch.WAV} @Vol}} {}
@@ -71,8 +62,8 @@
 #Sub {%1 fires its %2 at %3};
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\OtherFired*3.wav} @Vol}}} {}
-#Trigger {   You are hit*} {
-#Sub {Hit%1};
+#Trigger {   You are hit!} {
+#Sub {Hit!};
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\YouHit*3.wav} @Vol}} {}
 #Trigger {* turns toward you.} {
@@ -591,22 +582,21 @@
 #Play {Star Conquest\Ground Combat\glyphdoor.wav} @Vol}} {}
 #Trigger {Glyph * detaches from an alcove on the wall.} {
 #if {@silent = 1} {
+#if {%ifWord(templar,%1," ")} {
+#Play {Star Conquest\Ground Combat\glyphdetach.wav} @Vol;
+#abort 1};
 #if {%ifWord(alpha,%1," ")} {
 #Play {Star Conquest\Ground Combat\glyphdetach.wav} @Vol;
 #Var SoundHandlePanning %PlayHandle;#Pc @SoundHandlePanning Pan -3500};
 #if {%ifWord(beta,%1," ")} {
 #Play {Star Conquest\Ground Combat\glyphdetach.wav} @Vol;
-#Var SoundHandlePanning %PlayHandle;#Pc @SoundHandlePanning Pan 3500};
-#if {%ifWord(Fehu,%1," ")} {
-#Play {Star Conquest\Ground Combat\glyphdetach.wav} @Vol;
-#Var SoundHandlePanning %PlayHandle;#Pc @SoundHandlePanning Pan -3500};
-#if {%ifWord(Uruz,%1," ")} {
-#Play {Star Conquest\Ground Combat\glyphdetach.wav} @Vol;
 #Var SoundHandlePanning %PlayHandle;#Pc @SoundHandlePanning Pan 3500}}}
-#trigger {You see * here.} {
+#trigger {You see a semi-transparent hexagonal crystal container, a semi-transparent hexagonal crystal container*} {
 #if {@silent = 1} {
-#if {%ifWord(semi-transparent hexagonal crystal container,%1," ")} {
-#play {Star conquest\Ground Combat\ContainerHere.wav} @vol}}} {}
+#play {Star conquest\Ground Combat\ContainerHere.wav} @vol}} {}
+#trigger {You see a semi-transparent hexagonal crystal container and a semi-transparent hexagonal crystal container here.} {
+#if {@silent = 1} {
+#play {Star Conquest\Ground Combat\Containerhere.wav} @vol}} {}
 #trigger {* glyph suddenly appears in front of a large blast door.} {
 #if {@silent = 1} {
 #play {Star Conquest\Ground Combat\glyphflash.wav} @vol}} {}
