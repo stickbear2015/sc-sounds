@@ -57,45 +57,45 @@
 #play {Star Conquest\general\comm\org.wav} @vol}};
 #abort 1};
 #if {%ifWord(League,%1," ")} {
+#additem AllianceCommunication %0;
 #if {@commson = 1} {
 #if {@silent = 1} {
-#additem AllianceCommunication %0;
 #play {Star Conquest\general\comm\alliance.wav} @vol}};
 #abort 1};
 #if {%ifWord(League-Mutuality,%1," ")} {
+#additem AllianceCommunication %0;
 #if {@commson = 1} {
 #if {@silent = 1} {
-#additem AllianceCommunication %0;
 #play {Star Conquest\general\comm\alliance.wav} @vol}};
 #abort 1};
 #if {%ifWord(Fringe,%1," ")} {
+#additem AllianceCommunication %0;
 #if {@commson = 1} {
 #if {@silent = 1} {
-#additem AllianceCommunication %0;
 #play {Star Conquest\general\comm\alliance.wav} @vol}};
 #abort 1};
 #if {%ifWord(AEU,%1," ")} {
+#additem AllianceCommunication %0;
 #if {@commson = 1} {
 #if {@silent = 1} {
-#additem AllianceCommunication %0;
 #play {Star Conquest\general\comm\alliance.wav} @vol}};
 #abort 1};
 #if {%ifWord(General,%1," ")} {
+#additem GeneralCommunication %0;
 #if {@commson = 1} {
 #if {@silent = 1} {
-#additem GeneralCommunication %0;
 #Play {Star Conquest\General\Comm\General.wav} @vol}};
 #abort 1};
 #if {%ifWord(Newbie,%1," ")} {
+#additem NewbieHelp %0;
 #if {@commson = 1} {
 #if {@silent = 1} {
-#additem NewbieHelp %0;
 #Play {Star Conquest\General\Comm\newbie.wav} @Vol}};
 #abort 1};
 #if {%ifWord(Tactical,%1," ")} {
+#additem TacticalCommunication %0;
 #if {@commson = 1} {
 #if {@silent = 1} {
-#additem TacticalCommunication %0;
 #Play {Star Conquest\General\Comm\tactical.wav} @Vol}};
 #abort 1};
 #if {%ifWord(Squad,%1," ")} {
@@ -104,15 +104,15 @@
 #Play {Star Conquest\Ground Combat\squad.wav} @Vol}};
 #abort 1};
 #if {%ifWord(Mining,%1," ")} {
+#additem Mining %0;
 #if {@commson = 1} {
 #if {@silent = 1} {
-#additem Mining %0;
 #play {Star Conquest\general\comm\mining.wav} @vol}};
 #abort 1};
 #if {%ifWord(Salvage,%1," ")} {
+#additem SalvageOp %0;
 #if {@commson = 1} {
 #if {@silent = 1} {
-#additem SalvageOp %0;
 #play {Star Conquest\general\comm\salvageop.wav} @vol}};
 #abort 1};
 #if {(%ifword(%1,@chansecond," "))} {#additem Community2 %0};

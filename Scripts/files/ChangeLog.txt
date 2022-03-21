@@ -27,8 +27,8 @@ Version 2.8.1
 *Thanks to  Luna, updates crewfinder sound.
 *Thanks to Luna, updates the ooc sound.
 *replaces power on and power off sounds with the older sounds.
-*removes panning from templars.
-
+*thanks to Luna, removes panning from templars.
+*thanks to luna, updates to fix the storing of messages even if comm sounds are off. They store now regardless of sound setting.
 Version 2.8
 We got rid of some bari combat sounds that only seemed to trigger sometimes.
 In the name of not having a ton of sounds for one function, we got rid of several repair sounds.
