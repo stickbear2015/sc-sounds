@@ -33,7 +33,7 @@
 #play {Star Conquest\general\felo\meow*3.wav} @vol}}}} {}
 
 ;Felo
-#TRIGGER {* purrs softly.} {
+#TRIGGER {* felo*purrs softly.} {
 #if {@socialson = 1} {
 #if {@felo = 1} {
 #if {@silent = 1} {
@@ -43,11 +43,6 @@
 #if {@felo = 1} {
 #if {@silent = 1} {
 #Play {Star Conquest\general\felo\meow*3.wav} @vol}}}} {}
-#trigger {* purrs and rubs its head against * hand, looking up at * adoringly.} {
-#if {@socialson = 1} {
-#if {@felo = 1} {
-#if {@silent = 1} {
-#play {Star Conquest\general\felo\purr*3.wav} @vol}}}} {}
 #trigger {* rubs up against *, and both animals purr softly.} {
 #if {@socialson = 1} {
 #if {@felo = 1} {
@@ -58,7 +53,7 @@
 #if {@felo = 1} {
 #if {@silent = 1} {
 #play {Star Conquest\general\felo\meow*3.wav} @vol}}}} {}
-#trigger {* purrs and rubs its head against * hand.} {
+#trigger {* purrs and rubs its head against * hand*} {
 #if {@socialson = 1} {
 #if {@felo = 1} {
 #if {@silent = 1} {
