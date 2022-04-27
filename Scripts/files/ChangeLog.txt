@@ -31,6 +31,7 @@ Version 2.8.1
 *thanks to luna, updates to fix the storing of messages even if comm sounds are off. They store now regardless of sound setting.
 *Thanks to Luna: fixed it so that purring softly, as sent by people, doesn't trigger the felo purring.
 *Thanks to Luna, streamlined some of the felo code slightly
+*minor fix to ships.set
 Version 2.8
 We got rid of some bari combat sounds that only seemed to trigger sometimes.
 In the name of not having a ton of sounds for one function, we got rid of several repair sounds.

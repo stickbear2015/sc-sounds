@@ -331,11 +331,13 @@
 #Play {Star Conquest\Ship\Misc\EnterDucts*2.wav} @Vol}} {}
 
 #Trigger {The computer reports that * "*" has jumped into the sector.} {
-#Sub {%1 %2 has jumped into the sector.};
+#gagline voice;
+#say {%1 %2 has jumped in.} voiceOnly;
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Move\EnterSector1.wav} @Vol}} {}
 #Trigger {The computer reports that * "*" has jumped out of the sector.} {
-#Sub {%1 %2 has jumped out of the sector.};
+#gagline voice;
+#say {%1 %2 has jumped in.} voiceOnly;
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Move\ExitSector1.wav} @Vol}} {}
 
