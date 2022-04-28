@@ -9,30 +9,31 @@ Version 2.8.1
 *actually updates peoplecontrib so it reflects the actual last modified date.
 *updates the startup message to reference the issue tracker and where you can find it's URL.
 *slight cosmetic and readability changes to readme.txt.
-*thanks to luna, modifies several sound files to make them not suck.
-*thanks to luna, modifies ground combat to use a different sound for enemy damage notifications.
-*thanks to luna, adds a low grid sound file, and modifies the trigger to use it instead of the loud as piss failsafe sound.
-*thanks to luna, adds buffers, see buffers.txt for keystrokes and help on buffers.
-*thanks to luna, screen reader gags the computer says in ships, but leaves the line stil visible in the output window. The screen reader will only read the second half of the line.
+*modifies several sound files to make them not suck.
+*modifies ground combat to use a different sound for enemy damage notifications.
+*adds a low grid sound file, and modifies the trigger to use it instead of the loud as piss failsafe sound.
+*adds buffers, see buffers.txt for keystrokes and help on buffers.
+*screen reader gags the computer says in ships, but leaves the line stil visible in the output window. The screen reader will only read the second half of the line.
 *adds #exec {LoadBuffers} to "star conquest.set".
-*thanks to Luna, changed the sound for the alliance channel, newbie, and for comm notifications.
-*thanks to Luna, gagged a flight control scanner says from being spoken, but it still appears in output window and in logs.
-*thanks to Luna, Made it easier to tell when you are dealing with one Glythmaker enemy or two by panning alpha and beta to the left or right.
-*thanks to luna, Made it faster to identify where a target is coming from if you are gunning in a fortress.
-*thanks to luna, Fixed a bug where fehu and uruz drones didn't trigger sounds when they detached from the wall.
-*thanks to luna, changed the trigger so the sound for containers at GMG is more reliable.
-*thanks to luna and other characters, fixes a ground combat trigger that wasn't triggering the proper sound. Now, the entire launch text for battlesuits to nests triggers the proper sounds.
+*changed the sound for the alliance channel, newbie, and for comm notifications.
+*gagged a flight control scanner says from being spoken, but it still appears in output window and in logs.
+*Made it easier to tell when you are dealing with one Glythmaker enemy or two by panning alpha and beta to the left or right.
+*Made it faster to identify where a target is coming from if you are gunning in a fortress.
+*Fixed a bug where fehu and uruz drones didn't trigger sounds when they detached from the wall.
+*changed the trigger so the sound for containers at GMG is more reliable.
+*fixes a ground combat trigger that wasn't triggering the proper sound. Now, the entire launch text for battlesuits to nests triggers the proper sounds.
 *Set up triggers for launching to and from glyph stations.
 *Adjusted the trigger for getting hit by multiple projectiles so you hear a sound for them as well as single shots.
-*Thanks to  Luna, updates crewfinder sound.
-*Thanks to Luna, updates the ooc sound.
+*updates crewfinder sound.
+*updates the ooc sound.
 *replaces power on and power off sounds with the older sounds.
-*thanks to Luna, removes panning from templars.
-*thanks to luna, updates to fix the storing of messages even if comm sounds are off. They store now regardless of sound setting.
-*Thanks to Luna: fixed it so that purring softly, as sent by people, doesn't trigger the felo purring.
-*Thanks to Luna: streamlined some of the felo code slightly
-*thanks to luna: Launching from a fortress no longer triggers the enter battlesuit sound on top of the launching sound.
-*thanks to Luna: fixed a few sound file errors in ground combat.
+*removes panning from templars.
+*updates to fix the storing of messages even if comm sounds are off. They store now regardless of sound setting.
+*fixed it so that purring softly, as sent by people, doesn't trigger the felo purring.
+*streamlined some of the felo code slightly
+*Launching from a fortress no longer triggers the enter battlesuit sound on top of the launching sound.
+*fixed a few sound file errors in ground combat.
+*Crabs and carps will now trigger the correct damage warning sound. Thanks go to Monique for pointing this one out.
 
 Version 2.8
 We got rid of some bari combat sounds that only seemed to trigger sometimes.

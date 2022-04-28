@@ -482,6 +482,12 @@
 #if {%ifWord(Completely Resistant Assault Brigadier,%1," ")} {
 #Play {Star Conquest\Ground Combat\TargetDamageAlert.wav} @Vol;
 #abort 1};
+#if {%ifWord(Mining Oxidizing-Liquid Entity,%1," ")} {
+#Play {Star Conquest\Ground Combat\TargetDamageAlert.wav} @Vol;
+#abort 1};
+#if {%ifWord(Communicating Auto-Response Protector,%1," ")} {
+#Play {Star Conquest\Ground Combat\TargetDamageAlert.wav} @Vol;
+#abort 1};
 #if {%ifWord(Miniaturized Interfacing Companion Entity,%1," ")} {
 #Play {Star Conquest\Ground Combat\TargetDamageAlert.wav} @Vol;
 #abort 1};
