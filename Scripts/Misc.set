@@ -233,7 +233,8 @@
 #if {@silent = 1} {
 #Play {Star Conquest\General\Misc\CantGo.wav} @Vol}}} {}
 #Trigger {From * holovid: *} {
-#Sub {%2};
+#Gagline voice;
+#Say {%2} voiceOnly;
 #if {@silent = 1} {
 #Play {Star Conquest\General\Device\Holopad.wav} @Vol}} {}
 #trigger {Point Totals:} {
@@ -375,6 +376,7 @@
 #play {Star Conquest\general\misc\RoundTime.wav} 40}}
 };
 #if {%1<1} {
-  #Sub {1 second roundtime.} or #sub {%1 seconds roundtime.}}
+#gagline voice;
+  #Say {1 second roundtime.} or #sub {%1 seconds roundtime.} voiceOnly}
 }
 }

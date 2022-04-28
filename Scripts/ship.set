@@ -260,44 +260,49 @@
 #Play {Star Conquest\Ship\Move\Landing.wav} @Vol}} {}
 
 #TRIGGER {*'s voice comes over the loudspeaker and says, "*"} {
-#Sub {%1: %2};
+#Gagline voice;
+#Say {%1: %2} voiceOnly;
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Comm\PA*4.wav} @vol}} {}
 #TRIGGER {You speak into the PA microphone, saying, *} {
-#if {@silent = 1} {
 #additem PA %0;
+#if {@silent = 1} {
 #Play {Star Conquest\Ship\Comm\pa*4.wav} @vol}} {}
 #TRIGGER {You * into the PA microphone.} {
+#additem PA %0;
 #if {@silent = 1} {
 #play {Star Conquest\ship\comm\pa*4.wav} @vol}} {}
 #TRIGGER {* says into the PA microphone, "*"} {
-#Sub {%1, %2};
+#additem PA %1, %2;
+#Gagline Voice;
+#Say {%1, %2} voiceOnly;
 #if {@silent = 1} {
-#additem PA %0;
 #Play {Star Conquest\Ship\Comm\pa*4.wav} @vol}} {}
 #trigger {A voice says over the speaker, "*"} {
 #if {@silent = 1} {
 #play {Star Conquest\ship\comm\pa*4.wav} @vol}} {}
 #trigger {* voice comes over the loudspeaker as *} {
-#if {@silent = 1} {
 #additem PA %0;
+#if {@silent = 1} {
 #play {Star Conquest\ship\comm\pa*4.wav} @vol}} {}
 #Trigger {A voice comes over the speaker and says, "*"} {
-#Sub {%1};
+#Gagline voice;
+#Say {%1} voiceOnly;
 #if {@silent = 1};
 #Play {Star Conquest\Ship\Comm\PA*4.wav} @Vol} {}
 #trigger {*, and lift one cup of your earmuffs in time to hear *'s voice coming over the loudspeaker, saying, "*"} {
-#sub {%2: %3};
+#additem PA %2, %3;
+#gagline voice;
+#say {%2: %3} voiceOnly;
 #if {@silent = 1};
-#additem PA %0;
 #play {Star Conquest\ship\comm\pa*4.wav} @vol}
 
-#Trigger {A few green lights blink on, then off again a moment later, as another starship is scanned.} {
-#if {@silent = 1} {
-#Play {Star Conquest\Ship\Computer\Scan.wav} @vol;
+#Trigger {A few green lights blink on, then off again a moment later, as another starship is scanned.  The computer then displays the following:} {
 #Gagline Voice;
 #Math ScanTriggerCounter {@ScanTriggerCounter + 1};
-#Var ScanTriggersActive 1}} {}
+#Var ScanTriggersActive 1;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Computer\Scan.wav} @Vol}} {}
 #Trigger {Hull damage: &{ScanShipHullDamage}?} {
 #If {@ScanTriggersActive = 1} {
 #Gagline Voice;
@@ -326,7 +331,6 @@
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Misc\EnterDucts*2.wav} @Vol}} {}
 #Trigger {A panel suddenly moves aside.  A moment later, * arrives from the starship's network of systems ducts.} {
-#Sub {%1 arrives from the starship's network of systems ducts.};
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Misc\EnterDucts*2.wav} @Vol}} {}
 
@@ -337,7 +341,7 @@
 #Play {Star Conquest\Ship\Move\EnterSector1.wav} @Vol}} {}
 #Trigger {The computer reports that * "*" has jumped out of the sector.} {
 #gagline voice;
-#say {%1 %2 has jumped in.} voiceOnly;
+#say {%1 %2 has jumped out.} voiceOnly;
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Move\ExitSector1.wav} @Vol}} {}
 
@@ -424,7 +428,8 @@
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Computer\Announce1.wav} @Vol}} {}
 #TRIGGER {The computer reports that your current coordinates are: (*)} {
-#sub %1} {}
+#gagline voice;
+#say {%1} voiceOnly} {}
 #trigger {Bari Pods: *} {
 #if {@silent = 1} {
 #play {Star Conquest\general\misc\warning.wav} @vol}} {}
@@ -434,7 +439,7 @@
 #Play {Star Conquest\ship\move\changesector.wav} @vol}} {}
 #Trigger {The computer says, "The pilot has signalled that incoming weapon fire is imminent. Please brace yourself."} {
 #Gagline Voice;
-#Say {Brace!}} {}
+#Say {Brace!} voiceOnly} {}
 #Trigger {An odd humming sound fills the ship.} {
 #Gagline Voice;
 #if {@silent = 1} {

@@ -34,7 +34,8 @@ Version 2.8.1
 *Launching from a fortress no longer triggers the enter battlesuit sound on top of the launching sound.
 *fixed a few sound file errors in ground combat.
 *Crabs and carps will now trigger the correct damage warning sound. Thanks go to Monique for pointing this one out.
-
+*Now, scanning a ship will not speak the first line that informs you a scan is being run, and plays a sound instead.
+*The PA buffer should work more reliably now.
 Version 2.8
 We got rid of some bari combat sounds that only seemed to trigger sometimes.
 In the name of not having a ton of sounds for one function, we got rid of several repair sounds.

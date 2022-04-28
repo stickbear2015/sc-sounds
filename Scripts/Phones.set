@@ -1,5 +1,5 @@
 #Trigger {You hear a soft ringing sound on the line.} {
-#gagline all;
+#gagline voice;
 #if {@phones = 1} {
 #if {@silent = 1} {
 #Play {Star Conquest\general\Comm\Phone Ring Out.wav} @Vol}}} {}

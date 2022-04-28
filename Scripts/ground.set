@@ -67,11 +67,13 @@
 #Play {Star Conquest\Ship\Combat\OtherFired*3.wav} @Vol}}} {}
 #Trigger {* aims its * at * and fires!} {
 #If {@InCombatSuit = 1} {
-#Sub {%1 fires its %2 at %3};
+#Gagline voice;
+#Say {%1 fires its %2 at %3} voiceOnly;
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\OtherFired*3.wav} @Vol}}} {}
 #Trigger {   You are hit*} {
-#Sub {Hit%1};
+#Gagline voice;
+#Say {Hit%1} voiceOnly;
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\YouHit*3.wav} @Vol}} {}
 #Trigger {* turns toward you.} {
@@ -98,9 +100,11 @@
 #If {@InCombatSuit = 1} {
 #Gagline Voice}} {}
 #Trigger {You detach a one-use repair drone.} {
-#Sub {Repair}} {}
+#Gagline voice;
+#Say {Repair} voiceOnly} {}
 #Trigger {   You repair * damage!} {
-#Sub {%1 damage repaired!};
+#gagline voice;
+#Say {%1 damage repaired!};
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Misc\Repair*2.wav} @Vol}} {}
 #Trigger {   You are rapidly repaired by a swarm of minidrones!} {
@@ -129,7 +133,8 @@
 #Play {Star Conquest\Ground Combat\ThrowWeapon.wav} @Vol}} {}
 #Trigger {   The * lands near * and explodes!} {
 #If {@InCombatSuit = 1} {
-#Sub {%1 explodes near %2};
+#Gagline voice;
+#Say {%1 explodes near %2} voiceOnly;
 #if {@silent = 1} {
 #Play {Star Conquest\Ground Combat\HandGrenade.wav} @Vol}}} {}
 #Trigger {You toss a space-grade detonator at the enemy!} {
@@ -412,7 +417,8 @@
 #Var InCombatSuit 0}} {}
 
 #Trigger {* ?in cover? is under cover; you can't fire at it now.} {
-#Sub {%1 under cover}}
+#Gagline voice;
+#Say {%1 under cover} voiceOnly}
 #TRIGGER {* deftly enters a set of coordinates, and the computer chirps in confirmation.} {
 #if {@silent = 1} {
 #Play {Star Conquest\commchirp.wav} @Vol}} {}
@@ -444,7 +450,8 @@
 #if {@silent = 1} {
 #Play {Star Conquest\Ground Combat\knockout.wav} @vol}} {}
 #Trigger {* exceeds *%*} {
-#Sub {%1 Exceeds %2%!};
+#Gagline voice;
+#Say {%1 Exceeds %2%!} voiceOnly;
 #if {@silent = 1} {
 #if {%ifWord(Poacher,%1," ")} {
 #Play {Star Conquest\Ground Combat\TargetDamageAlert.wav} @Vol;
@@ -502,7 +509,8 @@
 #abort 1};
 #Play {Star Conquest\Ground Combat\DamageWarning.wav} @Vol}}
 #TRIGGER {   You do * damage to *!} {
-#Sub {%1 damage: %2};
+#Gagline voice;
+#Say {%1 damage: %2} voiceOnly;
 #if {@silent = 1} {
 #Play {Star Conquest\Ground Combat\ShotHits.wav} @Vol;
 #Play {Star Conquest\Ship\Combat\OtherHit*3.wav} @Vol}} {}
