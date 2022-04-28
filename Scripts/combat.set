@@ -9,33 +9,38 @@
 #say {%1 tracked.} voiceOnly;
 #if {@silent = 1} {
 #play {Star Conquest\Ship\Combat\tracking.wav} @Vol}} {}
-#TRIGGER {The ship's target tracking array reports that * is now in range at Sector *} {
-#Sub {%2};
+#trig {The ship's target tracking array reports that * is now in range at Sector *.} {
+#gagline voice;
+#say  {%2} voiceOnly;
 #if {@silent = 1} {
-#PLAY {Star Conquest\ship\combat\tracking.wav} @vol}} {}
+#play {Star Conquest\ship\combat\tracking.wav} @Vol}} {}
 #TRIGGER {The ship's target tracking array reports that * is two units away at Sector *} {
-#sub {2 units %2};
+#gagline voice;
+#say  {2 units %2} voiceOnly;
 #if {@silent = 1} {
-#Play {Star Conquest\Ship\Combat\tracking.wav} @vol}} {}
+#play {Star Conquest\ship\combat\tracking.wav} @Vol}} {}
 #TRIGGER {Select target:} {
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\prompt.wav} @Vol}} {}
-#trigger {TTA: * contact: *} {
-#Sub {%1, %3, %2};
+#trigger {TTA: * contact: "*"} {
+#gagline voice;
+#Say {%1, %3, %2} voiceOnly;
 #if {@silent = 1} {
 #play {Star Conquest\ship\combat\tracking.wav} @vol}} {}
 #trigger {TTA: * contact: *. Distance: * units} {
-#Sub {%1, %3, %2};
+#gagline voice;
+#say {%1, %3, %2} voiceOnly;
 #if {@silent = 1} {
 #play {Star Conquest\ship\combat\tracking.wav} @vol}} {}
 #TRIGGER {The ship's target tracking array reports that it has lost track of *} {
-#Sub {Lost track.};
+#gagline voice;
+#say {Lost track.} voiceOnly;
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\lost track.wav} @Vol}} {}
 #TRIGGER {* presses a button on the target tracking array control board.} {
 #if {@silent = 1} {
 #Play {Star Conquest\General\Misc\Beep3.wav} @Vol}} {}
-#TRIGGER {There are no valid targets in range.} {
+#TRIGGER {There are no valid targets in *.} {
 #Gagline Voice;
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\Sonar.wav} @vol}} {}
@@ -212,7 +217,8 @@
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\WeaponsGridDischarge.wav} @vol}} {}
 #Trigger {A display indicates that your combat energy supply has increased by *.} {
-#Sub {Energy increased by %1};
+#gagline voice;
+#Say {Energy increased by %1} voiceOnly;
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Computer\Display.wav} @Vol}} {}
 
@@ -229,8 +235,9 @@
 #play {Star Conquest\ship\combat\otherfired*3.wav} @vol}} {}
 #TRIGGER {The computer announces, "This ship has been hit by *} {
 #If {@ShipHitGagging = 1} {
-#Gagline Voice};#If {@ShipHitGagging = 0} {
-#Sub {Ship hit by %1}};
+#Gagline Voice};
+#If {@ShipHitGagging = 0} {
+#Say {Ship hit by %1}} voiceOnly;
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\YouHit*3.wav} @Vol}} {}
 #TRIGGER {The ship suddenly shudders violently.*} {
@@ -330,15 +337,18 @@
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\confirmation.wav} @Vol}} {}
 #Trigger {The computer announces, "Lock lost."} {
-#Sub {Lock lost.};
+#Gagline voice;
+#say {Lock lost.} voiceOnly;
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\range.wav} @Vol}} {}
 #Trigger {The computer reports that the * "*" has a lock on this starship.} {
-#Sub {%1, %2 locked on you.};
+#gagline voice;
+#Say {%1, %2 locked on you.} voiceOnly;
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\LockedOnYou.wav} @Vol}} {}
 #Trigger {The computer reports that the * "*" is in range of firing on or docking with this ship.} {
-#Sub {%1, %2 is in range of firing on or docking with this ship.};
+#Gagline voice;
+#Say {%1, %2 in action range.} voiceOnly;
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\range.wav} @Vol}} {}
 #TRIGGER {The computer reports that it has collected * from an exploding starship.} {
