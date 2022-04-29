@@ -17,6 +17,9 @@ Control+Ault+F2
 F3
 This will turn on and off the felo sounds.
 
+Control+F4
+This will instruct the pack to pass on information about what kind of weapons are hitting your hull. This function is most useful for those in an engineering role during combat actions.
+
 F5
 This will turn on and off the phone sounds.
 

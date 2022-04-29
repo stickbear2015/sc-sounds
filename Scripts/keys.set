@@ -70,6 +70,13 @@
 
 #alias wn {#edit {Star Conquest\scripts\files\ChangeLog.txt}}
 
+#key control-f4 {
+#if {@Eng = 1} {
+#var Eng 0;
+#say {Information about the types of weapon hits received will no longer be displayed.}} {
+#var Eng 1;
+#say {Information about the types of weapon hits received will now be displayed.}}}
+
 #key control-f5 {
 #if {@gaggs = 1} {
 #var gaggs 0;
@@ -98,6 +105,7 @@
 #Write 6 @robots @SettingsFileCounter;#Math SettingsFileCounter {@SettingsFileCounter +1};
 #Write 6 @felo @SettingsFileCounter;#Math SettingsFileCounter {@SettingsFileCounter +1};
 #Write 6 @RTime @SettingsFileCounter;#Math SettingsFileCounter {@SettingsFileCounter +1};
+#Write 6 @Eng @SettingsFileCounter;#Math SettingsFileCounter {@SettingsFileCounter +1};
 #close 6;
 #say {Soundpack settings saved.}}
 
@@ -108,7 +116,7 @@
 #wait 0.4;
 #say {The following is the current settings for the soundpack. To save them while connected, press F12.};
 #say {1 equals enabled, 0 equals disabled.};
-#say {Current soundpack volume: @vol%, Social sounds: @socialson, Soundpack silent setting: @silent, Soundpack custom gag settings: @gaggs, Communication channel sounds status: @commson, Oven sounds: @ovenon, Robot sounds: @robots, Felo sounds: @felo, and Roundtime sound: @rtime.};
+#say {Current soundpack volume: @vol%, Social sounds: @socialson, Soundpack silent setting: @silent, Soundpack custom gag settings: @gaggs, Communication channel sounds status: @commson, Oven sounds: @ovenon, Robot sounds: @robots, Felo sounds: @felo, engineering hit reports: @eng, and Roundtime sound: @rtime.};
 #say {The current channel that you have set for your first community channel is, @org, and the second channel is @ChanSecond.};
 #say {The current version of the scripts folder is @version, and the current version of the sounds folder is @soundsversion.};
 #say {The current version of the client that you're running is %Version.};

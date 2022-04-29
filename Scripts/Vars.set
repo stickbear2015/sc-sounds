@@ -23,6 +23,7 @@
 #var felo 0
 #var GagAll 0
 #var RTime 0
+#var Eng 0
 #Var PaLastMessage
 #Var PAMessage1
 #Var PAMessage2

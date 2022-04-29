@@ -237,6 +237,7 @@
 #If {@ShipHitGagging = 1} {
 #Gagline Voice};
 #If {@ShipHitGagging = 0} {
+#Gagline voice;
 #Say {Ship hit by %1}} voiceOnly;
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\YouHit*3.wav} @Vol}} {}
@@ -364,29 +365,53 @@
 #Play {Star Conquest\Ship\Computer\Keyboard.wav} @Vol}} {}
 
 ;hit gags
-#TRIGGER {You hear the strange sizzling noise of laser fire on the hull.} {
-#Gagline Voice} {}
-#TRIGGER {A number of coherent beams of weaponized light flash by the window as the starship shudders under laser fire.} {
-#Gagline Voice} {}
-#TRIGGER {The hull creaks with too-rapid temperature changes as laser fire plays upon it.} {
-#Gagline Voice} {}
-#trigger {The viewport glows brightly for a split second before a blast of minicannon energy impacts the starship.} {
-#Gagline Voice} {}
-#trigger {You hear the sudden metallic complaints of the hull as a minicannon hit leaves several hull plates glowing white hot.} {
-#Gagline Voice} {}
-#trigger {A ball of minicannon energy suddenly flashes by the window, then slams into the starship.} {
-#Gagline Voice} {}
-#trigger {The deck jumps underneath your feet as a torpedo explodes against the hull.} {
-#Gagline Voice} {}
-#trigger {You hear a sharp metal clang as a torpedo bounces off the hull, then the starship jerks violently to one side as the warhead immediately explodes nearby.} {
-#Gagline Voice} {}
-#trigger {The starship shudders violently as a torpedo detonates against the hull.} {
-#Gagline Voice} {}
-#trigger {You hear the sharp metallic whine of hull plates being pierced by rapid-fire chaingun rounds.} {
-#Gagline Voice} {}
-#trigger {A rapid rattling sound moves from one end of the starship to the other as the hull is raked by chaingun rounds.} {
-#Gagline Voice} {}
-#trigger {You hear a metal hailstorm against the hull as chaingun fire hits the starship.} {
-#Gagline Voice} {}
+#TRIGGER {You hear the strange sizzling noise of laser fire on the hull*} {
+#Gagline Voice;
+#if {@Eng = 1} {
+#say {Hit by laser weapons.} voiceOnly}} {}
+#TRIGGER {A number of coherent beams of weaponized light flash by the window as the starship shudders under laser fire*} {
+#Gagline Voice;
+#if {@Eng = 1} {
+#say {Hit by laser weapons.} voiceOnly}} {}
+#TRIGGER {The hull creaks with too-rapid temperature changes as laser fire plays upon it*} {
+#Gagline Voice;
+#if {@Eng = 1} {
+#say {Hit by laser weapons.} voiceOnly}} {}
+#trigger {The viewport glows brightly for a split second before a blast of minicannon energy impacts the starship*} {
+#Gagline Voice;
+#if {@Eng = 1} {
+#say {Hit by minicannon weapons.} voiceOnly}} {}
+#trigger {You hear the sudden metallic complaints of the hull as a minicannon hit leaves several hull plates glowing white hot*} {
+#Gagline Voice;
+#if {@Eng = 1} {
+#say {Hit by minicannon weapons.} voiceOnly}} {}
+#trigger {A ball of minicannon energy suddenly flashes by the window, then slams into the starship*} {
+#Gagline Voice;
+#if {@Eng = 1} {
+#say {Hit by minicannon weapons.} voiceOnly}} {}
+#trigger {The deck jumps underneath your feet as a torpedo explodes against the hull*} {
+#Gagline Voice;
+#if {@Eng = 1} {
+#say {Hit by torpedo weapons.} voiceOnly}} {}
+#trigger {You hear a sharp metal clang as a torpedo bounces off the hull, then the starship jerks violently to one side as the warhead immediately explodes nearby*} {
+#Gagline Voice;
+#if {@Eng = 1} {
+#say {Hit by torpedo weapons.} voiceOnly}} {}
+#trigger {The starship shudders violently as a torpedo detonates against the hull*} {
+#Gagline Voice;
+#if {@Eng = 1} {
+#say {Hit by torpedo weapons.} voiceOnly}} {}
+#trigger {You hear the sharp metallic whine of hull plates being pierced by rapid-fire chaingun rounds*} {
+#Gagline Voice;
+#if {@Eng = 1} {
+#say {Hit by chaingun weapons.} voiceOnly}} {}
+#trigger {A rapid rattling sound moves from one end of the starship to the other as the hull is raked by chaingun rounds*} {
+#Gagline Voice;
+#if {@Eng = 1} {
+#say {Hit by chaingun weapons.} voiceOnly}} {}
+#trigger {You hear a metal hailstorm against the hull as chaingun fire hits the starship*} {
+#Gagline Voice;
+#if {@Eng = 1} {
+#say {Hit by chaingun weapons.} voiceOnly}} {}
 #trigger {You hear the sound of something violently drilling into the hull.} {
 #Gagline Voice} {}

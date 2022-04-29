@@ -36,6 +36,9 @@ Version 2.8.1
 *Crabs and carps will now trigger the correct damage warning sound. Thanks go to Monique for pointing this one out.
 *Now, scanning a ship will not speak the first line that informs you a scan is being run, and plays a sound instead.
 *The PA buffer should work more reliably now.
+*Fixed a bug where, if ship hit gagging were disabled, you would hear information about what ship hit you twice.
+*At Monique's request, a feature has been added to the pack which allows engineers to keep track of what weapons are hitting your ship during combat actions. This option is off by default but can be enabled with control+f4.
+*Hopefully fixed an issue where, when loading the pack for the first time, some settings would not match what the soundpack told them they should be.
 Version 2.8
 We got rid of some bari combat sounds that only seemed to trigger sometimes.
 In the name of not having a ton of sounds for one function, we got rid of several repair sounds.
