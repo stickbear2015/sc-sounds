@@ -2,7 +2,7 @@ Here is where changes that are made to the soundpack will be documented, so you 
 
 
 version 2.8.1.1
-*reverts combat.set  to the version originally included in version 2.8.0. This fixes numerous bugs and rule violations that were added by mistake in 2.8.1's initial release.
+*reverts combat.set  and ground.set to the versions originally included in version 2.8.0. This fixes numerous bugs and rule violations that were added by mistake in 2.8.1's initial release.
 Version 2.8.1
 *updated credits.
 *updated information about where to submit suggestions.

@@ -21,23 +21,15 @@
 #Trigger {You and your battlesuit are promptly picked up by a flier, which begins returning to the deployment facility.} {
 #if {@silent = 1} {
 #Play {Star Conquest\Ground Combat\FlyerTransport.wav} @Vol}} {}
-#Trigger {The pod shudders violently as it speeds through the interior of the enemy structure. The interior of your battlesuit cushions most of the turbulence.} {
+#Trigger {The pod shudders violently as it speeds through the interior of the nest. The interior of your battlesuit cushions most of the turbulence.} {
 #if {@silent = 1} {
 #Play {Star Conquest\Ground Combat\BattleSuitFlight.wav} @Vol}} {}
 #Trigger {You tongue a prominent control inside your battlesuit, then brace yourself as two halves of a drop pod suddenly descend onto you and seal around you. A moment later, you feel sudden acceleration as your pod is launched from the aerial fortress.} {
 #if {@silent = 1} {
 #Play {Star Conquest\General\Misc\Beep*3.wav} @Vol;
+#Play {Star Conquest\Ground Combat\EnterBattleSuit.wav} @Vol;
 #Play {Star Conquest\Ground Combat\ArialFortressBattleSuitLaunch.WAV} @Vol;
 #Var InCombatSuit 1}} {}
-#Trigger {Your battlesuit is launched at great speed toward the large artifact!} {
-#if {@silent = 1} {
-#Play {Star Conquest\General\Misc\Beep*3.wav} @Vol;
-#Play {Star Conquest\Ground Combat\ArialFortressBattleSuitLaunch.WAV} @Vol;
-#Var InCombatSuit 1}} {}
-#trig {You light your battlesuit's ascent rockets and hurl yourself down the corridor and out through the access point.} {
-#if {@silent = 1} {
-#Play {Star Conquest\Ground Combat\ArialFortressBattleSuitLaunch.WAV} @Vol}} {}
-
 #Trigger {You light your battlesuit's ascent rockets and begin speeding toward the waiting aerial fortress.} {
 #if {@silent = 1} {
 #Play {Star Conquest\Ground Combat\ArialFortressBattleSuitLaunch.WAV} @Vol}} {}
@@ -67,13 +59,11 @@
 #Play {Star Conquest\Ship\Combat\OtherFired*3.wav} @Vol}}} {}
 #Trigger {* aims its * at * and fires!} {
 #If {@InCombatSuit = 1} {
-#Gagline voice;
-#Say {%1 fires its %2 at %3} voiceOnly;
+#Sub {%1 fires its %2 at %3};
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\OtherFired*3.wav} @Vol}}} {}
-#Trigger {   You are hit*} {
-#Gagline voice;
-#Say {Hit%1} voiceOnly;
+#Trigger {   You are hit!} {
+#Sub {Hit!};
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\YouHit*3.wav} @Vol}} {}
 #Trigger {* turns toward you.} {
@@ -100,11 +90,9 @@
 #If {@InCombatSuit = 1} {
 #Gagline Voice}} {}
 #Trigger {You detach a one-use repair drone.} {
-#Gagline voice;
-#Say {Repair} voiceOnly} {}
+#Sub {Repair}} {}
 #Trigger {   You repair * damage!} {
-#gagline voice;
-#Say {%1 damage repaired!};
+#Sub {%1 damage repaired!};
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Misc\Repair*2.wav} @Vol}} {}
 #Trigger {   You are rapidly repaired by a swarm of minidrones!} {
@@ -133,8 +121,7 @@
 #Play {Star Conquest\Ground Combat\ThrowWeapon.wav} @Vol}} {}
 #Trigger {   The * lands near * and explodes!} {
 #If {@InCombatSuit = 1} {
-#Gagline voice;
-#Say {%1 explodes near %2} voiceOnly;
+#Sub {%1 explodes near %2};
 #if {@silent = 1} {
 #Play {Star Conquest\Ground Combat\HandGrenade.wav} @Vol}}} {}
 #Trigger {You toss a space-grade detonator at the enemy!} {
@@ -143,13 +130,6 @@
 #Play {Star Conquest\Ground Combat\ThrowWeapon.wav} @Vol;
 #Play {Star Conquest\Ground Combat\HandGrenade.wav} @Vol}} {}
 
-#trig {The aerial fortress appears to be *. *} {
-#if {%ifWord(approaching,%1," ")} {
-#gagline voice;
-#say {%2} voiceOnly};
-#if {%ifWord(hovering,%1," ")} {
-#gagline voice;
-#say {%2} voiceOnly}}
 #Trigger {You feel a slight bump as the aerial fortress detaches from "*."} {
 #Gagline Voice;
 #if {@silent = 1} {
@@ -191,17 +171,10 @@
 #Trigger {The computer announces that defenses on the space station have detected your descent and are launching fighters!} {
 #if {@silent = 1} {
 #Play {Star Conquest\Ground Combat\FightersWaveIncoming.wav} @Vol}} {}
-#Trigger {A * approaches from the * direction on the * side.} {
-#gagline voice;
-#say {%3 %2, %1} voiceOnly;
-#if {%ifWord(port,%3," ")} {
+#Trigger {A * approaches from the * direction on the starboard side.} {
 #if {@silent = 1} {
 #Play {Star Conquest\Ground Combat\WingedAutonomousSwarmingPatrollerApproach.wav} @Vol;
-#Var SoundHandlePanning %PlayHandle;#Pc @SoundHandlePanning Pan -3500}};
-#if {%ifWord(starboard,%3," ")} {
-#if {@silent = 1} {
-#Play {Star Conquest\Ground Combat\WingedAutonomousSwarmingPatrollerApproach.wav} @Vol;
-#Var SoundHandlePanning %PlayHandle;#Pc @SoundHandlePanning Pan 3500}}} {}
+#Var SoundHandlePanning %PlayHandle;#Pc @SoundHandlePanning Pan 3500}} {}
 #Trigger {A * approaches from the * direction on the port side.} {
 #if {@silent = 1} {
 #Play {Star Conquest\Ground Combat\WingedAutonomousSwarmingPatrollerApproach.wav} @Vol;
@@ -332,7 +305,7 @@
 #Play {Star Conquest\Ground Combat\flare.wav} @vol}} {}
 #Trigger {* Alpha prepares to use *!} {
 #if {@silent = 1} {
-#Play {Star Conquest\Ground Combat\alpha Warning.wav} @vol}};
+#Play {Star Conquest\Ground Combat\alpha Warning.wav} @vol}} {}
 #Trigger {* Beta prepares to use *!} {
 #if {@silent = 1} {
 #Play {Star Conquest\Ground Combat\Beta Warning.wav} @vol}} {}
@@ -417,8 +390,7 @@
 #Var InCombatSuit 0}} {}
 
 #Trigger {* ?in cover? is under cover; you can't fire at it now.} {
-#Gagline voice;
-#Say {%1 under cover} voiceOnly}
+#Sub {%1 under cover}}
 #TRIGGER {* deftly enters a set of coordinates, and the computer chirps in confirmation.} {
 #if {@silent = 1} {
 #Play {Star Conquest\commchirp.wav} @Vol}} {}
@@ -450,67 +422,11 @@
 #if {@silent = 1} {
 #Play {Star Conquest\Ground Combat\knockout.wav} @vol}} {}
 #Trigger {* exceeds *%*} {
-#Gagline voice;
-#Say {%1 Exceeds %2%!} voiceOnly;
+#Sub {%1 Exceeds %2%!};
 #if {@silent = 1} {
-#if {%ifWord(Poacher,%1," ")} {
-#Play {Star Conquest\Ground Combat\TargetDamageAlert.wav} @Vol;
-#abort 1};
-#if {%ifWord(Glyph,%1," ")} {
-#Play {Star Conquest\Ground Combat\TargetDamageAlert.wav} @Vol;
-#abort 1};
-#if {%ifWord(Hyperbari,%1," ")} {
-#Play {Star Conquest\Ground Combat\TargetDamageAlert.wav} @Vol;
-#abort 1};
-#if {%ifWord(Bari Vine Cluster,%1," ")} {
-#Play {Star Conquest\Ground Combat\TargetDamageAlert.wav} @Vol;
-#abort 1};
-#if {%ifWord(Bari Mold,%1," ")} {
-#Play {Star Conquest\Ground Combat\TargetDamageAlert.wav} @Vol;
-#abort 1};
-#if {%ifWord(Bari Worker Horde,%1," ")} {
-#Play {Star Conquest\Ground Combat\TargetDamageAlert.wav} @Vol;
-#abort 1};
-#if {%ifWord(Bari Warrior,%1," ")} {
-#Play {Star Conquest\Ground Combat\TargetDamageAlert.wav} @Vol;
-#abort 1};
-#if {%ifWord(Overseeing Replicating Kinetic Sentinel,%1," ")} {
-#Play {Star Conquest\Ground Combat\TargetDamageAlert.wav} @Vol;
-#abort 1};
-#if {%ifWord(Battle Auxiliary Tactician,%1," ")} {
-#Play {Star Conquest\Ground Combat\TargetDamageAlert.wav} @Vol;
-#abort 1};
-#if {%ifWord(mechanical womb,%1," ")} {
-#Play {Star Conquest\Ground Combat\TargetDamageAlert.wav} @Vol;
-#abort 1};
-#if {%ifWord(Angry ORK,%1," ")} {
-#Play {Star Conquest\Ground Combat\TargetDamageAlert.wav} @Vol;
-#abort 1};
-#if {%ifWord(Completely Resistant Assault Brigadier,%1," ")} {
-#Play {Star Conquest\Ground Combat\TargetDamageAlert.wav} @Vol;
-#abort 1};
-#if {%ifWord(Mining Oxidizing-Liquid Entity,%1," ")} {
-#Play {Star Conquest\Ground Combat\TargetDamageAlert.wav} @Vol;
-#abort 1};
-#if {%ifWord(Communicating Auto-Response Protector,%1," ")} {
-#Play {Star Conquest\Ground Combat\TargetDamageAlert.wav} @Vol;
-#abort 1};
-#if {%ifWord(Miniaturized Interfacing Companion Entity,%1," ")} {
-#Play {Star Conquest\Ground Combat\TargetDamageAlert.wav} @Vol;
-#abort 1};
-#if {%ifWord(Guardian Nanite Utilizing Soldier,%1," ")} {
-#Play {Star Conquest\Ground Combat\TargetDamageAlert.wav} @Vol;
-#abort 1};
-#if {%ifWord(Sentry Horde Replicator and Enhanced Warrior,%1," ")} {
-#Play {Star Conquest\Ground Combat\TargetDamageAlert.wav} @Vol;
-#abort 1};
-#if {%ifWord(Mobile Laser-Equipped Sentry,%1," ")} {
-#Play {Star Conquest\Ground Combat\TargetDamageAlert.wav} @Vol;
-#abort 1};
-#Play {Star Conquest\Ground Combat\DamageWarning.wav} @Vol}}
+#Play {Star Conquest\Ground Combat\DamageWarning.wav} @Vol}} {}
 #TRIGGER {   You do * damage to *!} {
-#Gagline voice;
-#Say {%1 damage: %2} voiceOnly;
+#Sub {%1 damage: %2};
 #if {@silent = 1} {
 #Play {Star Conquest\Ground Combat\ShotHits.wav} @Vol;
 #Play {Star Conquest\Ship\Combat\OtherHit*3.wav} @Vol}} {}
@@ -611,22 +527,13 @@
 #Play {Star Conquest\Ground Combat\glyphdoor.wav} @Vol}} {}
 #Trigger {Glyph * detaches from an alcove on the wall.} {
 #if {@silent = 1} {
-#if {%ifWord(alpha,%1," ")} {
-#Play {Star Conquest\Ground Combat\glyphdetach.wav} @Vol;
-#Var SoundHandlePanning %PlayHandle;#Pc @SoundHandlePanning Pan -3500};
-#if {%ifWord(beta,%1," ")} {
-#Play {Star Conquest\Ground Combat\glyphdetach.wav} @Vol;
-#Var SoundHandlePanning %PlayHandle;#Pc @SoundHandlePanning Pan 3500};
-#if {%ifWord(Fehu,%1," ")} {
-#Play {Star Conquest\Ground Combat\glyphdetach.wav} @Vol;
-#Var SoundHandlePanning %PlayHandle;#Pc @SoundHandlePanning Pan -3500};
-#if {%ifWord(Uruz,%1," ")} {
-#Play {Star Conquest\Ground Combat\glyphdetach.wav} @Vol;
-#Var SoundHandlePanning %PlayHandle;#Pc @SoundHandlePanning Pan 3500}}}
-#trigger {You see * here.} {
+#Play {Star Conquest\Ground Combat\glyphdetach.wav} @Vol}} {}
+#trigger {You see a semi-transparent hexagonal crystal container, a semi-transparent hexagonal crystal container*} {
 #if {@silent = 1} {
-#if {%ifWord(semi-transparent hexagonal crystal container,%1," ")} {
-#play {Star conquest\Ground Combat\ContainerHere.wav} @vol}}} {}
+#play {Star conquest\Ground Combat\ContainerHere.wav} @vol}} {}
+#trigger {You see a semi-transparent hexagonal crystal container and a semi-transparent hexagonal crystal container here.} {
+#if {@silent = 1} {
+#play {Star Conquest\Ground Combat\Containerhere.wav} @vol}} {}
 #trigger {* glyph suddenly appears in front of a large blast door.} {
 #if {@silent = 1} {
 #play {Star Conquest\Ground Combat\glyphflash.wav} @vol}} {}
