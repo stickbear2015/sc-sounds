@@ -1,46 +1,37 @@
 ;tracking
-#trigger {The ship's target tracking array reports that it is now tracking the *.} {
-#gagline voice;
-#say {%1 tracked.} voiceOnly;
+#trigger {The ship's target tracking array reports that it is now tracking *.} {
 #if {@silent = 1} {
 #play {Star Conquest\Ship\Combat\tracking.wav} @vol}} {}
-#trigger {The target tracking array is now tracking the *.} {
-#gagline voice;
-#say {%1 tracked.} voiceOnly;
+#trigger {The target tracking array is now tracking *} {
 #if {@silent = 1} {
 #play {Star Conquest\Ship\Combat\tracking.wav} @Vol}} {}
-#trig {The ship's target tracking array reports that * is now in range at Sector *.} {
-#gagline voice;
-#say  {%2} voiceOnly;
+#TRIGGER {The ship's target tracking array reports that * is now in range at Sector *} {
+#Sub {%2};
 #if {@silent = 1} {
-#play {Star Conquest\ship\combat\tracking.wav} @Vol}} {}
+#PLAY {Star Conquest\ship\combat\tracking.wav} @vol}} {}
 #TRIGGER {The ship's target tracking array reports that * is two units away at Sector *} {
-#gagline voice;
-#say  {2 units %2} voiceOnly;
+#sub {2 units %2};
 #if {@silent = 1} {
-#play {Star Conquest\ship\combat\tracking.wav} @Vol}} {}
+#Play {Star Conquest\Ship\Combat\tracking.wav} @vol}} {}
 #TRIGGER {Select target:} {
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\prompt.wav} @Vol}} {}
-#trigger {TTA: * contact: "*"} {
-#gagline voice;
-#Say {%1, %3, %2} voiceOnly;
+#trigger {TTA: * contact: *} {
+#Sub {%1, %3, %2};
 #if {@silent = 1} {
 #play {Star Conquest\ship\combat\tracking.wav} @vol}} {}
 #trigger {TTA: * contact: *. Distance: * units} {
-#gagline voice;
-#say {%1, %3, %2} voiceOnly;
+#Sub {%1, %3, %2};
 #if {@silent = 1} {
 #play {Star Conquest\ship\combat\tracking.wav} @vol}} {}
 #TRIGGER {The ship's target tracking array reports that it has lost track of *} {
-#gagline voice;
-#say {Lost track.} voiceOnly;
+#Sub {Lost track.};
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\lost track.wav} @Vol}} {}
 #TRIGGER {* presses a button on the target tracking array control board.} {
 #if {@silent = 1} {
 #Play {Star Conquest\General\Misc\Beep3.wav} @Vol}} {}
-#TRIGGER {There are no valid targets in *.} {
+#TRIGGER {There are no valid targets in range.} {
 #Gagline Voice;
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\Sonar.wav} @vol}} {}
@@ -128,9 +119,7 @@
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\mini*3.wav} @Vol}} {}
 #TRIGGER {The lights dim briefly as a plasma burst is fired.} {
-#Gagline Voice;
-#if {@silent = 1} {
-#Play {Star Conquest\Ship\Combat\mini*3.wav} @Vol}} {}
+#Gagline Voice} {}
 #TRIGGER {The ship jerks sharply as its lasers are fired.} {
 #Gagline Voice;
 #if {@silent = 1} {
@@ -144,17 +133,13 @@
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\lasOrient.wav} @Vol}} {}
 #TRIGGER {You feel a mild vibration as the ship's lasers are fired.} {
-#Gagline Voice;
-#if {@silent = 1} {
-#Play {Star Conquest\Ship\Combat\Laser*3.wav} @Vol}}
+#Gagline Voice} {}
 #TRIGGER {The ship shudders slightly as its lasers are fired.} {
 #Gagline Voice;
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\Laser*3.wav} @Vol}} {}
 #TRIGGER {The ship jerks sharply as its lasers are fired.} {
-#Gagline Voice} {;
-#if {@silent = 1} {
-#Play {Star Conquest\Ship\Combat\Laser*3.wav} @Vol}} {}
+#Gagline Voice} {}
 #TRIGGER {The ship shudders as a torrent of bullets are launched from its chainguns.} {
 #Gagline Voice;
 #if {@silent = 1} {
@@ -174,9 +159,7 @@
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\torpedo*4.wav} @Vol}} {}
 #TRIGGER {The ship jerks back violently as torpedoes are fired.} {
-#Gagline Voice;
-#if {@silent = 1} {
-#Play {Star Conquest\Ship\Combat\torpedo*4.wav} @Vol}}
+#Gagline Voice} {}
 #TRIGGER {You hear a loud bang as the ship's torpedo launchers are used.} {
 #Gagline Voice;
 #if {@silent = 1} {
@@ -192,13 +175,11 @@
 
 ;misc
 #TRIGGER {The computer reports that the * has executed an assault maneuver.} {
-#gagline voice;
-#say {The %1 has executed an assault maneuver.} voiceOnly;
 #if {@silent = 1} {
-#play {Star Conquest\ship\combat\warp.wav} @vol}}
+#play {Star Conquest\ship\combat\rapid.wav} @vol}} {}
 #trigger {Your starship's combat energy grid doesn't enough energy for * shot.} {
 #if {@silent = 1} {
-#play {Star Conquest\ship\combat\LowGrid.wav} @vol}} {}
+#play {Star Conquest\ship\combat\failsafe.wav} @vol}} {}
 #Trigger {* pulls up the * and presses a large button.} {
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Computer\Keyboard.wav} @Vol}} {}
@@ -217,8 +198,7 @@
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\WeaponsGridDischarge.wav} @vol}} {}
 #Trigger {A display indicates that your combat energy supply has increased by *.} {
-#gagline voice;
-#Say {Energy increased by %1} voiceOnly;
+#Sub {Energy increased by %1};
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Computer\Display.wav} @Vol}} {}
 
@@ -235,10 +215,8 @@
 #play {Star Conquest\ship\combat\otherfired*3.wav} @vol}} {}
 #TRIGGER {The computer announces, "This ship has been hit by *} {
 #If {@ShipHitGagging = 1} {
-#Gagline Voice};
-#If {@ShipHitGagging = 0} {
-#Gagline voice;
-#Say {Ship hit by %1}} voiceOnly;
+#Gagline Voice};#If {@ShipHitGagging = 0} {
+#Sub {Ship hit by %1}};
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\YouHit*3.wav} @Vol}} {}
 #TRIGGER {The ship suddenly shudders violently.*} {
@@ -338,18 +316,15 @@
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\confirmation.wav} @Vol}} {}
 #Trigger {The computer announces, "Lock lost."} {
-#Gagline voice;
-#say {Lock lost.} voiceOnly;
+#Sub {Lock lost.};
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\range.wav} @Vol}} {}
 #Trigger {The computer reports that the * "*" has a lock on this starship.} {
-#gagline voice;
-#Say {%1, %2 locked on you.} voiceOnly;
+#Sub {%1, %2 locked on you.};
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\LockedOnYou.wav} @Vol}} {}
 #Trigger {The computer reports that the * "*" is in range of firing on or docking with this ship.} {
-#Gagline voice;
-#Say {%1, %2 in action range.} voiceOnly;
+#Sub {%1, %2 is in range of firing on or docking with this ship.};
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\range.wav} @Vol}} {}
 #TRIGGER {The computer reports that it has collected * from an exploding starship.} {
@@ -365,53 +340,29 @@
 #Play {Star Conquest\Ship\Computer\Keyboard.wav} @Vol}} {}
 
 ;hit gags
-#TRIGGER {You hear the strange sizzling noise of laser fire on the hull*} {
-#Gagline Voice;
-#if {@Eng = 1} {
-#say {Hit by laser weapons.} voiceOnly}} {}
-#TRIGGER {A number of coherent beams of weaponized light flash by the window as the starship shudders under laser fire*} {
-#Gagline Voice;
-#if {@Eng = 1} {
-#say {Hit by laser weapons.} voiceOnly}} {}
-#TRIGGER {The hull creaks with too-rapid temperature changes as laser fire plays upon it*} {
-#Gagline Voice;
-#if {@Eng = 1} {
-#say {Hit by laser weapons.} voiceOnly}} {}
-#trigger {The viewport glows brightly for a split second before a blast of minicannon energy impacts the starship*} {
-#Gagline Voice;
-#if {@Eng = 1} {
-#say {Hit by minicannon weapons.} voiceOnly}} {}
-#trigger {You hear the sudden metallic complaints of the hull as a minicannon hit leaves several hull plates glowing white hot*} {
-#Gagline Voice;
-#if {@Eng = 1} {
-#say {Hit by minicannon weapons.} voiceOnly}} {}
-#trigger {A ball of minicannon energy suddenly flashes by the window, then slams into the starship*} {
-#Gagline Voice;
-#if {@Eng = 1} {
-#say {Hit by minicannon weapons.} voiceOnly}} {}
-#trigger {The deck jumps underneath your feet as a torpedo explodes against the hull*} {
-#Gagline Voice;
-#if {@Eng = 1} {
-#say {Hit by torpedo weapons.} voiceOnly}} {}
-#trigger {You hear a sharp metal clang as a torpedo bounces off the hull, then the starship jerks violently to one side as the warhead immediately explodes nearby*} {
-#Gagline Voice;
-#if {@Eng = 1} {
-#say {Hit by torpedo weapons.} voiceOnly}} {}
-#trigger {The starship shudders violently as a torpedo detonates against the hull*} {
-#Gagline Voice;
-#if {@Eng = 1} {
-#say {Hit by torpedo weapons.} voiceOnly}} {}
-#trigger {You hear the sharp metallic whine of hull plates being pierced by rapid-fire chaingun rounds*} {
-#Gagline Voice;
-#if {@Eng = 1} {
-#say {Hit by chaingun weapons.} voiceOnly}} {}
-#trigger {A rapid rattling sound moves from one end of the starship to the other as the hull is raked by chaingun rounds*} {
-#Gagline Voice;
-#if {@Eng = 1} {
-#say {Hit by chaingun weapons.} voiceOnly}} {}
-#trigger {You hear a metal hailstorm against the hull as chaingun fire hits the starship*} {
-#Gagline Voice;
-#if {@Eng = 1} {
-#say {Hit by chaingun weapons.} voiceOnly}} {}
+#TRIGGER {You hear the strange sizzling noise of laser fire on the hull.} {
+#Gagline Voice} {}
+#TRIGGER {A number of coherent beams of weaponized light flash by the window as the starship shudders under laser fire.} {
+#Gagline Voice} {}
+#TRIGGER {The hull creaks with too-rapid temperature changes as laser fire plays upon it.} {
+#Gagline Voice} {}
+#trigger {The viewport glows brightly for a split second before a blast of minicannon energy impacts the starship.} {
+#Gagline Voice} {}
+#trigger {You hear the sudden metallic complaints of the hull as a minicannon hit leaves several hull plates glowing white hot.} {
+#Gagline Voice} {}
+#trigger {A ball of minicannon energy suddenly flashes by the window, then slams into the starship.} {
+#Gagline Voice} {}
+#trigger {The deck jumps underneath your feet as a torpedo explodes against the hull.} {
+#Gagline Voice} {}
+#trigger {You hear a sharp metal clang as a torpedo bounces off the hull, then the starship jerks violently to one side as the warhead immediately explodes nearby.} {
+#Gagline Voice} {}
+#trigger {The starship shudders violently as a torpedo detonates against the hull.} {
+#Gagline Voice} {}
+#trigger {You hear the sharp metallic whine of hull plates being pierced by rapid-fire chaingun rounds.} {
+#Gagline Voice} {}
+#trigger {A rapid rattling sound moves from one end of the starship to the other as the hull is raked by chaingun rounds.} {
+#Gagline Voice} {}
+#trigger {You hear a metal hailstorm against the hull as chaingun fire hits the starship.} {
+#Gagline Voice} {}
 #trigger {You hear the sound of something violently drilling into the hull.} {
 #Gagline Voice} {}
