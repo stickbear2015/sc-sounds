@@ -2,9 +2,9 @@
 #var silent 0
 #Var SocialsOn 1
 #var commson 1
-#var version 2.8.1;
+#var version 2.8.1.1;
 #var soundsversion 2
-#var date 04/29/2022;
+#var date 05/01/2022;
 #var len 0
 #Var SoundHandlePanning
 #Var InCombatSuit 0
