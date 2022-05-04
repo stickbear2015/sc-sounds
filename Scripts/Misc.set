@@ -234,7 +234,7 @@
 #Play {Star Conquest\General\Misc\CantGo.wav} @Vol}}} {}
 #Trigger {From * holovid: *} {
 #Gagline voice;
-#Say {%2} voiceOnly;
+#Say {%2};
 #if {@silent = 1} {
 #Play {Star Conquest\General\Device\Holopad.wav} @Vol}} {}
 #trigger {Point Totals:} {

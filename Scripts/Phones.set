@@ -51,6 +51,6 @@
 
 #trigger {From a phone-based holoemitter: *} {
 #gagline voice; 
-#say {"%1"} voiceOnly;
+#say {"%1"};
 #if {@silent = 1} {
 #play {Star Conquest\General\Misc\Phone Holo.wav} @vol}}
