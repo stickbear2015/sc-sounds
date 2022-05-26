@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Create a report to help us improve
+about: used for bug reports, broken triggers, etc.
 title: bug report
 labels: ''
 assignees: ''
