@@ -23,6 +23,6 @@ If you're using the latest version of VIP mud which is 2.0, it may be installed 
 5. Copy "Star conquest.set" here as well.
 6. Copy "settings.set"  here as well.
 7. back out of the star conquest folder, and Copy "StarConquestBufferlist.txt"  into the route of your VIP Mud folder.
-bugs, suggestions, etc.
+
 bugs, suggestions, etc.
 If you have any other troubles, find a bug, or have a feature suggestion, please post an issue to [the issue tracker](https://github.com/stickbear2015/sc-sounds/issues/new/choose)
