@@ -336,18 +336,24 @@
 #Trigger {* Beta prepares to use *!} {
 #if {@silent = 1} {
 #Play {Star Conquest\Ground Combat\Beta Warning.wav} @vol}} {}
+#Trigger {* Gamma prepares to use *!} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\Gamma Warning.wav} @vol}} {}
+#Trigger {* Delta prepares to use*!} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\Delta Warning.wav} @vol}} {}
 #Trigger {* Fehu prepares to use *!} {
 #if {@silent = 1} {
 #Play {Star Conquest\Ground Combat\alpha Warning.wav} @vol}} {}
 #Trigger {* Uruz prepares to use*!} {
 #if {@silent = 1} {
 #Play {Star Conquest\Ground Combat\Beta Warning.wav} @vol}} {}
-#Trigger {* Gamma prepares to use *!} {
-#if {@silent = 1} {
-#Play {Star Conquest\Ground Combat\Gamma Warning.wav} @vol}} {}
 #Trigger {* Thorn prepares to use *!} {
 #if {@silent = 1} {
 #Play {Star Conquest\Ground Combat\Gamma Warning.wav} @vol}} {}
+#Trigger {* Amsuz prepares to use*!} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ground Combat\Delta Warning.wav} @vol}} {}
 #trigger {Miniaturized Interfacing Companion Entity * stands alone.} {
 #if {@silent = 1} {
 #Play {Star Conquest\Ground Combat\Standalone.wav} @vol}} {}
