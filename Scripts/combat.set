@@ -243,6 +243,9 @@
 #Gagline Voice;
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\YouHit*3.wav} @Vol}} {}
+#TRIGGER {A buzzsaw slams into the ship with jarring force!} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Combat\buzzsaw hit us*6.wav} @Vol}} {}
 #TRIGGER {The computer announces, "Target destroyed."} {
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\OtherDestroyed*3.wav} @Vol}} {}
