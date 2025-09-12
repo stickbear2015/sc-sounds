@@ -120,10 +120,6 @@
 #Play {Star Conquest\Ship\Combat\mini*3.wav} @Vol}} {}
 #TRIGGER {The lights dim briefly as a plasma burst is fired.} {
 #Gagline Voice} {}
-#TRIGGER {The ship jerks sharply as its lasers are fired.} {
-#Gagline Voice;
-#if {@silent = 1} {
-#Play {Star Conquest\Ship\Combat\Laser*3.wav} @Vol}} {}
 #Trigger {The computer announces, "Laser * locked on *.  Firing."} {
 #Gagline Voice;
 #if {@silent = 1} {
@@ -134,12 +130,16 @@
 #Play {Star Conquest\Ship\Combat\lasOrient.wav} @Vol}} {}
 #TRIGGER {You feel a mild vibration as the ship's lasers are fired.} {
 #Gagline Voice} {}
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Combat\Laser*3.wav} @Vol}} {}
 #TRIGGER {The ship shudders slightly as its lasers are fired.} {
 #Gagline Voice;
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\Laser*3.wav} @Vol}} {}
-#TRIGGER {The ship jerks sharply as its lasers are fired.} {
-#Gagline Voice} {}
+#TRIGGER {You hear the hum of rapidly expended energy as the ship's lasers are fired.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Combat\Laser*3.wav} @Vol}} {}
 #TRIGGER {The ship shudders as a torrent of bullets are launched from its chainguns.} {
 #Gagline Voice;
 #if {@silent = 1} {
