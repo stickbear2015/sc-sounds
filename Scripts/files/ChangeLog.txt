@@ -1,5 +1,8 @@
 Here is where changes that are made to the soundpack will be documented, so you know what has been changed, fixed, and or added!
 
+version 2.8.3 (in development)
+*thanks to valiant8086, adds buzz saw sounds.
+*thanks to valiant8086, adds sounds for shields going up or down on continuance lineage ships.
 version 2.8.2
 *thanks to valiant8086 modifies ground combat and adds sounds to make things easier to hear. 
 version 2.8.1.1
