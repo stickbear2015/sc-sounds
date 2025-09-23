@@ -120,10 +120,6 @@
 #Play {Star Conquest\Ship\Combat\mini*3.wav} @Vol}} {}
 #TRIGGER {The lights dim briefly as a plasma burst is fired.} {
 #Gagline Voice} {}
-#TRIGGER {The ship jerks sharply as its lasers are fired.} {
-#Gagline Voice;
-#if {@silent = 1} {
-#Play {Star Conquest\Ship\Combat\Laser*3.wav} @Vol}} {}
 #Trigger {The computer announces, "Laser * locked on *.  Firing."} {
 #Gagline Voice;
 #if {@silent = 1} {
@@ -134,12 +130,16 @@
 #Play {Star Conquest\Ship\Combat\lasOrient.wav} @Vol}} {}
 #TRIGGER {You feel a mild vibration as the ship's lasers are fired.} {
 #Gagline Voice} {}
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Combat\Laser*3.wav} @Vol}} {}
 #TRIGGER {The ship shudders slightly as its lasers are fired.} {
 #Gagline Voice;
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\Laser*3.wav} @Vol}} {}
-#TRIGGER {The ship jerks sharply as its lasers are fired.} {
-#Gagline Voice} {}
+#TRIGGER {You hear the hum of rapidly expended energy as the ship's lasers are fired.} {
+#Gagline Voice;
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Combat\Laser*3.wav} @Vol}} {}
 #TRIGGER {The ship shudders as a torrent of bullets are launched from its chainguns.} {
 #Gagline Voice;
 #if {@silent = 1} {
@@ -174,6 +174,15 @@
 #Play {Star Conquest\Ship\Combat\torpOrient.wav} @Vol}} {}
 
 ;misc
+#Trigger {A shield shimmers into existence around the *!} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\combat\lineage shield up.wav} @Vol}} {}
+#Trigger {The *'s shield has been overwhelmed!} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\combat\lineage shield down.wav} @Vol}} {}
+#Trigger {* inputs a series of commands on the damage control computer, entering repair orders for *.} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Computer\Keyboard.wav} @Vol}} {}
 #TRIGGER {The computer reports that the * has executed an assault maneuver.} {
 #if {@silent = 1} {
 #play {Star Conquest\ship\combat\rapid.wav} @vol}} {}
@@ -243,6 +252,9 @@
 #Gagline Voice;
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\YouHit*3.wav} @Vol}} {}
+#TRIGGER {A buzzsaw slams into the ship with jarring force!} {
+#if {@silent = 1} {
+#Play {Star Conquest\Ship\Combat\buzzsaw hit us*6.wav} @Vol}} {}
 #TRIGGER {The computer announces, "Target destroyed."} {
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\OtherDestroyed*3.wav} @Vol}} {}
