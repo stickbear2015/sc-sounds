@@ -129,7 +129,7 @@
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\lasOrient.wav} @Vol}} {}
 #TRIGGER {You feel a mild vibration as the ship's lasers are fired.} {
-#Gagline Voice} {}
+#Gagline Voice;
 #if {@silent = 1} {
 #Play {Star Conquest\Ship\Combat\Laser*3.wav} @Vol}} {}
 #TRIGGER {The ship shudders slightly as its lasers are fired.} {
